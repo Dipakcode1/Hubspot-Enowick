@@ -1,0 +1,119 @@
+﻿<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: FAQ
+  screenshotPath: ../images/template-previews/faq.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+<main>
+
+    {# Breadcrumb Banner Module #}
+    {% module "faq_breadcrumb" path="../modules/breadcrumb.module" label="Breadcrumb Banner", title="FAQs", current_page_title="FAQs" %}
+
+    <!-- FAQ area start -->
+    <section class="ew-faq-area pt-124 pb-124">
+        <div class="container container-1617">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="ew-section-title pb-78">
+                        <span>Got Questions?</span>
+                        <h2 class="ew-text-revel-anim">Frequently Asked <br class="d-none d-xxl-block"> Questions</h2>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="ew-faq-box">
+                        <div class="ew-faq-accordion-wrap">
+                            <div class="accordion" id="accordionExample1">
+                                <div class="accordion-items">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-buttons" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                            What Services Does Enowick Offer?
+                                            <span class="accordion-icon"></span>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample1">
+                                        <div class="accordion-body">
+                                            <p>Enowick offers a comprehensive range of digital services including Web Design &amp; Development, UI/UX Design, Digital Marketing &amp; SEO, Custom Software Development, AI-Powered Solutions, and Brand Strategy. We serve clients across India — from startups in Ghaziabad to enterprises nationwide.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-items">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                                            How Long Does a Web Development Project Take?
+                                            <span class="accordion-icon"></span>
+                                        </button>
+                                    </h3>
+                                    <div id="collapseTwo2" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+                                        <div class="accordion-body">
+                                            <p>Project timelines vary based on complexity and scope. A standard business website typically takes 2–4 weeks, while custom software or AI-integrated platforms may take 6–16 weeks. We provide clear timelines during the discovery phase so you know exactly when to expect delivery.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-items">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
+                                            Do You Work With Businesses Across All of India?
+                                            <span class="accordion-icon"></span>
+                                        </button>
+                                    </h3>
+                                    <div id="collapseThree3" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+                                        <div class="accordion-body">
+                                            <p>Yes! While our team is based in Ghaziabad, Uttar Pradesh, we proudly serve clients across India — Delhi, Mumbai, Bengaluru, Hyderabad, and beyond. We work both remotely and on-site for clients in NCR and nearby regions.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-items">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour4" aria-expanded="false" aria-controls="collapseFour4">
+                                            Which Industries Do You Specialise In?
+                                            <span class="accordion-icon"></span>
+                                        </button>
+                                    </h3>
+                                    <div id="collapseFour4" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+                                        <div class="accordion-body">
+                                            <p>We work across a wide range of industries including Technology &amp; SaaS, E-Commerce, Healthcare, Real Estate, Education, Finance, and Creative Agencies. Our cross-industry experience enables us to bring fresh, effective ideas to every project.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-items">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive5" aria-expanded="false" aria-controls="collapseFive5">
+                                            How Do I Get Started With Enowick?
+                                            <span class="accordion-icon"></span>
+                                        </button>
+                                    </h3>
+                                    <div id="collapseFive5" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+                                        <div class="accordion-body">
+                                            <p>Getting started is simple — reach out via our <a href="/contact">Contact page</a>, email us at hello@enowick.com, or call us at +91 88267 54759. We'll schedule a free discovery call to understand your goals, then propose the best solution for your business.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-items">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix6" aria-expanded="false" aria-controls="collapseSix6">
+                                            Does Enowick Provide Post-Launch Support?
+                                            <span class="accordion-icon"></span>
+                                        </button>
+                                    </h3>
+                                    <div id="collapseSix6" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+                                        <div class="accordion-body">
+                                            <p>Absolutely. We offer ongoing maintenance, performance monitoring, SEO updates, and technical support packages after every project launch. Your digital success is a long-term commitment, not just a one-time delivery.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ area end -->
+
+</main>
+
+{% endblock body %}

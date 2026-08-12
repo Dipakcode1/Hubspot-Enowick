@@ -1,0 +1,358 @@
+[ {
+  "id" : "featured_image",
+  "name" : "featured_image",
+  "label" : "Featured Main Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : "portfolio details",
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "project_overview",
+  "name" : "project_overview",
+  "label" : "Project Overview (Rich Text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h1>Project Overview</h1><p>As we reflect on this achievement, we look forward to continuing our journey in digital innovation, transformative solutions, and shaping the future of the digital landscape. Celebrating a major milestone in digital services is a significant occasion.</p>"
+}, {
+  "id" : "gallery_image_1",
+  "name" : "gallery_image_1",
+  "label" : "Gallery Image 1",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : "project image 1",
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "gallery_image_2",
+  "name" : "gallery_image_2",
+  "label" : "Gallery Image 2",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : "project image 2",
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "gallery_image_3",
+  "name" : "gallery_image_3",
+  "label" : "Gallery Image 3",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : "project image 3",
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "challenge_solution_heading",
+  "name" : "challenge_solution_heading",
+  "label" : "Challenge & Solution Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Challenge & Solution"
+}, {
+  "id" : "challenge_solution_content",
+  "name" : "challenge_solution_content",
+  "label" : "Challenge & Solution Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>When creating a detailed case study, it is important to provide comprehensive information that communicates the story of the project, including the challenges faced, the solutions implemented, and the achieved results.</p>"
+}, {
+  "id" : "final_result_heading",
+  "name" : "final_result_heading",
+  "label" : "Final Result Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Final Result"
+}, {
+  "id" : "final_result_content",
+  "name" : "final_result_content",
+  "label" : "Final Result Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Our team successfully launched the platform with optimized load times, enhanced mobile responsiveness, and clean UI design system integration.</p>"
+}, {
+  "id" : "prev_work_text",
+  "name" : "prev_work_text",
+  "label" : "Previous Work Button Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Prev Work"
+}, {
+  "id" : "prev_work_link",
+  "name" : "prev_work_link",
+  "label" : "Previous Work Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : "/portfolio"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "next_work_text",
+  "name" : "next_work_text",
+  "label" : "Next Work Button Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Next Work"
+}, {
+  "id" : "next_work_link",
+  "name" : "next_work_link",
+  "label" : "Next Work Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : "/portfolio"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "info_box_title",
+  "name" : "info_box_title",
+  "label" : "Info Box Title",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Project Information"
+}, {
+  "id" : "project_info_list",
+  "name" : "project_info_list",
+  "label" : "Project Information List",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : 20,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "label_text",
+    "name" : "label_text",
+    "label" : "Label Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Category:"
+  }, {
+    "id" : "value_text",
+    "name" : "value_text",
+    "label" : "Value Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Development"
+  }, {
+    "id" : "link_url",
+    "name" : "link_url",
+    "label" : "Label Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : "#"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "label_text" : "Category:",
+    "value_text" : "Development",
+    "link_url" : {
+      "url" : {
+        "href" : "#"
+      }
+    }
+  }, {
+    "label_text" : "Software:",
+    "value_text" : "HTML, Figma",
+    "link_url" : {
+      "url" : {
+        "href" : "#"
+      }
+    }
+  }, {
+    "label_text" : "Service:",
+    "value_text" : "UI/UX Design",
+    "link_url" : {
+      "url" : {
+        "href" : "#"
+      }
+    }
+  }, {
+    "label_text" : "Client:",
+    "value_text" : "Eunice Mills",
+    "link_url" : {
+      "url" : {
+        "href" : "#"
+      }
+    }
+  }, {
+    "label_text" : "Date:",
+    "value_text" : "Feb 6, 2026",
+    "link_url" : {
+      "url" : {
+        "href" : "#"
+      }
+    }
+  } ]
+}, {
+  "id" : "need_help_title",
+  "name" : "need_help_title",
+  "label" : "Need Help Box Title",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Need Help?"
+}, {
+  "id" : "need_help_subtitle",
+  "name" : "need_help_subtitle",
+  "label" : "Need Help Subtitle",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Feel free to reach out anytime to discuss your project"
+}, {
+  "id" : "address_heading",
+  "name" : "address_heading",
+  "label" : "Address Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Office Address"
+}, {
+  "id" : "address_text",
+  "name" : "address_text",
+  "label" : "Address Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "629 Elgin St. Celina, 2202"
+}, {
+  "id" : "phone_heading",
+  "name" : "phone_heading",
+  "label" : "Phone Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Call Us For Support"
+}, {
+  "id" : "phone_text",
+  "name" : "phone_text",
+  "label" : "Phone Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "+91 88267 54759"
+}, {
+  "id" : "email_heading",
+  "name" : "email_heading",
+  "label" : "Email Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Email Us Anytime"
+}, {
+  "id" : "email_text",
+  "name" : "email_text",
+  "label" : "Email Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "hello@enowick.com"
+} ]

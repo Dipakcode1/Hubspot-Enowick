@@ -1,0 +1,115 @@
+﻿{% set main_nav = menu(module.menu, "site_root").children if module.menu else [] %}
+{% set legal_nav = menu(module.legal_menu, "site_root").children if module.legal_menu else [] %}
+
+<footer class="ew-footer-2-area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-8 col-lg-12">
+                <div class="ew-footer-2-list">
+                    <ul>
+                        {% if module.social_links and module.social_links|length > 0 %}
+                            {% for item in module.social_links %}
+                                {% set href = item.social_link_url.url.href if (item.social_link_url.url and item.social_link_url.url.href) else (item.social_link_url.href if item.social_link_url.href else '#') %}
+                                {% set target = '_blank' if item.social_link_url.open_in_new_tab else '_self' %}
+                                {% set platform = item.platform_name if item.platform_name else (item.label if item.label else '') %}
+                                {% if platform %}
+                                    <li><a href="{{ href }}" target="{{ target }}">{{ platform }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        {% else %}
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Linkedin</a></li>
+                            <li><a href="#">Dribbble</a></li>
+                            <li><a href="#">Behance</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-12">
+                <div class="ew-footer-2-box">
+                    {% if module.newsletter_heading %}
+                        <h1 class="ew-text-revel-anim">{{ module.newsletter_heading }}</h1>
+                    {% else %}
+                        <h1 class="ew-text-revel-anim">Get the Latest <br class="d-none d-xxl-block"> Updates</h1>
+                    {% endif %}
+                    {% if module.newsletter_text %}
+                        <p>{{ module.newsletter_text }}</p>
+                    {% else %}
+                        <p>We are digital agency that helps businesses <br class="d-none d-xxl-block"> develop immersive experiences.</p>
+                    {% endif %}
+                    <form action="#" method="post">
+                        <input type="email" name="email" placeholder="Enter Your Email">
+                        <a href="javascript:void(0)" onclick="this.closest('form').submit()"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        <span><a href="javascript:void(0)" onclick="this.closest('form').submit()">subscribe</a></span>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="ew-footer-2-text">
+                    {% if module.phone_number %}
+                        <h2>{{ module.phone_number }}</h2>
+                    {% else %}
+                        <h2>+91 88267 54759</h2>
+                    {% endif %}
+                    {% if module.email_address %}
+                        <h3>{{ module.email_address }}</h3>
+                    {% else %}
+                        <h3>hello@enowick.com</h3>
+                    {% endif %}
+
+                    <ul>
+                        {% if main_nav and main_nav|length > 0 %}
+                            {% for link in main_nav %}
+                                <li><a href="{{ link.url if link.url else '#' }}">{{ link.label }}</a></li>
+                            {% endfor %}
+                        {% else %}
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/service">Service</a></li>
+                            <li><a href="/portfolio">Portfolio</a></li>
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ew-copyright-2-area copyright-2-line">
+        <div class="container container-1588">
+            <div class="row align-items-center">
+                <div class="col-lg-6 p-0">
+                    <div class="ew-copyright-title copyright-2-title">
+                        <p>{% if module.copyright_text %}{{ module.copyright_text }}{% else %}All rights reserved — {{ year }} © <a href="/">Enowick</a>{% endif %}</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="ew-copyright-2-list copyright-2-title copyright-2-title2">
+                        <ul>
+                            {% if legal_nav and legal_nav|length > 0 %}
+                                {% for link in legal_nav %}
+                                    <li><a href="{{ link.url if link.url else '#' }}">{{ link.label }}</a></li>
+                                {% endfor %}
+                            {% elif module.legal_links and module.legal_links|length > 0 %}
+                                {% for item in module.legal_links %}
+                                    {% set href = item.legal_link_url.url.href if (item.legal_link_url.url and item.legal_link_url.url.href) else (item.legal_link_url.href if item.legal_link_url.href else '#') %}
+                                    {% set target = '_blank' if item.legal_link_url.open_in_new_tab else '_self' %}
+                                    {% set link_text = item.link_text if item.link_text else (item.label if item.label else '') %}
+                                    {% if link_text %}
+                                        <li><a href="{{ href }}" target="{{ target }}">{{ link_text }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            {% else %}
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Cookie Policy</a></li>
+                                <li><a href="#">Terms and Conditions</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

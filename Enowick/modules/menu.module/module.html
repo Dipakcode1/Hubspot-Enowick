@@ -1,0 +1,55 @@
+<ul>
+    {% set nav = menu(module.menu, "site_root").children %}
+
+    {% macro render_menu_item(link) %}
+        <li class="{{ 'has-dropdown' if link.children and link.children|length > 0 else '' }}">
+            <a href="{{ link.url if link.url else '#' }}">{{ link.label }}</a>
+            {% if link.children and link.children|length > 0 %}
+                <ul class="ew-submenu submenu">
+                    {% for sublink in link.children %}
+                        {{ render_menu_item(sublink) }}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endmacro %}
+
+    {% if nav and nav|length > 0 %}
+        {% for link in nav %}
+            {{ render_menu_item(link) }}
+        {% endfor %}
+    {% else %}
+        <li class="has-dropdown">
+            <a href="#">Home</a>
+            <ul class="ew-submenu submenu">
+                <li><a href="/">Home</a></li>
+            </ul>
+        </li>
+        <li><a href="/about">About Us</a></li>
+        <li class="has-dropdown">
+            <a href="#">Services</a>
+            <ul class="ew-submenu submenu">
+                <li><a href="/service">Our Services</a></li>
+                <li><a href="/service-details">Service Details</a></li>
+            </ul>
+        </li>
+        <li class="has-dropdown">
+            <a href="#">Portfolio</a>
+            <ul class="ew-submenu submenu">
+                <li><a href="/portfolio">Our Portfolio</a></li>
+                <li><a href="/portfolio-details">Portfolio Details</a></li>
+            </ul>
+        </li>
+        <li class="has-dropdown">
+            <a href="#">Pages</a>
+            <ul class="ew-submenu submenu">
+                <li><a href="/team">Our Team</a></li>
+                <li><a href="/team-details">Team Details</a></li>
+                <li><a href="/pricing">Pricing Plan</a></li>
+                <li><a href="/faq">FAQ</a></li>
+            </ul>
+        </li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
+    {% endif %}
+</ul>

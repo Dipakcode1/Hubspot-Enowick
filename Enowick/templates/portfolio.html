@@ -1,0 +1,21 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Portfolio
+  screenshotPath: ../images/template-previews/portfolio.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+<main>
+
+    {# Breadcrumb Banner Module #}
+    {% module "portfolio_breadcrumb" path="../modules/breadcrumb.module" label="Breadcrumb Banner", title="Portfolio Grid", current_page_title="Portfolio Grid" %}
+
+    {# Portfolio Section Module #}
+    {% module "portfolio_section" path="../modules/portfolio-section.module" label="Portfolio Section" %}
+
+</main>
+
+{% endblock body %}

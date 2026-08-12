@@ -1,0 +1,107 @@
+﻿<!--
+  templateType: none
+-->
+<!doctype html>
+<html class="no-js" lang="{{ html_lang }}" {{ html_lang_dir }}>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page_meta.html_title or pageTitle %}<title>{{ page_meta.html_title or pageTitle }}</title>{% endif %}
+    {% if brand_settings.favicon.src %}<link rel="shortcut icon" href="{{ brand_settings.favicon.src }}" />{% endif %}
+    <meta name="description" content="{{ page_meta.meta_description }}">
+
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    {{ require_css(get_asset_url("../../css/bootstrap.css")) }}
+    {{ require_css(get_asset_url("../../css/slick.css")) }}
+    {{ require_css(get_asset_url("../../css/swiper-bundle.css")) }}
+    {{ require_css(get_asset_url("../../css/magnific-popup.css")) }}
+    {{ require_css("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css") }}
+    {{ require_css(get_asset_url("../../css/font-awesome-pro.css")) }}
+    {{ require_css(get_asset_url("../../css/atropos.min.css")) }}
+    {{ require_css(get_asset_url("../../css/main.css")) }}
+
+    {{ standard_header_includes }}
+  </head>
+  <body class="ew-magic-cursor">
+
+    <!-- Begin magic cursor -->
+    <div id="magic-cursor" class="cursor-white-bg">
+        <div id="ball"></div>
+    </div>
+    <!-- End magic cursor -->
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- Preloader end -->
+
+    <!-- Back to top start -->
+    <div class="back-to-top-wrapper">
+        <button id="back_to_top" type="button" class="back-to-top-btn">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+    <!-- Back to top end -->
+
+    <!-- Floating Action Buttons -->
+    <div class="cps-floating-btns">
+        <a href="tel:+918826754759" class="cps-get-in-touch cps-call" title="Call Enowick">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 88267 54759</span>
+        </a>
+        <a href="https://wa.me/918826754759" target="_blank" rel="noopener" class="cps-get-in-touch cps-whatsapp" title="WhatsApp Enowick">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp Us</span>
+        </a>
+    </div>
+
+    <div class="body-wrapper">
+      {% block header %}
+        {% global_partial path="../partials/header.html" %}
+      {% endblock header %}
+
+      <main id="main-content" class="body-container-wrapper">
+        {% block body %}
+        {% endblock body %}
+      </main>
+
+      {% block footer %}
+        {% global_partial path="../partials/footer.html" %}
+      {% endblock footer %}
+    </div>
+
+    {{ require_js(get_asset_url("../../js/vendor/jquery.js")) }}
+    {{ require_js(get_asset_url("../../js/bootstrap-bundle.js")) }}
+    {{ require_js(get_asset_url("../../js/swiper-bundle.js")) }}
+    {{ require_js(get_asset_url("../../js/plugin.js")) }}
+    {{ require_js(get_asset_url("../../js/three.js")) }}
+    {{ require_js(get_asset_url("../../js/slick.js")) }}
+    {{ require_js(get_asset_url("../../js/scroll-magic.js")) }}
+    {{ require_js(get_asset_url("../../js/hover-effect.umd.js")) }}
+    {{ require_js(get_asset_url("../../js/magnific-popup.js")) }}
+    {{ require_js(get_asset_url("../../js/parallax-slider.js")) }}
+    {{ require_js(get_asset_url("../../js/nice-select.js")) }}
+    {{ require_js(get_asset_url("../../js/purecounter.js")) }}
+    {{ require_js(get_asset_url("../../js/Observer.min.js")) }}
+    {{ require_js(get_asset_url("../../js/splitting.min.js")) }}
+    {{ require_js(get_asset_url("../../js/parallax-scroll.js")) }}
+    {{ require_js(get_asset_url("../../js/atropos.js")) }}
+    {{ require_js(get_asset_url("../../js/slider-active.js")) }}
+    {{ require_js(get_asset_url("../../js/main.js")) }}
+    {{ require_js(get_asset_url("../../js/ew-cursor.js")) }}
+
+    {{ standard_footer_includes }}
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Service
+  screenshotPath: ../images/template-previews/service.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+<main>
+
+    {# Breadcrumb Banner Module #}
+    {% module "service_breadcrumb" path="../modules/breadcrumb.module" label="Breadcrumb Banner", title="Service", current_page_title="Service" %}
+
+    <!-- Service Area Start -->
+    {% module "service_section"
+      path="../modules/service-section",
+      label="Service Section"
+    %}
+    <!-- Service Area End -->
+
+</main>
+
+{% endblock body %}

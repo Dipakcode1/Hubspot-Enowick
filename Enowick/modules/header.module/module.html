@@ -1,0 +1,229 @@
+{% set logo_src = module.logo_image.src if module.logo_image.src else (brand_settings.logo.src if brand_settings.logo.src else get_asset_url('../../images/logo/mindlayer-logo.png')) %}
+{% set logo_alt = module.logo_image.alt if module.logo_image.alt else 'logo' %}
+{% set logo_href = module.logo_url.url.href if (module.logo_url.url and module.logo_url.url.href) else '/' %}
+
+{% set offcanvas_logo_1 = module.offcanvas_logo_dark.src if module.offcanvas_logo_dark.src else get_asset_url('../../images/logo/mindlayer-logo.png') %}
+{% set offcanvas_logo_2 = module.offcanvas_logo_light.src if module.offcanvas_logo_light.src else get_asset_url('../../images/logo/mindlayer-logo.png') %}
+
+{% set nav = menu(module.menu, "site_root").children if module.menu else [] %}
+
+{% macro render_menu_item(link) %}
+    <li class="{{ 'has-dropdown' if link.children and link.children|length > 0 else '' }}">
+        <a href="{{ link.url if link.url else '#' }}">{{ link.label }}</a>
+        {% if link.children and link.children|length > 0 %}
+            <ul class="ew-submenu submenu">
+                {% for sublink in link.children %}
+                    {{ render_menu_item(sublink) }}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+{% endmacro %}
+
+<!-- header area start -->
+<div id="header-sticky-black" class="ew-header-area header-transparent ew-header-3-area">
+    <div class="container container-1619">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <div class="ew-header-3-main">
+                    <div class="ew-header-logo">
+                        <a href="{{ logo_href }}">
+                            <img data-width="167" class="logo-black" src="{{ logo_src }}" alt="{{ logo_alt }}">
+                        </a>
+                    </div>
+                    <div class="ew-header-main ew-header-2-main ew-header-3-left">
+                        <div class="ew-header-right">
+                            <div class="ew-header-box d-none d-xl-block">
+                                <div class="ew-header-menu ew-header-3-menu ew-header-dropdown dropdown-white-bg">
+                                    <nav class="ew-mobile-menu-active">
+                                        <ul>
+                                            {% if nav and nav|length > 0 %}
+                                                {% for link in nav %}
+                                                    {{ render_menu_item(link) }}
+                                                {% endfor %}
+                                            {% else %}
+                                                <li class="has-dropdown">
+                                                    <a href="/">Home</a>
+                                                    <ul class="ew-submenu submenu">
+                                                        <li><a href="/">Home</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="/about">About Us</a></li>
+                                                <li class="has-dropdown">
+                                                    <a href="/service">Services</a>
+                                                    <ul class="ew-submenu submenu">
+                                                        <li><a href="/service">Our Services</a></li>
+                                                        <li><a href="/service-details">Service Details</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-dropdown">
+                                                    <a href="/portfolio">Portfolio</a>
+                                                    <ul class="ew-submenu submenu">
+                                                        <li><a href="/portfolio">Our Portfolio</a></li>
+                                                        <li><a href="/portfolio-details">Portfolio Details</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-dropdown">
+                                                    <a href="#">Pages</a>
+                                                    <ul class="ew-submenu submenu">
+                                                        <li><a href="/team">Our Team</a></li>
+                                                        <li><a href="/team-details">Team Details</a></li>
+                                                        <li><a href="/pricing">Pricing Plan</a></li>
+                                                        <li><a href="/faq">FAQ</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="/blog">Blog</a></li>
+                                                <li><a href="/contact">Contact</a></li>
+                                            {% endif %}
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ew-header-2-btn-main">
+                        {% if module.show_search %}
+                            <div class="ew-header-search-box d-none d-md-block">
+                                <button class="ew-header-search ew-search-open-btn">
+                                    <span>
+                                        <img src="{{ get_asset_url('../../images/header/search.svg') }}" alt="Search">
+                                    </span>
+                                    <span class="ew-header-search-title header-3-title">Search</span>
+                                </button>
+                            </div>
+                        {% endif %}
+                        <div class="ew-header-2-bar ew-header-3-bar">
+                            <button class="ew-header-2-bar-inner ew-header-3-bar-inner ew-offcanvas-open-btn">
+                                <span class="line-one"></span>
+                                <span class="line-two"></span>
+                                <span class="line-three"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header area end -->
+
+<!-- ew-offcanvas-area-start -->
+<div class="ew-offcanvas-area">
+    <div class="ew-offcanvas-wrapper">
+        <div class="ew-offcanvas-top d-flex align-items-center justify-content-between">
+            <div class="ew-offcanvas-logo">
+                <a href="{{ logo_href }}">
+                    <img class="logo-1" data-width="120" src="{{ offcanvas_logo_1 }}" alt="logo">
+                    <img class="logo-2" data-width="120" src="{{ offcanvas_logo_2 }}" alt="logo">
+                </a>
+            </div>
+            <div class="ew-offcanvas-close">
+                <button class="ew-offcanvas-close-btn">
+                    <svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.19141 9.80762L27.5762 28.1924" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M9.19141 28.1924L27.5762 9.80761" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="ew-offcanvas-main">
+            <div class="ew-offcanvas-content d-none d-xl-block">
+                <h3 class="ew-offcanvas-title">{% if module.offcanvas_title %}{{ module.offcanvas_title }}{% else %}About Us{% endif %}</h3>
+                <p>{% if module.offcanvas_text %}{{ module.offcanvas_text }}{% else %}We are digital agency that helps businesses develop immersive experiences.{% endif %}</p>
+            </div>
+            <div class="ew-offcanvas-menu d-xl-none">
+                <nav></nav>
+            </div>
+            <div class="ew-offcanvas-gallery d-none d-xl-block">
+                <div class="row gx-2">
+                    {% if module.gallery_images and module.gallery_images|length > 0 %}
+                        {% for g_item in module.gallery_images %}
+                            {% set default_g_num = ((loop.index - 1) % 4) + 1 %}
+                            {% set g_src = g_item.gallery_img.src if g_item.gallery_img.src else get_asset_url('../../images/offcanvas/offcanvas-' ~ default_g_num ~ '.jpg') %}
+                            {% set g_alt = g_item.gallery_img.alt if g_item.gallery_img.alt else 'gallery image' %}
+                            <div class="col-md-3 col-3">
+                                <div class="ew-offcanvas-gallery-img fix">
+                                    <a class="popup-image" href="{{ g_src }}"><img src="{{ g_src }}" alt="{{ g_alt }}"></a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="col-md-3 col-3">
+                            <div class="ew-offcanvas-gallery-img fix">
+                                <a class="popup-image" href="{{ get_asset_url('../../images/offcanvas/offcanvas-1.jpg') }}"><img src="{{ get_asset_url('../../images/offcanvas/offcanvas-1.jpg') }}" alt="image"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-3">
+                            <div class="ew-offcanvas-gallery-img fix">
+                                <a class="popup-image" href="{{ get_asset_url('../../images/offcanvas/offcanvas-2.jpg') }}"><img src="{{ get_asset_url('../../images/offcanvas/offcanvas-2.jpg') }}" alt="image"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-3">
+                            <div class="ew-offcanvas-gallery-img fix">
+                                <a class="popup-image" href="{{ get_asset_url('../../images/offcanvas/offcanvas-3.jpg') }}"><img src="{{ get_asset_url('../../images/offcanvas/offcanvas-3.jpg') }}" alt="image"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-3">
+                            <div class="ew-offcanvas-gallery-img fix">
+                                <a class="popup-image" href="{{ get_asset_url('../../images/offcanvas/offcanvas-4.jpg') }}"><img src="{{ get_asset_url('../../images/offcanvas/offcanvas-4.jpg') }}" alt="image"></a>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="ew-offcanvas-contact">
+                <h3 class="ew-offcanvas-title">Contact Info</h3>
+                <ul>
+                    {% if module.offcanvas_phone %}
+                        <li><a href="tel:{{ module.offcanvas_phone|replace(' ', '') }}">{{ module.offcanvas_phone }}</a></li>
+                    {% else %}
+                        <li><a href="tel:+918826754759">+91 88267 54759</a></li>
+                    {% endif %}
+                    {% if module.offcanvas_email %}
+                        <li><a href="mailto:{{ module.offcanvas_email }}">{{ module.offcanvas_email }}</a></li>
+                    {% else %}
+                        <li><a href="mailto:hello@enowick.com">hello@enowick.com</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="offcanvas-overlay"></div>
+
+<!-- search area start -->
+{% if module.show_search %}
+<div class="ew-search-area p-relative">
+    <div class="ew-search-close">
+        <button class="ew-search-close-btn">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="path-1" d="M11 1L1 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path class="path-2" d="M1 1L11 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+    <div class="container container-1230">
+        <div class="row">
+            <div class="ew-search-wrapper">
+                <div class="col-lg-8">
+                    <div class="ew-search-content">
+                        <div class="search p-relative">
+                            <form action="/hs-search-results" method="get">
+                                <input type="text" name="q" class="search-input" placeholder="Search...">
+                                <button type="submit" class="ew-search-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M18.0508 18.05L23.0009 23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M20.8004 10.9C20.8004 5.43237 16.3679 1 10.9002 1C5.43246 1 1 5.43237 1 10.9C1 16.3676 5.43246 20.7999 10.9002 20.7999C16.3679 20.7999 20.8004 16.3676 20.8004 10.9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="body-overlay"></div>
+{% endif %}
+<!-- search area end -->

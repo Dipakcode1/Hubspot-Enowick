@@ -1,0 +1,40 @@
+<!-- Portfolio Area Start -->
+<div class="ew-project-3-bg2 pt-75 pb-124">
+    <div class="container container-1617">
+        <div class="row">
+            {% if module.portfolio_items and module.portfolio_items|length > 0 %}
+                {% for item in module.portfolio_items %}
+                    {% set default_img_num = ((loop.index - 1) % 5) + 8 %}
+                    {% set default_img = get_asset_url('../../images/project/img' ~ default_img_num ~ '.jpg') %}
+                    {% set img_src = item.image.src if item.image.src else default_img %}
+                    {% set img_alt = item.image.alt if item.image.alt else item.title %}
+                    {% set href = item.link_url.url.href if item.link_url.url.href else '/portfolio-details' %}
+                    {% set target = '_blank' if item.link_url.open_in_new_tab else '_self' %}
+                    {% set rel = 'noopener' if item.link_url.open_in_new_tab else '' %}
+                    {% set col_width = item.column_width if item.column_width else 'col-lg-6' %}
+                    
+                    <div class="{{ col_width }}">
+                        <div class="ew-project-3-box">
+                            <div class="ew-project-3-thumb portfolio-radius ew-portfolio-thumb-height3 si_fade_anim fix not-hide-cursor" data-cursor="View<br>Demo">
+                                <a class="cursor-hide img-cover" href="{{ href }}" target="{{ target }}"{% if rel %} rel="{{ rel }}"{% endif %}><img data-speed=".8" src="{{ img_src }}" alt="{{ img_alt }}"></a>
+                            </div>
+                            <div class="ew-project-3-text">
+                                {% if item.title %}
+                                    <h3><a class="underline-black" href="{{ href }}" target="{{ target }}"{% if rel %} rel="{{ rel }}"{% endif %}>{{ item.title }}</a></h3>
+                                {% endif %}
+                                {% if item.tags and item.tags|length > 0 %}
+                                    {% for tag_item in item.tags %}
+                                        {% if tag_item.tag_text %}
+                                            <span>{{ tag_item.tag_text }}</span>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+<!-- Portfolio Area End -->

@@ -1,0 +1,211 @@
+﻿<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home
+  screenshotPath: ../images/template-previews/home.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+<main>
+
+    <!-- Hero 3 Area start -->
+    {% module "hero_banner"
+      path="../modules/hero-banner",
+      label="Hero Banner"
+    %}
+    <!-- Hero 3 Area end -->
+
+    <!-- Brand 2 area start -->
+    {% module "brand_logos"
+      path="../modules/brand-logos",
+      label="Brand Logos"
+    %}
+    <!-- Brand 2 area end -->
+
+    <!-- About 2 area start -->
+    {% module "about_section"
+      path="../modules/about-section",
+      label="About Section"
+    %}
+    <!-- About 2 area end -->
+
+    <!-- Service 2 area start -->
+    {% module "service_section"
+      path="../modules/service-section",
+      label="Service Section"
+    %}
+    <!-- Service 2 area end -->
+
+    <!-- Project 2 area start -->
+    {% module "project_section"
+      path="../modules/project-section",
+      label="Project Section"
+    %}
+    <!-- Project 2 area end -->
+
+    <!-- Team area start -->
+    {% module "team_section"
+      path="../modules/team-section.module",
+      label="Team Section"
+    %}
+    <!-- Team area end -->
+
+    <!-- Testimonial 2 area start -->
+    <section class="ew-testimonial-2-area pt-124 pb-124" data-background="{{ get_asset_url('../images/testimonial/bg.jpg') }}" style="background-image: url('{{ get_asset_url('../images/testimonial/bg.jpg') }}');">
+        <div class="container container-1617">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="ew-testimonial-slider-wrap">
+                        <div class="swiper ew-testimonial-bottom-thumb-active">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="{{ get_asset_url('../images/testimonial/t1.png') }}" alt="Client testimonial - Enowick">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{ get_asset_url('../images/testimonial/t2.png') }}" alt="Client testimonial - Enowick">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{ get_asset_url('../images/testimonial/t3.png') }}" alt="Client testimonial - Enowick">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="ew-section-title ew-white pb-40">
+                        <span>Client Stories</span>
+                        <h2 class="ew-text-revel-anim">What Our Clients Say</h2>
+                    </div>
+                    <div class="swiper ew-testimonial-content-active">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="ew-testimonial-2-text">
+                                    <p>"Enowick transformed our outdated website into a high-performing digital platform. Our leads increased by 3x within two months of launch. Truly a world-class team right here in India."</p>
+                                </div>
+                                <div class="ew-testimonial-2-main">
+                                    <div class="ew-testimonial-2-title">
+                                        <h3>Priya Sharma</h3>
+                                        <span>Founder, TechVenture Delhi</span>
+                                    </div>
+                                    <div class="ew-testimonial-2-shape">
+                                        <img src="{{ get_asset_url('../images/testimonial/shape.png') }}" alt="shape">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ew-testimonial-2-text">
+                                    <p>"Working with Enowick on our e-commerce platform was seamless. They understood our vision, delivered a stunning UI/UX design, and drove measurable growth through their SEO expertise."</p>
+                                </div>
+                                <div class="ew-testimonial-2-main">
+                                    <div class="ew-testimonial-2-title">
+                                        <h3>Rajesh Gupta</h3>
+                                        <span>CEO, ShopBridge India</span>
+                                    </div>
+                                    <div class="ew-testimonial-2-shape">
+                                        <img src="{{ get_asset_url('../images/testimonial/shape.png') }}" alt="shape">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ew-testimonial-2-text">
+                                    <p>"Enowick's AI-powered solutions helped us automate key business workflows, saving us 40+ hours a week. Their team is incredibly knowledgeable and always a step ahead."</p>
+                                </div>
+                                <div class="ew-testimonial-2-main">
+                                    <div class="ew-testimonial-2-title">
+                                        <h3>Anika Mehra</h3>
+                                        <span>Operations Head, Nexus Infra</span>
+                                    </div>
+                                    <div class="ew-testimonial-2-shape">
+                                        <img src="{{ get_asset_url('../images/testimonial/shape.png') }}" alt="shape">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial 2 area end -->
+
+    <!-- Blog 2 area start -->
+    <section class="ew-blog-2-area pt-124 pb-124">
+        <div class="container container-1617">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ew-blog-2-main">
+                        <div class="ew-section-title pb-20">
+                            <span>Our Insights</span>
+                            <h2 class="ew-text-revel-anim">Recent News &amp; Updates</h2>
+                        </div>
+                        <div class="ew-blog-2-btn">
+                            <a class="ew-btn-one black-bg-btn border-btn" href="/blog"> <span class="btn-text"> <span> Visit Our Blog</span> </span> <span class="btn-icon btn-icon2"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ew-blog-2-box">
+                        <div class="ew-blog-2-text">
+                            <span class="blog-2-border">Insight</span>
+                            <span>5 minute read</span>
+                            <h3><a class="underline-black" href="/blog">How AI is Revolutionising Web Development in India</a></h3>
+                            <span class="project-dot2">Enowick Team</span>
+                            <span>August 2026</span>
+                        </div>
+                        <div class="ew-blog-2-thumb">
+                            <img src="{{ get_asset_url('../images/blog/blog6.jpg') }}" alt="AI and web development insights from Enowick">
+                        </div>
+                        <div class="ew-blog-2-p">
+                            <p>Discover how AI-powered tools are transforming the way Indian businesses build, launch, and scale their digital presence in 2026 and beyond.</p>
+                        </div>
+                    </div>
+                    <div class="ew-blog-2-box">
+                        <div class="ew-blog-2-text">
+                            <span class="blog-2-border">Insight</span>
+                            <span>4 minute read</span>
+                            <h3><a class="underline-black" href="/blog">Top Digital Marketing Strategies for Indian Businesses in 2026</a></h3>
+                            <span class="project-dot2">Enowick Team</span>
+                            <span>August 2026</span>
+                        </div>
+                        <div class="ew-blog-2-thumb">
+                            <img src="{{ get_asset_url('../images/blog/blog7.jpg') }}" alt="Digital marketing strategies for Indian businesses - Enowick">
+                        </div>
+                        <div class="ew-blog-2-p">
+                            <p>From local SEO in Ghaziabad to pan-India digital campaigns — explore the strategies that are driving real ROI for Indian brands this year.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog 2 area end -->
+
+    <!-- Video area Start -->
+    <div class="ew-video-area" data-background="{{ get_asset_url('../images/video/bg.jpg') }}" style="background-image: url('{{ get_asset_url('../images/video/bg.jpg') }}');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ew-video-icon">
+                        <div class="ew-video-icon-inner">
+                            <a class="popup-video ew-about-playbtn" href="https://www.youtube.com/watch?v=MLpWrANjFbI"><svg width="18" height="20" viewBox="0 0 18 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.7L16.5 10L1 18.3V1.7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></a>
+                            <div class="ew-video-shape">
+                                <img class="rotate2" src="{{ get_asset_url('../images/video/shape.png') }}" alt="Watch Enowick in action">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video area  End -->
+
+</main>
+
+{% endblock body %}
+
+{% block footer %}
+    {% module "footer_home" path="../modules/footer.module", label="Footer Home" %}
+{% endblock footer %}
+

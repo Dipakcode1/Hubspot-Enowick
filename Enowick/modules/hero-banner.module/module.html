@@ -1,0 +1,47 @@
+{% set bg_img = module.background_image.src if module.background_image.src else get_asset_url('../../images/hero/bg3.jpg') %}
+{% set shape_1 = module.shape_image_1.src if module.shape_image_1.src else get_asset_url('../../images/hero/shape4.png') %}
+{% set shape_2 = module.shape_image_2.src if module.shape_image_2.src else get_asset_url('../../images/hero/shape3.png') %}
+
+<section class="ew-hero-3-area" data-background="{{ bg_img }}" style="background-image: url('{{ bg_img }}');">
+    <div class="container container-1617">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ew-hero-3-text">
+                    {% if module.heading %}
+                        <div class="ew-hero-heading-wrapper">
+                            <h1 class="ew-text-revel-anim">
+                                {{ module.heading }}
+                            </h1>
+                        </div>
+                    {% else %}
+                        <h1 class="ew-text-revel-anim">Next Generation <br class="d-none d-xxl-block">
+                            <span> <img class="rotate2" src="{{ shape_1 }}" alt="shape"> Digital Agency</span>
+                        </h1>
+                    {% endif %}
+                </div>
+                {% if module.subheading %}
+                    <div class="ew-hero-3-p">
+                        <p>{{ module.subheading }}</p>
+                    </div>
+                {% endif %}
+                {% if module.button_text %}
+                    {% set href = module.button_url.url.href if module.button_url.url.href else '/portfolio' %}
+                    {% set target = '_blank' if module.button_url.open_in_new_tab else '_self' %}
+                    {% set rel = 'noopener' if module.button_url.open_in_new_tab else '' %}
+                    <div class="ew-hero-3-btn">
+                        <a class="ew-btn-one black-bg-btn" href="{{ href }}" target="{{ target }}" rel="{{ rel }}">
+                            <span class="btn-text"> <span>{{ module.button_text }}</span> </span>
+                            <span class="btn-icon btn-icon2"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        </a>
+                    </div>
+                {% endif %}
+                {% if module.badge_number %}
+                    <div class="ew-hero-3-shape">
+                        <img src="{{ shape_2 }}" alt="shape">
+                        <h2>{{ module.badge_number }}</h2>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

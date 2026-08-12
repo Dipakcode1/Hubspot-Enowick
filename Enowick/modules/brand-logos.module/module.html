@@ -1,0 +1,44 @@
+{% set is_light = module.style_variant == 'light_bg' %}
+{% set container_class = 'ew-brand-area pb-130' if is_light else 'ew-brand-area ew-brand-2-area pb-124' %}
+
+<div class="{{ container_class }}">
+    <div class="container container-1617">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ew-brand-wrappere">
+                    {% if module.brands and module.brands|length > 0 %}
+                        {% for item in module.brands %}
+                            {% if is_light %}
+                                {% set default_filename = 'brand' ~ (loop.index if loop.index > 1 else '') ~ '.png' %}
+                            {% else %}
+                                {% set default_filename = 'white-logo' ~ (loop.index if loop.index > 1 else '') ~ '.png' %}
+                            {% endif %}
+                            
+                            {% set logo_src = item.logo_image.src if item.logo_image.src else get_asset_url('../../images/brand/' ~ default_filename) %}
+                            {% set alt_text = item.brand_name if item.brand_name else 'brand' %}
+                            
+                            <div class="ew-brand-box">
+                                {% if item.link_url.url.href %}
+                                    {% set href = item.link_url.url.href %}
+                                    {% set target = '_blank' if item.link_url.open_in_new_tab else '_self' %}
+                                    <a href="{{ href }}" target="{{ target }}">
+                                        <img src="{{ logo_src }}" alt="{{ alt_text }}">
+                                    </a>
+                                {% else %}
+                                    <img src="{{ logo_src }}" alt="{{ alt_text }}">
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        {% for i in range(1, 7) %}
+                            {% set filename = ('brand' if is_light else 'white-logo') ~ (i if i > 1 else '') ~ '.png' %}
+                            <div class="ew-brand-box">
+                                <img src="{{ get_asset_url('../../images/brand/' ~ filename) }}" alt="brand">
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

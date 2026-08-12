@@ -1,0 +1,211 @@
+﻿[ {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Section Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Featured Projects"
+}, {
+  "id" : "button_text",
+  "name" : "button_text",
+  "label" : "Button Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "View All Projects"
+}, {
+  "id" : "button_url",
+  "name" : "button_url",
+  "label" : "Button Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : "/portfolio"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "projects",
+  "name" : "projects",
+  "label" : "Project Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 20,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "title",
+    "name" : "title",
+    "label" : "Project Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "E-Commerce Platform for RetailEdge India"
+  }, {
+    "id" : "image",
+    "name" : "image",
+    "label" : "Project Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "src" : "",
+      "alt" : "Enowick project",
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "link_url",
+    "name" : "link_url",
+    "label" : "Project Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : "/portfolio"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "tags",
+    "name" : "tags",
+    "label" : "Project Tags",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 0,
+      "max" : 10,
+      "sorting_label_field" : null,
+      "default" : null
+    },
+    "children" : [ {
+      "id" : "tag_text",
+      "name" : "tag_text",
+      "label" : "Tag Text",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "Web Development"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : [ {
+      "tag_text" : "Web Development"
+    }, {
+      "tag_text" : "UI/UX Design"
+    }, {
+      "tag_text" : "SEO Optimisation"
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "E-Commerce Platform for RetailEdge India",
+    "image" : {
+      "src" : "",
+      "alt" : "Enowick e-commerce project"
+    },
+    "link_url" : {
+      "url" : {
+        "href" : "/portfolio"
+      }
+    },
+    "tags" : [ {
+      "tag_text" : "Web Development"
+    }, {
+      "tag_text" : "UI/UX Design"
+    }, {
+      "tag_text" : "Digital Marketing"
+    } ]
+  }, {
+    "title" : "Corporate Website Revamp for Nexus Infra",
+    "image" : {
+      "src" : "",
+      "alt" : "Enowick corporate website project"
+    },
+    "link_url" : {
+      "url" : {
+        "href" : "/portfolio"
+      }
+    },
+    "tags" : [ {
+      "tag_text" : "Web Design"
+    }, {
+      "tag_text" : "Brand Identity"
+    }, {
+      "tag_text" : "SEO"
+    } ]
+  }, {
+    "title" : "AI-Powered CRM for HealthBridge",
+    "image" : {
+      "src" : "",
+      "alt" : "Enowick AI software development project"
+    },
+    "link_url" : {
+      "url" : {
+        "href" : "/portfolio"
+      }
+    },
+    "tags" : [ {
+      "tag_text" : "Software Development"
+    }, {
+      "tag_text" : "AI Solutions"
+    }, {
+      "tag_text" : "UX Design"
+    } ]
+  }, {
+    "title" : "Digital Marketing Campaign for UrbanLiving",
+    "image" : {
+      "src" : "",
+      "alt" : "Enowick digital marketing project"
+    },
+    "link_url" : {
+      "url" : {
+        "href" : "/portfolio"
+      }
+    },
+    "tags" : [ {
+      "tag_text" : "Digital Marketing"
+    }, {
+      "tag_text" : "SEO"
+    }, {
+      "tag_text" : "Brand Strategy"
+    } ]
+  } ]
+} ]

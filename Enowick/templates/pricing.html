@@ -1,0 +1,146 @@
+﻿<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Pricing
+  screenshotPath: ../images/template-previews/pricing.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+<main>
+
+    {# Breadcrumb Banner Module #}
+    {% module "pricing_breadcrumb" path="../modules/breadcrumb.module" label="Breadcrumb Banner", title="Pricing Plans", current_page_title="Pricing Plans" %}
+
+    <!-- Pricing area start -->
+    <section class="ew-pricing-area pt-124 pb-130">
+        <div class="container container-1617">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="ew-pricing-box ew-pricing-border pricing-bg-white">
+                        <div class="ew-pricing-text ew-pricing-text2">
+                            <h2>Starter Plan</h2>
+                            <span>Perfect for startups and new businesses building their digital presence.</span>
+                            <h3>₹14,999 <span>/Project</span></h3>
+                        </div>
+                        <div class="ew-pricing-list pricing-bg-list">
+                            <ul>
+                                <li><img src="{{ get_asset_url('../images/pricing/pricing-icon.svg') }}" alt="icon">Custom Website Design (up to 5 pages)</li>
+                                <li><img src="{{ get_asset_url('../images/pricing/pricing-icon.svg') }}" alt="icon">Mobile-Responsive Development</li>
+                                <li><img src="{{ get_asset_url('../images/pricing/pricing-icon.svg') }}" alt="icon">Basic On-Page SEO Setup</li>
+                                <li><img src="{{ get_asset_url('../images/pricing/pricing-icon.svg') }}" alt="icon">Contact Form Integration</li>
+                                <li><img src="{{ get_asset_url('../images/pricing/pricing-icon.svg') }}" alt="icon">30-Day Post-Launch Support</li>
+                            </ul>
+                            <a href="/contact">Get Started <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ew-pricing-box ew-pricing-border pricing-bg-white">
+                        <div class="ew-pricing-text ew-pricing-text2">
+                            <h2>Growth Plan</h2>
+                            <span>Ideal for growing businesses ready to scale their digital footprint.</span>
+                            <h3>₹39,999 <span>/Project</span></h3>
+                        </div>
+                        <div class="ew-pricing-list pricing-bg-list">
+                            <ul>
+                                <li><img src="{{ get_asset_url('../images/pricing/pricing-icon.svg') }}" alt="icon">Custom Website (up to 15 pages)</li>
+                                <li><img src="{{ get_asset_url('../images/pricing/pricing-icon.svg') }}" alt="icon">UI/UX Design + CMS Integration</li>
+                                <li><img src="{{ get_asset_url('../images/pricing/pricing-icon.svg') }}" alt="icon">Full SEO &amp; Analytics Setup</li>
+                                <li><img src="{{ get_asset_url('../images/pricing/pricing-icon.svg') }}" alt="icon">Digital Marketing Strategy (1 month)</li>
+                                <li><img src="{{ get_asset_url('../images/pricing/pricing-icon.svg') }}" alt="icon">Priority Support — 60 Days</li>
+                            </ul>
+                            <a href="/contact">Get Started <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ew-pricing-box ew-pricing-border pricing-bg-white">
+                        <div class="ew-pricing-text ew-pricing-text2">
+                            <h2>Enterprise Plan</h2>
+                            <span>Comprehensive digital transformation for large-scale businesses and enterprises.</span>
+                            <h3>Custom <span>Quote</span></h3>
+                        </div>
+                        <div class="ew-pricing-list pricing-bg-list">
+                            <ul>
+                                <li><img src="{{ get_asset_url('../images/pricing/pricing-icon.svg') }}" alt="icon">Custom Software / Platform Development</li>
+                                <li><img src="{{ get_asset_url('../images/pricing/pricing-icon.svg') }}" alt="icon">AI-Powered Feature Integration</li>
+                                <li><img src="{{ get_asset_url('../images/pricing/pricing-icon.svg') }}" alt="icon">End-to-End Digital Marketing</li>
+                                <li><img src="{{ get_asset_url('../images/pricing/pricing-icon.svg') }}" alt="icon">Dedicated Project Manager</li>
+                                <li><img src="{{ get_asset_url('../images/pricing/pricing-icon.svg') }}" alt="icon">Ongoing Retainer &amp; Support</li>
+                            </ul>
+                            <a href="/contact">Talk to Us <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing area end -->
+
+    <!-- FAQ area start -->
+    <section class="ew-faq-area pb-130">
+        <div class="container container-1617">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="ew-section-title pb-78">
+                        <span>Pricing FAQs</span>
+                        <h2 class="ew-text-revel-anim">Questions &amp; Answers</h2>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="ew-faq-box">
+                        <div class="ew-faq-accordion-wrap">
+                            <div class="accordion" id="accordionExample1">
+                                <div class="accordion-items">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-buttons" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                            What Services Does Enowick Offer?
+                                            <span class="accordion-icon"></span>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample1">
+                                        <div class="accordion-body">
+                                            <p>Enowick provides full-scale digital solutions including Web Design &amp; Development, UI/UX Design, Custom Software Development, Digital Marketing &amp; SEO, AI-Powered Solutions, and Brand Strategy — serving businesses across India.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-items">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                                            Are These Prices Fixed or Negotiable?
+                                            <span class="accordion-icon"></span>
+                                        </button>
+                                    </h3>
+                                    <div id="collapseTwo2" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+                                        <div class="accordion-body">
+                                            <p>The Starter and Growth plans reflect typical project costs, but final pricing depends on your specific requirements. We tailor every engagement to your goals — contact us for a free consultation and custom quote.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-items">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
+                                            Do You Work With Startups and Small Businesses?
+                                            <span class="accordion-icon"></span>
+                                        </button>
+                                    </h3>
+                                    <div id="collapseThree3" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+                                        <div class="accordion-body">
+                                            <p>Yes! We partner with early-stage startups, SMEs, and established enterprise brands across India. Our flexible plans are designed to grow with you, so you only pay for what you truly need.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ area end -->
+
+</main>
+
+{% endblock body %}

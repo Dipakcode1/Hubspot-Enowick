@@ -1,0 +1,254 @@
+[ {
+  "id" : "subtitle",
+  "name" : "subtitle",
+  "label" : "Subtitle Tag",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "RELIABLE TOOLS ANYTIME"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Main Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Designing Digital Experiences with Impact"
+}, {
+  "id" : "main_image",
+  "name" : "main_image",
+  "label" : "Main Service Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : null,
+    "size_type" : null,
+    "width" : null,
+    "height" : null,
+    "max_width" : null,
+    "max_height" : null,
+    "loading" : "disabled"
+  }
+}, {
+  "id" : "description_1",
+  "name" : "description_1",
+  "label" : "First Paragraph",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>In the realm of digital innovation, the demand for creative and immersive experiences extends far beyond the confines of the screen. At our agency, we are excited to unveil digital products and platforms where the boundaries of digital design are transcended. We delve into the intricate process of crafting designs that take users on a journey beyond conventional digital experiences.</p>"
+}, {
+  "id" : "description_2",
+  "name" : "description_2",
+  "label" : "Second Paragraph",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>The vision behind our service is clear from the start – to redefine the way users interact with digital products. We envision a space where users can not only browse and interact with digital goods but also immerse themselves in an interactive and visually captivating environment.</p>"
+}, {
+  "id" : "gallery_image_1",
+  "name" : "gallery_image_1",
+  "label" : "Gallery Image 1",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : null,
+    "size_type" : null,
+    "width" : null,
+    "height" : null,
+    "max_width" : null,
+    "max_height" : null,
+    "loading" : "disabled"
+  }
+}, {
+  "id" : "gallery_image_2",
+  "name" : "gallery_image_2",
+  "label" : "Gallery Image 2",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : null,
+    "size_type" : null,
+    "width" : null,
+    "height" : null,
+    "max_width" : null,
+    "max_height" : null,
+    "loading" : "disabled"
+  }
+}, {
+  "id" : "description_3",
+  "name" : "description_3",
+  "label" : "Third Paragraph (Below Gallery)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Our multidisciplinary team combines research, visual aesthetic design, frontend architecture, and continuous optimization to build scalable web applications that stand out in competitive markets.</p>"
+}, {
+  "id" : "benefits_heading",
+  "name" : "benefits_heading",
+  "label" : "Benefits Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Benefits of this service"
+}, {
+  "id" : "benefits_description",
+  "name" : "benefits_description",
+  "label" : "Benefits Description",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Our UI/UX & Product Innovation Service Package offers tangible strategic benefits that help businesses enhance customer satisfaction, achieve measurable outcomes, and stay ahead of competitors."
+}, {
+  "id" : "benefits_list_left",
+  "name" : "benefits_list_left",
+  "label" : "Left Benefits List",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 6
+  },
+  "children" : [ {
+    "id" : "item_text_left",
+    "name" : "item_text_left",
+    "label" : "Feature Item",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "item_text_left" : "Custom Website Design"
+  }, {
+    "item_text_left" : "Responsive Web Development"
+  }, {
+    "item_text_left" : "E-Commerce Solutions"
+  }, {
+    "item_text_left" : "JavaScript & Framework Integrations"
+  }, {
+    "item_text_left" : "API & Hubspot CMS Integration"
+  }, {
+    "item_text_left" : "Front End Optimization"
+  } ]
+}, {
+  "id" : "benefits_list_right",
+  "name" : "benefits_list_right",
+  "label" : "Right Benefits List",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "item_text_right",
+    "name" : "item_text_right",
+    "label" : "Feature Item",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "item_text_right" : "Front End Architecture"
+  }, {
+    "item_text_right" : "Content Management Systems"
+  }, {
+    "item_text_right" : "Website Maintenance & Upgrades"
+  }, {
+    "item_text_right" : "SEO Strategy & Optimization"
+  }, {
+    "item_text_right" : "Performance & Load Speed Optimization"
+  } ]
+}, {
+  "id" : "faqs",
+  "name" : "faqs",
+  "label" : "FAQ Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "question",
+    "name" : "question",
+    "label" : "Question",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null
+  }, {
+    "id" : "answer",
+    "name" : "answer",
+    "label" : "Answer",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "question" : "What Services Does Your Agency Offer?",
+    "answer" : "<p>Identify the key barriers that prevent your business from reaching its full potential. Addressing these issues can transform your path to success.</p>"
+  }, {
+    "question" : "How Long Does It Take To See Results?",
+    "answer" : "<p>Timelines vary based on requirements, but standard design & build projects take 2-6 weeks.</p>"
+  }, {
+    "question" : "Do You Work With Businesses Of All Sizes?",
+    "answer" : "<p>Yes, we work with ambitious startups, scaling growth companies, and global enterprise brands.</p>"
+  } ]
+} ]

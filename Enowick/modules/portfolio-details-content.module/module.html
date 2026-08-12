@@ -1,0 +1,149 @@
+<!-- Portfolio Details Area Start -->
+<section class="ew-portfolio-details-area pt-130 pb-130">
+    <div class="container container-1617">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ew-portfolio-details-thumb">
+                    {% set default_main_img = get_asset_url('../../images/portfolio-details/portfolio-d-1.jpg') %}
+                    {% set main_img_src = module.featured_image.src if module.featured_image.src else default_main_img %}
+                    {% set main_img_alt = module.featured_image.alt if module.featured_image.alt else 'portfolio details' %}
+                    <img src="{{ main_img_src }}" alt="{{ main_img_alt }}">
+                </div>
+            </div>
+            <div class="col-lg-8 p-0">
+                <div class="ew-portfolio-details-main">
+                    <div class="ew-portfolio-details-text">
+                        {% if module.project_overview %}
+                            {{ module.project_overview }}
+                        {% endif %}
+                    </div>
+                    <div class="ew-portfolio-details-img">
+                        {% set default_gal_1 = get_asset_url('../../images/portfolio-details/portfolio-d-2.jpg') %}
+                        {% set default_gal_2 = get_asset_url('../../images/portfolio-details/portfolio-d-3.jpg') %}
+                        {% set default_gal_3 = get_asset_url('../../images/portfolio-details/portfolio-d-4.jpg') %}
+                        
+                        {% set gal_1_src = module.gallery_image_1.src if module.gallery_image_1.src else default_gal_1 %}
+                        {% set gal_2_src = module.gallery_image_2.src if module.gallery_image_2.src else default_gal_2 %}
+                        {% set gal_3_src = module.gallery_image_3.src if module.gallery_image_3.src else default_gal_3 %}
+                        
+                        <ul>
+                            <li><img src="{{ gal_1_src }}" alt="{{ module.gallery_image_1.alt if module.gallery_image_1.alt else 'project image 1' }}"></li>
+                            <li class="ew-portfolio-details-mt"><img src="{{ gal_2_src }}" alt="{{ module.gallery_image_2.alt if module.gallery_image_2.alt else 'project image 2' }}"></li>
+                            <li class="ew-portfolio-details-mt2"><img src="{{ gal_3_src }}" alt="{{ module.gallery_image_3.alt if module.gallery_image_3.alt else 'project image 3' }}"></li>
+                        </ul>
+                    </div>
+                    {% if module.challenge_solution_content or module.challenge_solution_heading %}
+                        <div class="ew-portfolio-details-text2">
+                            {% if module.challenge_solution_heading %}
+                                <h2>{{ module.challenge_solution_heading }}</h2>
+                            {% endif %}
+                            {% if module.challenge_solution_content %}
+                                {{ module.challenge_solution_content }}
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                    {% if module.final_result_content or module.final_result_heading %}
+                        <div class="ew-portfolio-details-text2 portfolio-details-text">
+                            {% if module.final_result_heading %}
+                                <h2>{{ module.final_result_heading }}</h2>
+                            {% endif %}
+                            {% if module.final_result_content %}
+                                {{ module.final_result_content }}
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                    <div class="ew-portfolio-details-main2">
+                        {% if module.prev_work_text %}
+                            {% set prev_href = module.prev_work_link.url.href if module.prev_work_link.url.href else '/portfolio' %}
+                            <div class="ew-portfolio-details-prev">
+                                <a href="{{ prev_href }}"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 7H1M1 7L7 1M1 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> {{ module.prev_work_text }}</a>
+                            </div>
+                        {% endif %}
+                        {% if module.next_work_text %}
+                            {% set next_href = module.next_work_link.url.href if module.next_work_link.url.href else '/portfolio' %}
+                            <div class="ew-portfolio-details-next">
+                                <a href="{{ next_href }}">{{ module.next_work_text }} <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="ew-portfolio-details-box">
+                    {% if module.info_box_title %}
+                        <div class="ew-portfolio-details-title">
+                            <h3>{{ module.info_box_title }}</h3>
+                        </div>
+                    {% endif %}
+                    {% if module.project_info_list and module.project_info_list|length > 0 %}
+                        <div class="ew-portfolio-details-right">
+                            <div class="ew-portfolio-details-list">
+                                <ul>
+                                    {% for item in module.project_info_list %}
+                                        <li><a href="{{ item.link_url.url.href if item.link_url.url.href else '#' }}">{{ item.label_text }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <div class="ew-portfolio-details-text3">
+                                {% for item in module.project_info_list %}
+                                    <span>{{ item.value_text }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+                
+                <div class="ew-portfolio-details-box2 mt-30">
+                    <div class="ew-portfolio-details-title2">
+                        {% if module.need_help_title %}
+                            <h3>{{ module.need_help_title }}</h3>
+                        {% endif %}
+                        {% if module.need_help_subtitle %}
+                            <p>{{ module.need_help_subtitle }}</p>
+                        {% endif %}
+                    </div>
+                    {% set icon_address = get_asset_url('../../images/portfolio-details/portfolio-d-9.svg') %}
+                    {% set icon_phone = get_asset_url('../../images/portfolio-details/portfolio-d-10.svg') %}
+                    {% set icon_email = get_asset_url('../../images/portfolio-details/portfolio-d-11.svg') %}
+                    
+                    {% if module.address_text %}
+                        <div class="ew-portfolio-details-right2">
+                            <div class="ew-portfolio-details-icon2">
+                                <a href="#"><img src="{{ icon_address }}" alt="location"></a>
+                            </div>
+                            <div class="ew-portfolio-details-text4">
+                                {% if module.address_heading %}<h4>{{ module.address_heading }}</h4>{% endif %}
+                                <p>{{ module.address_text }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                    
+                    {% if module.phone_text %}
+                        <div class="ew-portfolio-details-right2">
+                            <div class="ew-portfolio-details-icon2">
+                                <a href="#"><img src="{{ icon_phone }}" alt="phone"></a>
+                            </div>
+                            <div class="ew-portfolio-details-text4">
+                                {% if module.phone_heading %}<h4>{{ module.phone_heading }}</h4>{% endif %}
+                                <p>{{ module.phone_text }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                    
+                    {% if module.email_text %}
+                        <div class="ew-portfolio-details-right2">
+                            <div class="ew-portfolio-details-icon2">
+                                <a href="#"><img src="{{ icon_email }}" alt="email"></a>
+                            </div>
+                            <div class="ew-portfolio-details-text4">
+                                {% if module.email_heading %}<h4>{{ module.email_heading }}</h4>{% endif %}
+                                <p>{{ module.email_text }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio Details Area End -->

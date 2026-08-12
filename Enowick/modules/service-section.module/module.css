@@ -1,0 +1,26 @@
+/* Service Section module CSS */
+
+/* Responsive order fix for small screens: Title 1st, Description 2nd */
+@media (max-width: 991px) {
+  .ew-service-2-box {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .ew-service-2-text {
+    order: 1 !important;
+    width: 100% !important;
+  }
+
+  .ew-service-2-p {
+    order: 2 !important;
+    width: 100% !important;
+    margin-top: 12px !important;
+  }
+
+  .service-2-left,
+  .service-2-right {
+    float: none !important;
+    text-align: left !important;
+  }
+}

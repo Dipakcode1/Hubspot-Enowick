@@ -1,0 +1,144 @@
+﻿[ {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading Title",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Ready to Build Something Great? Let's Talk."
+}, {
+  "id" : "description",
+  "name" : "description",
+  "label" : "Description Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Whether you're launching a new website, scaling your digital presence, or exploring AI solutions, Enowick is your trusted technology partner across India."
+}, {
+  "id" : "address_title",
+  "name" : "address_title",
+  "label" : "Address Box Title",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Our Location"
+}, {
+  "id" : "address_text",
+  "name" : "address_text",
+  "label" : "Address Text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Ghaziabad, <br>Uttar Pradesh, India</p>"
+}, {
+  "id" : "address_icon",
+  "name" : "address_icon",
+  "label" : "Address Icon",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : null,
+    "size_type" : null,
+    "width" : null,
+    "height" : null,
+    "max_width" : null,
+    "max_height" : null,
+    "loading" : "disabled"
+  }
+}, {
+  "id" : "contact_info_title",
+  "name" : "contact_info_title",
+  "label" : "Contact Info Title",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Email & Phone"
+}, {
+  "id" : "contact_info_text",
+  "name" : "contact_info_text",
+  "label" : "Contact Info Text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>hello@enowick.com <br> +91 88267 54759</p>"
+}, {
+  "id" : "contact_info_icon",
+  "name" : "contact_info_icon",
+  "label" : "Contact Info Icon",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : null,
+    "size_type" : null,
+    "width" : null,
+    "height" : null,
+    "max_width" : null,
+    "max_height" : null,
+    "loading" : "disabled"
+  }
+}, {
+  "id" : "form_title",
+  "name" : "form_title",
+  "label" : "Form Title",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Start Your Project"
+}, {
+  "id" : "form",
+  "name" : "form",
+  "label" : "HubSpot Form",
+  "required" : false,
+  "locked" : false,
+  "embed_versions" : [ "v2", "v4" ],
+  "type" : "form",
+  "display_width" : null,
+  "default" : {
+    "response_type" : "inline",
+    "message" : "Thank you! Our team at Enowick will be in touch shortly."
+  }
+}, {
+  "id" : "show_map",
+  "name" : "show_map",
+  "label" : "Show Google Map",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : true
+}, {
+  "id" : "map_embed_url",
+  "name" : "map_embed_url",
+  "label" : "Google Maps Embed iFrame URL",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112088.36879090434!2d77.3499059!3d28.6691767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1c898b98251%3A0x65f98ce4e50cc86c!2sGhaziabad%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1723444000000!5m2!1sen!2sin"
+} ]

@@ -1,0 +1,105 @@
+<section class="ew-service-details-area pt-130 pb-130">
+    <div class="container container-1617">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ew-service-details-box">
+                    {% set main_img = module.main_image.src if (module.main_image and module.main_image.src) else get_asset_url('../../images/service-details/service-d-1.jpg') %}
+                    <div class="ew-service-details-thumb">
+                        <img src="{{ main_img }}" alt="{{ module.heading or 'service details' }}">
+                    </div>
+                    <div class="ew-service-details-text">
+                        {% if module.subtitle %}
+                            <span>{{ module.subtitle }}</span>
+                        {% endif %}
+                        {% if module.heading %}
+                            <h1>{{ module.heading }}</h1>
+                        {% endif %}
+                        {% if module.description_1 %}
+                            {{ module.description_1 }}
+                        {% endif %}
+                        {% if module.description_2 %}
+                            <div class="ew-mt">
+                                {{ module.description_2 }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    {% set gallery_1 = module.gallery_image_1.src if (module.gallery_image_1 and module.gallery_image_1.src) else get_asset_url('../../images/service-details/service-d-2.jpg') %}
+                    {% set gallery_2 = module.gallery_image_2.src if (module.gallery_image_2 and module.gallery_image_2.src) else get_asset_url('../../images/service-details/service-d-3.jpg') %}
+                    <div class="ew-service-details-thumb-main">
+                        <div class="ew-service-details-thumb2">
+                            <img src="{{ gallery_1 }}" alt="service detail image 2">
+                        </div>
+                        <div class="ew-service-details-thumb3">
+                            <img src="{{ gallery_2 }}" alt="service detail image 3">
+                        </div>
+                    </div>
+
+                    {% if module.description_3 %}
+                        <div class="ew-service-details-p">
+                            {{ module.description_3 }}
+                        </div>
+                    {% endif %}
+
+                    <div class="ew-service-details-main">
+                        <div class="ew-service-details-right w-100">
+                            <div class="ew-service-details-text2">
+                                {% if module.benefits_heading %}
+                                    <h2>{{ module.benefits_heading }}</h2>
+                                {% endif %}
+                                {% if module.benefits_description %}
+                                    <p>{{ module.benefits_description }}</p>
+                                {% endif %}
+                            </div>
+                            <div class="ew-service-details-list-main">
+                                {% if module.benefits_list_left and module.benefits_list_left|length > 0 %}
+                                    <div class="ew-service-details-list">
+                                        <ul>
+                                            {% for item in module.benefits_list_left %}
+                                                <li><img src="{{ get_asset_url('../../images/service-details/icon.svg') }}" alt="check">{{ item.item_text_left }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                {% endif %}
+                                {% if module.benefits_list_right and module.benefits_list_right|length > 0 %}
+                                    <div class="ew-service-details-list2">
+                                        <ul>
+                                            {% for item in module.benefits_list_right %}
+                                                <li><img src="{{ get_asset_url('../../images/service-details/icon.svg') }}" alt="check">{{ item.item_text_right }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+                    {% if module.faqs and module.faqs|length > 0 %}
+                        <div class="ew-faq-box service-details-box mt-50 w-100">
+                            <div class="ew-faq-accordion-wrap">
+                                <div class="accordion" id="accordionExampleService">
+                                    {% for item in module.faqs %}
+                                        <div class="accordion-items">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-buttons {% if not loop.first %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapseService{{ loop.index }}" aria-expanded="{% if loop.first %}true{% else %}false{% endif %}" aria-controls="collapseService{{ loop.index }}">
+                                                    {{ item.question }}
+                                                    <span class="accordion-icon"></span>
+                                                </button>
+                                            </h2>
+                                            <div id="collapseService{{ loop.index }}" class="accordion-collapse collapse {% if loop.first %}show{% endif %}" data-bs-parent="#accordionExampleService">
+                                                <div class="accordion-body">
+                                                    {{ item.answer }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

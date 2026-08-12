@@ -1,0 +1,89 @@
+<!--
+  templateType: blog_post
+  isAvailableForNewContent: true
+  label: Blog Post
+  screenshotPath: ../images/template-previews/blog-post.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+<main>
+
+    {# Breadcrumb Banner Module #}
+    {% module "blog_post_breadcrumb" path="../modules/breadcrumb.module" label="Breadcrumb Banner", title="{{ content.name }}", current_page_title="{{ content.name }}" %}
+
+    <!-- Blog Details Area Start -->
+    <section class="ew-blog-details-area pt-127 pb-127">
+        <div class="container container-1617">
+            <div class="row">
+                <div class="col-lg-8">
+                    {% if content.featured_image %}
+                        <div class="ew-blog-details-thumb mb-30">
+                            <img src="{{ content.featured_image }}" alt="{{ content.name }}">
+                        </div>
+                    {% endif %}
+                    <div class="ew-blog-details-text mb-30">
+                        {% if content.topic_list %}
+                            <span>{{ content.topic_list[0].name }}</span>
+                        {% endif %}
+                        <span>{{ content.publish_date|datetimeformat('%B %e, %Y') }}</span>
+                        {% if content.blog_post_author %}
+                            <span>by {{ content.blog_post_author.display_name }}</span>
+                        {% endif %}
+                        <h3>{{ content.name }}</h3>
+                    </div>
+
+                    <div class="ew-blog-details-text2 mb-40">
+                        {{ content.post_body }}
+                    </div>
+
+                    {% if content.tag_list %}
+                        <div class="ew-blog-details-list-main mb-40">
+                            <div class="ew-blog-details-list">
+                                {% for tag in content.tag_list %}
+                                    <span>{{ tag.name }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    {% if group.allow_comments %}
+                        <div class="ew-blog-details-box mt-50">
+                            {% module "blog_comments" path="@hubspot/blog_comments", label="Blog comments" %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="ew-blolg-standard-main">
+                        <div class="ew-blog-sidebar-search mb-40">
+                            <div class="ew-blog-sidebar-searchtwo">
+                                <form action="/hs-search-results" method="get">
+                                    <input type="text" name="q" placeholder="Search here">
+                                    <div class="ew-blog-sidebar-icontwo">
+                                        <button type="submit" style="background:none; border:none;">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                                                <path d="M20.9984 20.9984L16.6484 16.6484" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="ew-blog-sidebar-text">
+                            <h1>Recent Posts</h1>
+                            {% related_blog_posts limit=4 %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Area End -->
+
+</main>
+
+{% endblock body %}

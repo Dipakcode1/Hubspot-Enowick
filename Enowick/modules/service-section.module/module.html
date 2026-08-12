@@ -1,0 +1,55 @@
+<section class="ew-service-2-area pb-70 pt-124">
+    <div class="container container-1617">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ew-service-2-main pb-20">
+                    <div class="ew-section-title">
+                        {% if module.subtitle %}
+                            <span>{{ module.subtitle }}</span>
+                        {% endif %}
+                        {% if module.heading %}
+                            <h2 class="ew-text-revel-anim">{{ module.heading }}</h2>
+                        {% endif %}
+                    </div>
+                    {% if module.button_text %}
+                        {% set href = module.button_url.url.href if module.button_url.url.href else '/service' %}
+                        {% set target = '_blank' if module.button_url.open_in_new_tab else '_self' %}
+                        <div class="ew-service-2-btn">
+                            <a class="ew-btn-one black-bg-btn border-btn" href="{{ href }}" target="{{ target }}">
+                                <span class="btn-text"> <span>{{ module.button_text }}</span> </span>
+                                <span class="btn-icon btn-icon2"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+
+                {% if module.services and module.services|length > 0 %}
+                    {% for item in module.services %}
+                        {% set is_even = (loop.index % 2 == 0) %}
+                        {% set href = item.link_url.url.href if item.link_url.url.href else '/service' %}
+                        
+                        <div class="ew-service-2-box">
+                            {% if is_even %}
+                                <div class="ew-service-2-p service-2-left">
+                                    <p>{{ item.description }}</p>
+                                </div>
+                                <div class="ew-service-2-text service-2-right">
+                                    <span>{{ item.number }}</span>
+                                    <h3><a href="{{ href }}">{{ item.title }}</a></h3>
+                                </div>
+                            {% else %}
+                                <div class="ew-service-2-text">
+                                    <span>{{ item.number }}</span>
+                                    <h3><a href="{{ href }}">{{ item.title }}</a></h3>
+                                </div>
+                                <div class="ew-service-2-p">
+                                    <p>{{ item.description }}</p>
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

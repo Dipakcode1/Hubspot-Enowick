@@ -1,0 +1,214 @@
+﻿[ {
+  "id" : "menu",
+  "name" : "menu",
+  "label" : "Navigation Menu",
+  "required" : false,
+  "locked" : false,
+  "type" : "menu",
+  "display_width" : null,
+  "default" : "default"
+}, {
+  "id" : "phone_number",
+  "name" : "phone_number",
+  "label" : "Phone Number",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "+91 88267 54759"
+}, {
+  "id" : "email_address",
+  "name" : "email_address",
+  "label" : "Email Address",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "hello@enowick.com"
+}, {
+  "id" : "newsletter_heading",
+  "name" : "newsletter_heading",
+  "label" : "Newsletter Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Stay Ahead <br class=\"d-none d-xxl-block\"> with Enowick"
+}, {
+  "id" : "newsletter_text",
+  "name" : "newsletter_text",
+  "label" : "Newsletter Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Get insights on web development, digital marketing, <br class=\"d-none d-xxl-block\"> and AI trends — straight to your inbox."
+}, {
+  "id" : "social_links",
+  "name" : "social_links",
+  "label" : "Social Media Links",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : 10,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "social_platform_name",
+    "name" : "platform_name",
+    "label" : "Platform Name",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "LinkedIn"
+  }, {
+    "id" : "social_link_url",
+    "name" : "social_link_url",
+    "label" : "Link URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : "#"
+      }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "platform_name" : "LinkedIn",
+    "social_link_url" : {
+      "url" : {
+        "href" : "#"
+      }
+    }
+  }, {
+    "platform_name" : "Instagram",
+    "social_link_url" : {
+      "url" : {
+        "href" : "#"
+      }
+    }
+  }, {
+    "platform_name" : "Twitter / X",
+    "social_link_url" : {
+      "url" : {
+        "href" : "#"
+      }
+    }
+  }, {
+    "platform_name" : "Facebook",
+    "social_link_url" : {
+      "url" : {
+        "href" : "#"
+      }
+    }
+  }, {
+    "platform_name" : "YouTube",
+    "social_link_url" : {
+      "url" : {
+        "href" : "#"
+      }
+    }
+  } ]
+}, {
+  "id" : "copyright_text",
+  "name" : "copyright_text",
+  "label" : "Copyright Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "All rights reserved — {{ year }} © Enowick"
+}, {
+  "id" : "legal_menu",
+  "name" : "legal_menu",
+  "label" : "Legal / Footer Bottom Menu",
+  "required" : false,
+  "locked" : false,
+  "type" : "menu",
+  "display_width" : null
+}, {
+  "id" : "legal_links",
+  "name" : "legal_links",
+  "label" : "Legal Links (Fallback if no Legal Menu selected)",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : 10,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "legal_link_text",
+    "name" : "link_text",
+    "label" : "Link Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Privacy Policy"
+  }, {
+    "id" : "legal_link_url",
+    "name" : "legal_link_url",
+    "label" : "Link URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : "#"
+      }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "link_text" : "Privacy Policy",
+    "legal_link_url" : {
+      "url" : {
+        "href" : "#"
+      }
+    }
+  }, {
+    "link_text" : "Cookie Policy",
+    "legal_link_url" : {
+      "url" : {
+        "href" : "#"
+      }
+    }
+  }, {
+    "link_text" : "Terms & Conditions",
+    "legal_link_url" : {
+      "url" : {
+        "href" : "#"
+      }
+    }
+  } ]
+} ]

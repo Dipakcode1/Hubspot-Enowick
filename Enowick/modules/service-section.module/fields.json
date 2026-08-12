@@ -1,0 +1,169 @@
+[ {
+  "id" : "subtitle",
+  "name" : "subtitle",
+  "label" : "Section Subtitle",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "What We Do"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Section Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "We Build Your Digital <br class=\"d-none d-xxl-block\"> Business."
+}, {
+  "id" : "button_text",
+  "name" : "button_text",
+  "label" : "Button Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "View All Services"
+}, {
+  "id" : "button_url",
+  "name" : "button_url",
+  "label" : "Button Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : "/service"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "services",
+  "name" : "services",
+  "label" : "Service Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 20,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "number",
+    "name" : "number",
+    "label" : "Service Number / Code",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "001"
+  }, {
+    "id" : "title",
+    "name" : "title",
+    "label" : "Service Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Web Design & Development"
+  }, {
+    "id" : "description",
+    "name" : "description",
+    "label" : "Service Description",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "We design and develop high-performance, visually stunning websites that captivate your audience and drive measurable business growth."
+  }, {
+    "id" : "link_url",
+    "name" : "link_url",
+    "label" : "Service Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : "/service"
+      }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "number" : "001",
+    "title" : "Web Design & Development",
+    "description" : "We design and develop high-performance, visually stunning websites that captivate your audience and drive measurable business growth — from landing pages to full-scale web platforms.",
+    "link_url" : {
+      "url" : {
+        "href" : "/service"
+      }
+    }
+  }, {
+    "number" : "002",
+    "title" : "UI/UX Design",
+    "description" : "Our user-centric design approach creates intuitive, beautiful interfaces that delight users and convert visitors into loyal customers — across web and mobile platforms.",
+    "link_url" : {
+      "url" : {
+        "href" : "/service"
+      }
+    }
+  }, {
+    "number" : "003",
+    "title" : "Digital Marketing & SEO",
+    "description" : "From local SEO in Ghaziabad to pan-India digital campaigns, our data-driven marketing strategies expand your reach, engage your audience, and maximise your ROI.",
+    "link_url" : {
+      "url" : {
+        "href" : "/service"
+      }
+    }
+  }, {
+    "number" : "004",
+    "title" : "Software Development",
+    "description" : "We build robust, scalable custom software — from SaaS platforms and enterprise applications to mobile apps — tailored precisely to your business workflows and goals.",
+    "link_url" : {
+      "url" : {
+        "href" : "/service"
+      }
+    }
+  }, {
+    "number" : "005",
+    "title" : "AI-Powered Solutions",
+    "description" : "Leverage the power of artificial intelligence to automate workflows, personalise customer experiences, and unlock actionable insights that give your business a competitive edge.",
+    "link_url" : {
+      "url" : {
+        "href" : "/service"
+      }
+    }
+  }, {
+    "number" : "006",
+    "title" : "Brand Strategy & Identity",
+    "description" : "We craft cohesive, memorable brand identities — from logos and visual systems to messaging frameworks — that build trust and resonate with your target audience across India.",
+    "link_url" : {
+      "url" : {
+        "href" : "/service"
+      }
+    }
+  } ]
+} ]

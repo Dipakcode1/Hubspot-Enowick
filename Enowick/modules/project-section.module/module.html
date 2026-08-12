@@ -1,0 +1,63 @@
+<section class="ew-project-2-area pt-130 pb-130">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ew-project-2-title-box pb-40 text-left p-relative">
+                    {% if module.heading %}
+                        <h1>{{ module.heading }}</h1>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container container-1617">
+        <div class="row">
+            {% if module.projects and module.projects|length > 0 %}
+                {% for item in module.projects %}
+                    {% set is_even = (loop.index % 2 == 0) %}
+                    {% set default_img_num = ((loop.index - 1) % 4) + 4 %}
+                    {% set default_img = get_asset_url('../../images/project/img' ~ default_img_num ~ '.jpg') %}
+                    {% set img_src = item.image.src if item.image.src else default_img %}
+                    {% set img_alt = item.image.alt if item.image.alt else item.title %}
+                    {% set href = item.link_url.url.href if item.link_url.url.href else '/portfolio' %}
+                    {% set target = '_blank' if item.link_url.open_in_new_tab else '_self' %}
+                    {% set rel = 'noopener' if item.link_url.open_in_new_tab else '' %}
+                    
+                    <div class="col-lg-6">
+                        <div class="ew-project-2-box{% if is_even %} project-2-top{% endif %}">
+                            <div class="ew-project-2-thumb ew-portfolio-thumb-height3 si_fade_anim fix not-hide-cursor" data-cursor="View<br>Demo">
+                                <a class="cursor-hide img-cover" href="{{ href }}" target="{{ target }}"{% if rel %} rel="{{ rel }}"{% endif %}><img data-speed=".8" src="{{ img_src }}" alt="{{ img_alt }}"></a>
+                            </div>
+                            <div class="ew-project-2-text">
+                                {% if item.title %}
+                                    <h2><a class="underline-black" href="{{ href }}" target="{{ target }}"{% if rel %} rel="{{ rel }}"{% endif %}>{{ item.title }}</a></h2>
+                                {% endif %}
+                                {% if item.tags and item.tags|length > 0 %}
+                                    {% for tag_item in item.tags %}
+                                        {% if tag_item.tag_text %}
+                                            <span>{{ tag_item.tag_text }}</span>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            {% if module.button_text %}
+                {% set btn_href = module.button_url.url.href if module.button_url.url.href else '/portfolio' %}
+                {% set btn_target = '_blank' if module.button_url.open_in_new_tab else '_self' %}
+                {% set btn_rel = 'noopener' if module.button_url.open_in_new_tab else '' %}
+                <div class="col-lg-12">
+                    <div class="ew-project-2-btn">
+                        <a class="ew-btn-one" href="{{ btn_href }}" target="{{ btn_target }}"{% if btn_rel %} rel="{{ btn_rel }}"{% endif %}>
+                            <span class="btn-text"> <span>{{ module.button_text }}</span> </span>
+                            <span class="btn-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

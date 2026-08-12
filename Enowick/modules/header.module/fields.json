@@ -1,0 +1,180 @@
+﻿[ {
+  "id" : "header_logo_image",
+  "name" : "logo_image",
+  "label" : "Header Logo Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : "Enowick - Digital Agency India",
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "header_logo_url",
+  "name" : "logo_url",
+  "label" : "Logo Link URL",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : "/"
+    }
+  }
+}, {
+  "id" : "header_menu",
+  "name" : "menu",
+  "label" : "Navigation Menu",
+  "required" : false,
+  "locked" : false,
+  "type" : "menu",
+  "display_width" : null,
+  "default" : "default"
+}, {
+  "id" : "show_search",
+  "name" : "show_search",
+  "label" : "Show Search Button",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : true
+}, {
+  "id" : "offcanvas_logo_dark",
+  "name" : "offcanvas_logo_dark",
+  "label" : "Offcanvas Dark Logo",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : "Enowick logo",
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "offcanvas_logo_light",
+  "name" : "offcanvas_logo_light",
+  "label" : "Offcanvas Light Logo",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : "Enowick logo",
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "offcanvas_title",
+  "name" : "offcanvas_title",
+  "label" : "Offcanvas About Title",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "About Enowick"
+}, {
+  "id" : "offcanvas_text",
+  "name" : "offcanvas_text",
+  "label" : "Offcanvas About Description",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Enowick is a full-service digital agency based in Ghaziabad, UP — delivering web development, UI/UX design, digital marketing, and AI solutions to businesses across India."
+}, {
+  "id" : "offcanvas_phone",
+  "name" : "offcanvas_phone",
+  "label" : "Offcanvas Phone Number",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "+91 88267 54759"
+}, {
+  "id" : "offcanvas_email",
+  "name" : "offcanvas_email",
+  "label" : "Offcanvas Email Address",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "hello@enowick.com"
+}, {
+  "id" : "gallery_images",
+  "name" : "gallery_images",
+  "label" : "Offcanvas Gallery Images",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : 8,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "offcanvas_gallery_img",
+    "name" : "gallery_img",
+    "label" : "Gallery Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "src" : "",
+      "alt" : "Enowick portfolio gallery",
+      "loading" : "lazy"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "gallery_img" : {
+      "src" : "",
+      "alt" : "Enowick project 1"
+    }
+  }, {
+    "gallery_img" : {
+      "src" : "",
+      "alt" : "Enowick project 2"
+    }
+  }, {
+    "gallery_img" : {
+      "src" : "",
+      "alt" : "Enowick project 3"
+    }
+  }, {
+    "gallery_img" : {
+      "src" : "",
+      "alt" : "Enowick project 4"
+    }
+  } ]
+} ]

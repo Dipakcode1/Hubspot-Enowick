@@ -1,0 +1,21 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Contact
+  screenshotPath: ../images/template-previews/contact.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+<main>
+
+    {# Breadcrumb Banner Module #}
+    {% module "contact_breadcrumb" path="../modules/breadcrumb.module" label="Breadcrumb Banner", title="Contact Us", current_page_title="Contact Us" %}
+
+    {# Contact Section Module #}
+    {% module "contact_section" path="../modules/contact-section.module" label="Contact Section" %}
+
+</main>
+
+{% endblock body %}

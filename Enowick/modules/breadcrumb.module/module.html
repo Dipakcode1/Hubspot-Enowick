@@ -1,0 +1,23 @@
+{% set bg_url = module.background_image.src if (module.background_image and module.background_image.src) else get_asset_url('../../images/breadcumb/bg.jpg') %}
+<section class="ew-breadcumb-area pt-160 pb-100" data-background="{{ bg_url }}" style="background-image: url('{{ bg_url }}');">
+    <div class="container container-1617">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ew-breadcumb-box">
+                    <div class="ew-breadcumb-text">
+                        {% if module.title %}
+                            <h2>{{ module.title }}</h2>
+                        {% endif %}
+                        <span> 
+                            {{ module.parent_page_title or 'Home' }} 
+                            <strong><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L1 11M6 1L11 6L6 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> {{ module.current_page_title or 'Service Details' }}</strong> 
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ew-breadcumb-shape">
+        <img src="{{ get_asset_url('../../images/breadcumb/shape.png') }}" alt="shape">
+    </div>
+</section>

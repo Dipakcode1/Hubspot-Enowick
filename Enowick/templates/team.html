@@ -1,0 +1,22 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Our Team
+  screenshotPath: ../images/template-previews/team.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+<main>
+
+    {# Breadcrumb Banner Module #}
+    {% module "team_breadcrumb" path="../modules/breadcrumb.module" label="Breadcrumb Banner", title="Our Team", current_page_title="Our Team" %}
+
+    {# Team Section Module #}
+    {% module "team_section" path="../modules/team-section.module" label="Team Section" %}
+    <!-- Team area end -->
+
+</main>
+
+{% endblock body %}

@@ -1,0 +1,107 @@
+﻿[ {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "India's Premier <br class=\"d-none d-xxl-block\"> <span>Digital Agency</span>"
+}, {
+  "id" : "subheading",
+  "name" : "subheading",
+  "label" : "Subheading / Description",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Enowick helps businesses across India build powerful digital experiences — from cutting-edge websites and AI solutions to results-driven digital marketing."
+}, {
+  "id" : "button_text",
+  "name" : "button_text",
+  "label" : "Button Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Explore Our Work"
+}, {
+  "id" : "button_url",
+  "name" : "button_url",
+  "label" : "Button Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : "/portfolio"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "badge_number",
+  "name" : "badge_number",
+  "label" : "Badge Number / Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "200+"
+}, {
+  "id" : "background_image",
+  "name" : "background_image",
+  "label" : "Background Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : "Hero Background",
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "shape_image_1",
+  "name" : "shape_image_1",
+  "label" : "Rotating Title Shape Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : "Title Shape",
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "shape_image_2",
+  "name" : "shape_image_2",
+  "label" : "Badge Shape Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : "Badge Shape",
+    "loading" : "lazy"
+  }
+} ]

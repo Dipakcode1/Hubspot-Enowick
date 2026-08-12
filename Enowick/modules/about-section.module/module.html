@@ -1,0 +1,52 @@
+{% set img_small = module.small_image.src if module.small_image.src else get_asset_url('../../images/about/about-4.png') %}
+{% set img_main = module.featured_image.src if module.featured_image.src else get_asset_url('../../images/about/about-5.jpg') %}
+
+<section class="ew-about-2-area pb-124">
+    <div class="container container-1617">
+        <div class="row">
+            <div class="col-lg-5">
+                {% if module.subtitle %}
+                    <div class="ew-section-title ew-white">
+                        <span>{{ module.subtitle }}</span>
+                    </div>
+                {% endif %}
+                <div class="ew-about-2-box">
+                    {% if module.small_description %}
+                        <div class="ew-about-2-text">
+                            <p>{{ module.small_description }}</p>
+                        </div>
+                    {% endif %}
+                    {% if module.button_text %}
+                        {% set href = module.button_url.url.href if module.button_url.url.href else '/about' %}
+                        {% set target = '_blank' if module.button_url.open_in_new_tab else '_self' %}
+                        <div class="ew-about-2-btn">
+                            <a class="ew-btn-one black-bg-btn" href="{{ href }}" target="{{ target }}">
+                                <span class="btn-text"> <span>{{ module.button_text }}</span> </span>
+                                <span class="btn-icon btn-icon2"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            </a>
+                        </div>
+                    {% endif %}
+                    <div class="ew-about-2-img">
+                        <img src="{{ img_small }}" alt="{{ module.small_image.alt if module.small_image.alt else 'about' }}">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                {% if module.main_heading %}
+                    <div class="ew-about-2-text2">
+                        <h2 class="ew-text-revel-anim">{{ module.main_heading }}</h2>
+                    </div>
+                {% endif %}
+                <div class="ew-about-2-thumb">
+                    <img src="{{ img_main }}" alt="{{ module.featured_image.alt if module.featured_image.alt else 'about' }}">
+                    {% if module.stat_number or module.stat_label %}
+                        <div class="ew-about-2-counter">
+                            {% if module.stat_number %}<h3>{{ module.stat_number }}</h3>{% endif %}
+                            {% if module.stat_label %}<span>{{ module.stat_label }}</span>{% endif %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

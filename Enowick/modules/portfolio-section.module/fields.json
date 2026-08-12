@@ -1,0 +1,209 @@
+[ {
+  "id" : "portfolio_items",
+  "name" : "portfolio_items",
+  "label" : "Portfolio Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 50,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "title",
+    "name" : "title",
+    "label" : "Project Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Brand Refresh for UrbanSpace"
+  }, {
+    "id" : "column_width",
+    "name" : "column_width",
+    "label" : "Column Width",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "col-lg-6", "Half Width (6 Cols)" ], [ "col-lg-12", "Full Width (12 Cols)" ], [ "col-lg-4", "One Third (4 Cols)" ], [ "col-lg-8", "Two Thirds (8 Cols)" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "col-lg-6"
+  }, {
+    "id" : "image",
+    "name" : "image",
+    "label" : "Project Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "src" : "",
+      "alt" : "project",
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "link_url",
+    "name" : "link_url",
+    "label" : "Project Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : "/portfolio-details"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "tags",
+    "name" : "tags",
+    "label" : "Project Tags",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 0,
+      "max" : 10,
+      "sorting_label_field" : null,
+      "default" : null
+    },
+    "children" : [ {
+      "id" : "tag_text",
+      "name" : "tag_text",
+      "label" : "Tag Text",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "Tagline Creation"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : [ {
+      "tag_text" : "Tagline Creation"
+    }, {
+      "tag_text" : "Web design"
+    }, {
+      "tag_text" : "Unique Visual Identity"
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "Brand Refresh for UrbanSpace",
+    "column_width" : "col-lg-6",
+    "image" : {
+      "src" : "",
+      "alt" : "project"
+    },
+    "link_url" : {
+      "url" : {
+        "href" : "/portfolio-details"
+      }
+    },
+    "tags" : [ {
+      "tag_text" : "Tagline Creation"
+    }, {
+      "tag_text" : "Web design"
+    }, {
+      "tag_text" : "Unique Visual Identity"
+    } ]
+  }, {
+    "title" : "New Look for Apex Fitness",
+    "column_width" : "col-lg-6",
+    "image" : {
+      "src" : "",
+      "alt" : "project"
+    },
+    "link_url" : {
+      "url" : {
+        "href" : "/portfolio-details"
+      }
+    },
+    "tags" : [ {
+      "tag_text" : "Tagline Creation"
+    }, {
+      "tag_text" : "Web design"
+    }, {
+      "tag_text" : "Unique Visual Identity"
+    } ]
+  }, {
+    "title" : "Digital Revamp for Luxe Living",
+    "column_width" : "col-lg-12",
+    "image" : {
+      "src" : "",
+      "alt" : "project"
+    },
+    "link_url" : {
+      "url" : {
+        "href" : "/portfolio-details"
+      }
+    },
+    "tags" : [ {
+      "tag_text" : "Tagline Creation"
+    }, {
+      "tag_text" : "Web design"
+    }, {
+      "tag_text" : "Unique Visual Identity"
+    } ]
+  }, {
+    "title" : "Kinetic Sandscapes",
+    "column_width" : "col-lg-6",
+    "image" : {
+      "src" : "",
+      "alt" : "project"
+    },
+    "link_url" : {
+      "url" : {
+        "href" : "/portfolio-details"
+      }
+    },
+    "tags" : [ {
+      "tag_text" : "Tagline Creation"
+    }, {
+      "tag_text" : "Web design"
+    }, {
+      "tag_text" : "Unique Visual Identity"
+    } ]
+  }, {
+    "title" : "Minimalist Architecture Concept",
+    "column_width" : "col-lg-6",
+    "image" : {
+      "src" : "",
+      "alt" : "project"
+    },
+    "link_url" : {
+      "url" : {
+        "href" : "/portfolio-details"
+      }
+    },
+    "tags" : [ {
+      "tag_text" : "Tagline Creation"
+    }, {
+      "tag_text" : "Web design"
+    }, {
+      "tag_text" : "Unique Visual Identity"
+    } ]
+  } ]
+} ]

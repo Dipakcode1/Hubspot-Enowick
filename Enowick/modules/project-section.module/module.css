@@ -1,0 +1,77 @@
+/* Project Section module CSS */
+
+/* Heading Responsive Scaling & Overflow Prevention */
+@media (max-width: 1400px) {
+  .ew-project-2-title-box h1 {
+    font-size: 100px !important;
+    line-height: 90px !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .ew-project-2-title-box h1 {
+    font-size: 75px !important;
+    line-height: 75px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .ew-project-2-area {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    overflow-x: hidden !important;
+  }
+
+  .ew-project-2-title-box {
+    padding-bottom: 20px !important;
+    text-align: center !important;
+  }
+
+  .ew-project-2-title-box h1 {
+    font-size: 50px !important;
+    line-height: 55px !important;
+    word-break: break-word !important;
+  }
+
+  .ew-project-2-box {
+    margin-bottom: 30px !important;
+  }
+
+  /* Reset 400px gap on stacked mobile layout */
+  .project-2-top {
+    margin-top: 0 !important;
+  }
+
+  .ew-project-2-thumb {
+    height: 300px !important;
+  }
+
+  .ew-project-2-text h2 {
+    font-size: 24px !important;
+    line-height: 32px !important;
+  }
+
+  .ew-project-2-btn {
+    margin-top: 30px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .ew-project-2-title-box h1 {
+    font-size: 34px !important;
+    line-height: 40px !important;
+  }
+
+  .ew-project-2-box {
+    padding: 16px 16px 24px 16px !important;
+  }
+
+  .ew-project-2-thumb {
+    height: 220px !important;
+  }
+
+  .ew-project-2-text h2 {
+    font-size: 20px !important;
+    line-height: 28px !important;
+  }
+}

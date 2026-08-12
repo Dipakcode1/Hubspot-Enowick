@@ -1,0 +1,131 @@
+﻿{% set main_nav = menu(module.menu, "site_root").children if module.menu else [] %}
+{% set support_nav = menu(module.support_menu, "site_root").children if module.support_menu else [] %}
+{% set bg_url = module.background_image.src if (module.background_image and module.background_image.src) else get_asset_url('../../images/footer/bg.jpg') %}
+{% set logo_url = module.logo.src if (module.logo and module.logo.src) else get_asset_url('../../images/logo/mindlayer-logo.png') %}
+
+<section class="ew-footer-area ew-background pt-127" data-background="{{ bg_url }}" style="background-image: url('{{ bg_url }}');">
+    <div class="container container-1588">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="ew-footer-text">
+                    {% if module.heading %}
+                        <h1>{{ module.heading }}</h1>
+                    {% else %}
+                        <h1>Let's Work <span>Together</span></h1>
+                    {% endif %}
+                </div>                                                               
+            </div>
+            <div class="col-lg-5">
+                <div class="ew-footer-p">
+                    <p>{% if module.description %}{{ module.description }}{% else %}Enowick is your full-service digital partner — delivering web development, UI/UX design, digital marketing, and AI solutions to businesses across India.{% endif %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row border-line">
+            <div class="col-lg-5 p-0">
+                <div class="ew-footer-logo">
+                    <a href="/"><img src="{{ logo_url }}" alt="logo"></a>
+                    <p>{% if module.logo_tagline %}{{ module.logo_tagline }}{% else %}Building digital experiences that inspire, convert, and grow.{% endif %}</p>
+                    {% if module.email_address %}
+                        <a href="mailto:{{ module.email_address }}">{{ module.email_address }}</a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="ew-footer-list footer-left">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        {% if main_nav and main_nav|length > 0 %}
+                            {% for link in main_nav %}
+                                <li><a href="{{ link.url if link.url else '#' }}">{{ link.label }}</a></li>
+                            {% endfor %}
+                        {% else %}
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/service">Service</a></li>
+                            <li><a href="/portfolio">Portfolio</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="ew-footer-list footer-right">
+                    <h2>Support</h2>
+                    <ul>
+                        {% if support_nav and support_nav|length > 0 %}
+                            {% for link in support_nav %}
+                                <li><a href="{{ link.url if link.url else '#' }}">{{ link.label }}</a></li>
+                            {% endfor %}
+                        {% else %}
+                            <li><a href="#">Style guide</a></li>
+                            <li><a href="#">License</a></li>
+                            <li><a href="#">Changelog</a></li>
+                            <li><a href="#">404 Error</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="ew-footer-list footer-list">
+                    <h2>Contact Us</h2>
+                    <ul>
+                        <li class="footer-color"><a href="#">Call Us Directly</a></li>
+                        <li><a href="tel:{{ (module.phone_number or '+91 88267 54759')|replace(' ', '') }}">{{ module.phone_number or '+91 88267 54759' }}</a></li>
+                        <li class="footer-color"><a href="#">Location</a></li>
+                        <li><a href="#">{{ module.location_address or 'Ghaziabad, Uttar Pradesh, India' }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ew-footer-shape">
+        <img class="rotate2" src="{{ get_asset_url('../../images/footer/shape.png') }}" alt="shape">
+    </div>
+    <div class="ew-copyright-area p-0">
+        <div class="container container-1588">
+            <div class="row align-items-center copyright-line">
+                <div class="col-lg-6 p-0">
+                    <div class="ew-copyright-title">
+                        <p>{% if module.copyright_text %}{{ module.copyright_text }}{% else %}All rights reserved — {{ year }} © <a href="/">Enowick</a>{% endif %}</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="ew-copyright-icon">
+                        <ul>
+                            {% if module.social_links and module.social_links|length > 0 %}
+                                {% for item in module.social_links %}
+                                    {% set href = item.social_link_url.url.href if (item.social_link_url.url and item.social_link_url.url.href) else (item.social_link_url.href if item.social_link_url.href else '#') %}
+                                    {% set target = '_blank' if item.social_link_url.open_in_new_tab else '_self' %}
+                                    {% set platform = item.platform_name|lower if item.platform_name else '' %}
+                                    <li>
+                                        <a href="{{ href }}" target="{{ target }}">
+                                            {% if platform == 'twitter' or platform == 'x' %}
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                            {% elif platform == 'instagram' %}
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                                            {% elif platform == 'linkedin' %}
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.74a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+                                            {% elif platform == 'pinterest' %}
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.367 18.618 0 12.017 0z"/></svg>
+                                            {% elif platform == 'behance' %}
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-4.726 3-3.284 0-5.716-2.13-5.716-5.5 0-3.328 2.316-5.5 5.5-5.5 3.57 0 5.21 2.57 4.801 6.012h-7.795c.081 1.637 1.254 2.688 2.91 2.688 1.341 0 2.213-.67 2.531-1.7h2.495zm-4.908-5.789c-1.323 0-2.277.871-2.464 2.189h4.743c-.078-1.233-.949-2.189-2.279-2.189zm-10.818 5.789h-8v-14h7.5c2.327 0 4.5 1.01 4.5 3.5 0 1.472-.8 2.628-1.97 3.13 1.542.477 2.47 1.83 2.47 3.57 0 2.685-2.01 3.8-4.5 3.8zm-4.5-8.5h3.5c1.07 0 2-.45 2-1.5s-.93-1.5-2-1.5h-3.5v3zm0 6h4c1.1 0 2.2-.47 2.2-1.75s-1.1-1.75-2.2-1.75h-4v3.5z"/></svg>
+                                            {% else %}
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                            {% endif %}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            {% else %}
+                                <li><a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+                                <li><a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li>
+                                <li><a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.74a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg></a></li>
+                                <li><a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.367 18.618 0 12.017 0z"/></svg></a></li>
+                                <li><a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-4.726 3-3.284 0-5.716-2.13-5.716-5.5 0-3.328 2.316-5.5 5.5-5.5 3.57 0 5.21 2.57 4.801 6.012h-7.795c.081 1.637 1.254 2.688 2.91 2.688 1.341 0 2.213-.67 2.531-1.7h2.495zm-4.908-5.789c-1.323 0-2.277.871-2.464 2.189h4.743c-.078-1.233-.949-2.189-2.279-2.189zm-10.818 5.789h-8v-14h7.5c2.327 0 4.5 1.01 4.5 3.5 0 1.472-.8 2.628-1.97 3.13 1.542.477 2.47 1.83 2.47 3.57 0 2.685-2.01 3.8-4.5 3.8zm-4.5-8.5h3.5c1.07 0 2-.45 2-1.5s-.93-1.5-2-1.5h-3.5v3zm0 6h4c1.1 0 2.2-.47 2.2-1.75s-1.1-1.75-2.2-1.75h-4v3.5z"/></svg></a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

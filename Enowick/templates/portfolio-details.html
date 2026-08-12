@@ -1,0 +1,21 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Portfolio Details
+  screenshotPath: ../images/template-previews/portfolio-details.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+<main>
+
+    {# Breadcrumb Banner Module #}
+    {% module "portfolio_details_breadcrumb" path="../modules/breadcrumb.module" label="Breadcrumb Banner", title="Portfolio Details", current_page_title="Portfolio Details" %}
+
+    {# Portfolio Details Content Module #}
+    {% module "portfolio_details_content" path="../modules/portfolio-details-content.module" label="Portfolio Details Content" %}
+
+</main>
+
+{% endblock body %}

@@ -1,0 +1,100 @@
+{% set icon1_url = module.address_icon.src if (module.address_icon and module.address_icon.src) else get_asset_url('../../images/contact/icon.svg') %}
+{% set icon2_url = module.contact_info_icon.src if (module.contact_info_icon and module.contact_info_icon.src) else get_asset_url('../../images/contact/icon2.svg') %}
+
+<div class="ew-contact-area pt-127 pb-124">
+    <div class="container container-1617">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="ew-section-title">
+                    {% if module.heading %}
+                        <h2>{{ module.heading }}</h2>
+                    {% endif %}
+                    {% if module.description %}
+                        <p>{{ module.description }}</p>
+                    {% endif %}
+                </div>
+                <div class="ew-contact-box">
+                    <div class="ew-contact-shape">
+                        <img src="{{ icon1_url }}" alt="location">
+                    </div>
+                    <div class="ew-contact-text">
+                        {% if module.address_title %}
+                            <h3>{{ module.address_title }}</h3>
+                        {% endif %}
+                        {% if module.address_text %}
+                            <span>{{ module.address_text }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="ew-contact-box">
+                    <div class="ew-contact-shape">
+                        <img src="{{ icon2_url }}" alt="email">
+                    </div>
+                    <div class="ew-contact-text">
+                        {% if module.contact_info_title %}
+                            <h3>{{ module.contact_info_title }}</h3>
+                        {% endif %}
+                        {% if module.contact_info_text %}
+                            <span>{{ module.contact_info_text }}</span>
+                        {% endif %}
+                    </div>
+                </div>                              
+            </div>
+            <div class="col-lg-6">
+                <div class="ew-contact-main">
+                    {% if module.form_title %}
+                        <h4>{{ module.form_title }}</h4>
+                    {% endif %}
+
+                    {% if module.form.form_id %}
+                        {% form
+                            form_to_use="{{ module.form.form_id }}",
+                            response_response_type="{{ module.form.response_type }}",
+                            response_message="{{ module.form.message }}",
+                            response_redirect_id="{{ module.form.redirect_id }}",
+                            response_redirect_url="{{ module.form.redirect_url }}"
+                        %}
+                    {% else %}
+                        <form action="#" method="post">
+                            <div class="ew-team-details-from pb-27">
+                                <input class="contact-border" type="text" name="firstname" placeholder="Your Name" required>
+                            </div>
+                            <div class="ew-team-details-from pb-27">
+                                <input class="contact-border" type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="ew-team-details-from pb-27">
+                                <select class="select-items contact-border select-pt" name="subject">
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Web Design & Development">Web Design &amp; Development</option>
+                                    <option value="UI/UX Design">UI/UX Design</option>
+                                    <option value="Digital Marketing & SEO">Digital Marketing &amp; SEO</option>
+                                    <option value="Software Development">Software Development</option>
+                                    <option value="AI-Powered Solutions">AI-Powered Solutions</option>
+                                    <option value="Brand Strategy & Identity">Brand Strategy &amp; Identity</option>
+                                </select>
+                            </div>
+                            <div class="ew-team-details-from pb-27">
+                                <textarea class="contact-border" name="message" placeholder="Write Message" required></textarea>
+                            </div>
+                            <button type="submit" class="ew-btn-one black-bg-btn border-btn mt-2"> <span class="btn-text"> <span>Send Message</span> </span> <span class="btn-icon btn-icon2"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+                        </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>               
+</div>
+
+{% if module.show_map %}
+    <div class="ew-contact-map-area pb-124">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 p-0">
+                    <div class="map-wrap">
+                        <iframe src="{{ module.map_embed_url or 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112088.36879090434!2d77.3499059!3d28.6691767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1c898b98251%3A0x65f98ce4e50cc86c!2sGhaziabad%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1723444000000!5m2!1sen!2sin' }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
