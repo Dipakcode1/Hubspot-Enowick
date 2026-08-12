@@ -181,6 +181,6 @@
     $('.interactive-gallery-list-wrap .interactive-gallery-list-item').on("mouseenter", function () {
         $('#interactive-gallery-thumb').removeClass().addClass($(this).attr('rel'));
         $(this).addClass('active').siblings().removeClass('active');
-    });55
+    });
 
 })(jQuery);

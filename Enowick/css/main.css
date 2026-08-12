@@ -1,9 +1,14 @@
 @import url("https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
-@import url("https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css");
-@import url("https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css");
-@import url("https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css");
-@import url("https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+
+/* FontAwesome Global Fallback Rules for HubSpot CMS */
+.fa-sharp, .fa-regular, .fa-light, .fa-thin, .fa-duotone, .fa-solid, .fas, .far, .fal {
+  font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Pro', 'FontAwesome', sans-serif !important;
+}
+.fa-brands, .fab {
+  font-family: 'Font Awesome 6 Brands', 'FontAwesome', sans-serif !important;
+}
 
 
 /*-----------------------------------------------------------------------------------
@@ -5790,45 +5795,56 @@ max-width: 70% !important;
     display: none !important;
   }
 }
-.ew-footer-2-box input {
+.ew-footer-2-box input,
+.ew-footer-2-box form input {
+  width: 100%;
+  height: 60px;
+  padding: 0 25px;
   border-radius: 30px;
   border: none;
   box-shadow: none;
   background: var(--ew-common-gray);
+  text-align: center;
+  font-size: 18px;
+  margin-top: 25px;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), (max-width: 991px) {
-  .ew-footer-2-box input {
-    margin-top: 25px;
-  }
-}
-.ew-footer-2-box input::placeholder {
+.ew-footer-2-box input::placeholder,
+.ew-footer-2-box form input::placeholder {
   font-size: 18px;
   color: var(--ew-common-text-body);
   background: var(--ew-common-gray);
 }
-.ew-footer-2-box input:focus {
+.ew-footer-2-box input:focus,
+.ew-footer-2-box form input:focus {
   border: none;
   box-shadow: none;
+  outline: none;
 }
-.ew-footer-2-box a {
+.ew-footer-2-box a,
+.ew-footer-2-box form a {
   display: block;
 }
-.ew-footer-2-box a i {
-  font-size: 35px;
+.ew-footer-2-box a i,
+.ew-footer-2-box form a i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
   background: var(--ew-common-black);
   width: 80px;
   height: 80px;
-  line-height: 80px;
   color: var(--ew-common-white);
   border-radius: 50%;
   transform: rotate(-50deg);
-  margin-top: 41px;
+  margin: 35px auto 0 auto;
   transition: 0.6s;
 }
-.ew-footer-2-box:hover a i {
+.ew-footer-2-box:hover a i,
+.ew-footer-2-box:hover form a i {
   transform: rotate(0deg);
 }
-.ew-footer-2-box span {
+.ew-footer-2-box span,
+.ew-footer-2-box form span {
   font-weight: 600;
   font-size: 18px;
   display: inline-block;

@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   templateType: none
 -->
 <!doctype html>
@@ -72,19 +72,26 @@
         {% global_partial path="../partials/header.html" %}
       {% endblock header %}
 
-      <main id="main-content" class="body-container-wrapper">
-        {% block body %}
-        {% endblock body %}
-      </main>
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <main id="main-content" class="body-container-wrapper">
+            {% block body %}
+            {% endblock body %}
+          </main>
 
-      {% block footer %}
-        {% global_partial path="../partials/footer.html" %}
-      {% endblock footer %}
+          {% block footer %}
+            {% global_partial path="../partials/footer.html" %}
+          {% endblock footer %}
+        </div>
+      </div>
     </div>
 
     {{ require_js(get_asset_url("../../js/vendor/jquery.js")) }}
     {{ require_js(get_asset_url("../../js/bootstrap-bundle.js")) }}
     {{ require_js(get_asset_url("../../js/swiper-bundle.js")) }}
+    {{ require_js("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js") }}
+    {{ require_js("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js") }}
+    {{ require_js("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js") }}
     {{ require_js(get_asset_url("../../js/plugin.js")) }}
     {{ require_js(get_asset_url("../../js/three.js")) }}
     {{ require_js(get_asset_url("../../js/slick.js")) }}

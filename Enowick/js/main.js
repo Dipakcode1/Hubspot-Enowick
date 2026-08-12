@@ -209,14 +209,22 @@
 	}
 
 	// 15. scroll wrapper //
-	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
-	if($('#smooth-wrapper').length && $('#smooth-content').length){
+	if (typeof gsap !== 'undefined') {
+		var pluginsToRegister = [];
+		if (typeof ScrollTrigger !== 'undefined') pluginsToRegister.push(ScrollTrigger);
+		if (typeof ScrollToPlugin !== 'undefined') pluginsToRegister.push(ScrollToPlugin);
+		if (typeof ScrollSmoother !== 'undefined') pluginsToRegister.push(ScrollSmoother);
+		if (pluginsToRegister.length > 0 && typeof gsap.registerPlugin === 'function') {
+			gsap.registerPlugin.apply(gsap, pluginsToRegister);
+		}
+	}
+	if (typeof ScrollSmoother !== 'undefined' && $('#smooth-wrapper').length && $('#smooth-content').length) {
 		ScrollSmoother.create({
 			smooth: 1.35,
 			effects: true,
 			smoothTouch: .1,
 			ignoreMobileResize: true
-		})
+		});
 	}
 
 	// 16. button hover animation //
@@ -231,35 +239,37 @@
 	});
 
   	// 17. Button Move Animation //
-	const all_btn = gsap.utils.toArray(".ew-circle-btn-wrap");
-	const all_btn_circle = gsap.utils.toArray(".btn-item");
+	if (typeof gsap !== 'undefined') {
+		const all_btn = gsap.utils.toArray(".ew-circle-btn-wrap");
+		const all_btn_circle = gsap.utils.toArray(".btn-item");
 
-	if (all_btn.length && all_btn_circle.length) {
-		all_btn.forEach((btn, i) => {
-			const circle = all_btn_circle[i];
+		if (all_btn.length && all_btn_circle.length) {
+			all_btn.forEach((btn, i) => {
+				const circle = all_btn_circle[i];
 
-			// Mouse move = parallax effect
-			$(btn).on("mousemove", function (e) {
-			const $this = $(this);
-			const relX = e.pageX - $this.offset().left;
-			const relY = e.pageY - $this.offset().top;
-				gsap.to(circle, {
-					duration: 0.5,
-					x: ((relX - $this.width() / 2) / $this.width()) * 80,
-					y: ((relY - $this.height() / 2) / $this.height()) * 80,
-					ease: "power2.out",
+				// Mouse move = parallax effect
+				$(btn).on("mousemove", function (e) {
+				const $this = $(this);
+				const relX = e.pageX - $this.offset().left;
+				const relY = e.pageY - $this.offset().top;
+					gsap.to(circle, {
+						duration: 0.5,
+						x: ((relX - $this.width() / 2) / $this.width()) * 80,
+						y: ((relY - $this.height() / 2) / $this.height()) * 80,
+						ease: "power2.out",
+					});
+				});
+				// Mouse leave = reset effect
+				$(btn).on("mouseleave", function () {
+					gsap.to(circle, {
+						duration: 0.5,
+						x: 0,
+						y: 0,
+						ease: "power2.out",
+					});
 				});
 			});
-			// Mouse leave = reset effect
-			$(btn).on("mouseleave", function () {
-				gsap.to(circle, {
-					duration: 0.5,
-					x: 0,
-					y: 0,
-					ease: "power2.out",
-				});
-			});
-		});
+		}
 	}
 
 	// 18. Pricing //
@@ -287,7 +297,7 @@
     });
 
 	// 19. fade-class-active //
-	if ($(".si_fade_anim").length > 0) {
+	if (typeof gsap !== 'undefined' && $(".si_fade_anim").length > 0) {
 		gsap.utils.toArray(".si_fade_anim").forEach((item) => {
 			let tp_fade_offset = item.getAttribute("data-fade-offset") || 40,
 				tp_duration_value = item.getAttribute("data-duration") || 0.75,
@@ -303,7 +313,7 @@
 					x: (tp_fade_direction == "left" ? -tp_fade_offset : (tp_fade_direction == "right" ? tp_fade_offset : 0)),
 					y: (tp_fade_direction == "top" ? -tp_fade_offset : (tp_fade_direction == "bottom" ? tp_fade_offset : 0)),
 			    };
-			if (tp_onscroll_value == 1) {
+			if (tp_onscroll_value == 1 && typeof ScrollTrigger !== 'undefined') {
 				tp_anim_setting.scrollTrigger = {
 					trigger: item,
 					start: 'top 85%',
@@ -315,57 +325,58 @@
 
 	// 20. Progress-Area //
 	let progressBars = $(".progress-area");
-	let observer = new IntersectionObserver(function (progressBars) {
-		progressBars.forEach(function (entry, index) {
-			if (entry.isIntersecting) {
-				let width = $(entry.target)
-					.find(".progress-bar")
-					.attr("aria-valuenow");
-				let count = 0;
-				let time = 1000 / width;
-				let progressValue = $(entry.target).find(".progress-value");
-				setInterval(() => {
-					if (count == width) {
-						clearInterval();
-					} else {
-						count += 1;
-						$(progressValue).text(count + "%");
-					}
-				}, time);
-				$(entry.target)
-					.find(".progress-bar")
-					.css({ width: width + "%", transition: "width 1s linear" });
-			} else {
-				$(entry.target)
-					.find(".progress-bar")
-					.css({ width: "0%", transition: "width 1s linear" });
-			}
+	if (progressBars.length > 0 && typeof IntersectionObserver !== 'undefined') {
+		let observer = new IntersectionObserver(function (entries) {
+			entries.forEach(function (entry) {
+				if (entry.isIntersecting) {
+					let width = $(entry.target)
+						.find(".progress-bar")
+						.attr("aria-valuenow");
+					let count = 0;
+					let time = 1000 / width;
+					let progressValue = $(entry.target).find(".progress-value");
+					let interval = setInterval(() => {
+						if (count >= width) {
+							clearInterval(interval);
+						} else {
+							count += 1;
+							$(progressValue).text(count + "%");
+						}
+					}, time);
+					$(entry.target)
+						.find(".progress-bar")
+						.css({ width: width + "%", transition: "width 1s linear" });
+				} else {
+					$(entry.target)
+						.find(".progress-bar")
+						.css({ width: "0%", transition: "width 1s linear" });
+				}
+			});
 		});
-	});
-	progressBars.each(function () {
-		observer.observe(this);
-	});
-	$(window).on("unload", function () {
-		observer.disconnect();
-	});
+		progressBars.each(function () {
+			observer.observe(this);
+		});
+	}
 
-	// 21. carachter Animation //
-	if ($('.ew-char-animation').length > 0) {
+	// 21. character Animation //
+	if (typeof gsap !== 'undefined' && typeof SplitText !== 'undefined' && $('.ew-char-animation').length > 0) {
 		let char_come = gsap.utils.toArray(".ew-char-animation");
 		char_come.forEach(splitTextLine => {
-			const tl = gsap.timeline({
-				scrollTrigger: {
+			const tlOptions = {};
+			if (typeof ScrollTrigger !== 'undefined') {
+				tlOptions.scrollTrigger = {
 					trigger: splitTextLine,
 					start: 'top 90%',
 					end: 'bottom 60%',
 					scrub: false,
 					markers: false,
 					toggleActions: 'play none none none'
-				}
-			});
+				};
+			}
+			const tl = gsap.timeline(tlOptions);
 			const itemSplitted = new SplitText(splitTextLine, { type: "chars, words" });
 			gsap.set(splitTextLine, { perspective: 300 });
-			itemSplitted.split({ type: "chars, words" })
+			itemSplitted.split({ type: "chars, words" });
 			tl.from(itemSplitted.chars,
 				{
 					duration: 1,
@@ -379,36 +390,56 @@
 
 	// 22. ew-text-revel-anim //
 	const si_anim_reveal = document.querySelectorAll(".ew-text-revel-anim");
-	si_anim_reveal.forEach(areveal => {
-		const getAttributeValue = (attr, defaultValue) => areveal.getAttribute(attr) || defaultValue;
-		const duration_value = parseFloat(getAttributeValue("data-duration", 1));
-		const onscroll_value = parseInt(getAttributeValue("data-on-scroll", 1));
-		const stagger_value = parseFloat(getAttributeValue("data-stagger", 0.02));
-		const data_delay = parseFloat(getAttributeValue("data-delay", 0.05));
-		const ease_value = getAttributeValue("data-ease", "circ.out");
+	if (typeof gsap !== 'undefined' && si_anim_reveal.length > 0) {
+		si_anim_reveal.forEach(areveal => {
+			const getAttributeValue = (attr, defaultValue) => areveal.getAttribute(attr) || defaultValue;
+			const duration_value = parseFloat(getAttributeValue("data-duration", 1));
+			const onscroll_value = parseInt(getAttributeValue("data-on-scroll", 1));
+			const stagger_value = parseFloat(getAttributeValue("data-stagger", 0.02));
+			const data_delay = parseFloat(getAttributeValue("data-delay", 0.05));
+			const ease_value = getAttributeValue("data-ease", "circ.out");
 
-		areveal.split = new SplitText(areveal, { type: "lines,words,chars", linesClass: "ew-revel-line" });
-		const animationProps = {
-			duration: duration_value,
-			delay: data_delay,
-			ease: ease_value,
-			y: 80,
-			stagger: stagger_value,
-			opacity: 0,
-		};
+			if (typeof SplitText !== 'undefined') {
+				areveal.split = new SplitText(areveal, { type: "lines,words,chars", linesClass: "ew-revel-line" });
+				const animationProps = {
+					duration: duration_value,
+					delay: data_delay,
+					ease: ease_value,
+					y: 80,
+					stagger: stagger_value,
+					opacity: 0,
+				};
 
-		if (onscroll_value === 1) {
-			areveal.anim = gsap.from(areveal.split.chars, {
-				scrollTrigger: {
-					trigger: areveal,
-					start: 'top 85%',
-				},
-				...animationProps,
-			});
-		} else {
-			areveal.anim = gsap.from(areveal.split.chars, animationProps);
-		}
-	});
+				if (onscroll_value === 1 && typeof ScrollTrigger !== 'undefined') {
+					areveal.anim = gsap.from(areveal.split.chars, {
+						scrollTrigger: {
+							trigger: areveal,
+							start: 'top 85%',
+						},
+						...animationProps,
+					});
+				} else {
+					areveal.anim = gsap.from(areveal.split.chars, animationProps);
+				}
+			} else {
+				// Fallback fade animation if SplitText is unavailable
+				const fallbackProps = {
+					duration: duration_value,
+					delay: data_delay,
+					ease: ease_value,
+					y: 40,
+					opacity: 0,
+				};
+				if (onscroll_value === 1 && typeof ScrollTrigger !== 'undefined') {
+					fallbackProps.scrollTrigger = {
+						trigger: areveal,
+						start: 'top 85%',
+					};
+				}
+				gsap.from(areveal, fallbackProps);
+			}
+		});
+	}
 
     // 23. Service Hover Animation Js
     $('.ew-service-list-wrap .ew-service-list-item').on("mouseenter", function () {
@@ -417,25 +448,27 @@
     });
 
 	// 24. text animation //
-	const tm = gsap.matchMedia();
-	tm.add("(min-width: 991px)", () => {
-		let tl_team = gsap.timeline();
-		let panels = document.querySelectorAll('.ew-project-2-area')
-		panels.forEach((section, index) => {
-			tl_team.to(section, {
-				scrollTrigger: {
-					trigger: '.ew-project-2-area',
-					pin: '.ew-project-2-title-box',
-					scrub: 1,
-					start: 'top 17%',
-					end: "bottom 90%",
-					endTrigger: '.ew-project-2-area',
-					pinSpacing: false,
-					markers: false,
-				},
-			})
-		})
-	});
+	if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && $('.ew-project-2-area').length > 0) {
+		const tm = gsap.matchMedia();
+		tm.add("(min-width: 991px)", () => {
+			let tl_team = gsap.timeline();
+			let panels = document.querySelectorAll('.ew-project-2-area');
+			panels.forEach((section) => {
+				tl_team.to(section, {
+					scrollTrigger: {
+						trigger: '.ew-project-2-area',
+						pin: '.ew-project-2-title-box',
+						scrub: 1,
+						start: 'top 17%',
+						end: "bottom 90%",
+						endTrigger: '.ew-project-2-area',
+						pinSpacing: false,
+						markers: false,
+					},
+				});
+			});
+		});
+	}
 
 
 })(jQuery);
