@@ -94,46 +94,18 @@
   "type" : "group",
   "display_width" : null,
   "default" : [ {
-    "social_account" : "facebook-f",
-    "social_link" : {
-      "no_follow" : false,
-      "open_in_new_tab" : true,
-      "url" : {
-        "content_id" : null,
-        "href" : "https://www.facebook.com",
-        "type" : "EXTERNAL"
-      }
-    },
-    "accessibility" : {
-      "title" : "Follow us on Facebook"
-    }
-  }, {
     "social_account" : "linkedin-in",
     "social_link" : {
       "no_follow" : false,
       "open_in_new_tab" : true,
       "url" : {
         "content_id" : null,
-        "href" : "https://www.linkedin.com",
+        "href" : "https://www.linkedin.com/company/enowick",
         "type" : "EXTERNAL"
       }
     },
     "accessibility" : {
-      "title" : "Follow us on LinkedIn"
-    }
-  }, {
-    "social_account" : "x-twitter",
-    "social_link" : {
-      "no_follow" : false,
-      "open_in_new_tab" : true,
-      "url" : {
-        "content_id" : null,
-        "href" : "https://www.twitter.com",
-        "type" : "EXTERNAL"
-      }
-    },
-    "accessibility" : {
-      "title" : "Follow us on Twitter"
+      "title" : "Follow Enowick on LinkedIn"
     }
   }, {
     "social_account" : "instagram",
@@ -142,12 +114,40 @@
       "open_in_new_tab" : true,
       "url" : {
         "content_id" : null,
-        "href" : "https://www.instagram.com",
+        "href" : "https://www.instagram.com/enowick.official",
         "type" : "EXTERNAL"
       }
     },
     "accessibility" : {
-      "title" : "Follow us on Instagram"
+      "title" : "Follow Enowick on Instagram"
+    }
+  }, {
+    "social_account" : "youtube",
+    "social_link" : {
+      "no_follow" : false,
+      "open_in_new_tab" : true,
+      "url" : {
+        "content_id" : null,
+        "href" : "https://www.youtube.com/@enowick.official",
+        "type" : "EXTERNAL"
+      }
+    },
+    "accessibility" : {
+      "title" : "Subscribe to Enowick on YouTube"
+    }
+  }, {
+    "social_account" : "facebook-f",
+    "social_link" : {
+      "no_follow" : false,
+      "open_in_new_tab" : true,
+      "url" : {
+        "content_id" : null,
+        "href" : "https://www.facebook.com/enowick.official/",
+        "type" : "EXTERNAL"
+      }
+    },
+    "accessibility" : {
+      "title" : "Follow Enowick on Facebook"
     }
   } ]
 }, {

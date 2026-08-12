@@ -1,4 +1,4 @@
-﻿{% set main_nav = menu(module.menu, "site_root").children if module.menu else [] %}
+{% set main_nav = menu(module.menu, "site_root").children if module.menu else [] %}
 {% set legal_nav = menu(module.legal_menu, "site_root").children if module.legal_menu else [] %}
 
 <footer class="ew-footer-2-area">
@@ -17,12 +17,11 @@
                                 {% endif %}
                             {% endfor %}
                         {% else %}
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">Linkedin</a></li>
-                            <li><a href="#">Dribbble</a></li>
-                            <li><a href="#">Behance</a></li>
+                            <li><a href="https://www.linkedin.com/company/enowick" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a href="https://www.instagram.com/enowick.official" target="_blank" rel="noopener">Instagram</a></li>
+                            <li><a href="https://www.youtube.com/@enowick.official" target="_blank" rel="noopener">YouTube</a></li>
+                            <li><a href="https://www.facebook.com/enowick.official/" target="_blank" rel="noopener">Facebook</a></li>
+                            <li><a href="https://www.threads.com/@enowick.official" target="_blank" rel="noopener">Threads</a></li>
                         {% endif %}
                     </ul>
                 </div>

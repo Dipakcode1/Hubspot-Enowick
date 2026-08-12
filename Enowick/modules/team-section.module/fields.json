@@ -1,4 +1,4 @@
-﻿[ {
+[ {
   "id" : "subtitle",
   "name" : "subtitle",
   "label" : "Section Subtitle",
@@ -109,9 +109,9 @@
       "url" : {
         "content_id" : null,
         "type" : "EXTERNAL",
-        "href" : "#"
+        "href" : "https://www.threads.com/@enowick.official"
       },
-      "open_in_new_tab" : false,
+      "open_in_new_tab" : true,
       "no_follow" : false
     }
   }, {
@@ -128,9 +128,9 @@
       "url" : {
         "content_id" : null,
         "type" : "EXTERNAL",
-        "href" : "#"
+        "href" : "https://www.instagram.com/enowick.official"
       },
-      "open_in_new_tab" : false,
+      "open_in_new_tab" : true,
       "no_follow" : false
     }
   }, {
@@ -147,9 +147,9 @@
       "url" : {
         "content_id" : null,
         "type" : "EXTERNAL",
-        "href" : "#"
+        "href" : "https://www.linkedin.com/company/enowick"
       },
-      "open_in_new_tab" : false,
+      "open_in_new_tab" : true,
       "no_follow" : false
     }
   }, {
@@ -166,9 +166,9 @@
       "url" : {
         "content_id" : null,
         "type" : "EXTERNAL",
-        "href" : ""
+        "href" : "https://www.facebook.com/enowick.official/"
       },
-      "open_in_new_tab" : false,
+      "open_in_new_tab" : true,
       "no_follow" : false
     }
   }, {
@@ -204,9 +204,9 @@
       "url" : {
         "content_id" : null,
         "type" : "EXTERNAL",
-        "href" : ""
+        "href" : "https://www.youtube.com/@enowick.official"
       },
-      "open_in_new_tab" : false,
+      "open_in_new_tab" : true,
       "no_follow" : false
     }
   }, {
@@ -249,26 +249,21 @@
       }
     },
     "show_social_links" : true,
-    "twitter_url" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : "#"
-      }
-    },
     "instagram_url" : {
       "url" : {
         "content_id" : null,
         "type" : "EXTERNAL",
-        "href" : "#"
-      }
+        "href" : "https://www.instagram.com/enowick.official"
+      },
+      "open_in_new_tab" : true
     },
     "linkedin_url" : {
       "url" : {
         "content_id" : null,
         "type" : "EXTERNAL",
-        "href" : "#"
-      }
+        "href" : "https://www.linkedin.com/company/enowick"
+      },
+      "open_in_new_tab" : true
     }
   }, {
     "member_name" : "Simran Kaur",
@@ -285,26 +280,21 @@
       }
     },
     "show_social_links" : true,
-    "twitter_url" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : "#"
-      }
-    },
     "instagram_url" : {
       "url" : {
         "content_id" : null,
         "type" : "EXTERNAL",
-        "href" : "#"
-      }
+        "href" : "https://www.instagram.com/enowick.official"
+      },
+      "open_in_new_tab" : true
     },
     "linkedin_url" : {
       "url" : {
         "content_id" : null,
         "type" : "EXTERNAL",
-        "href" : "#"
-      }
+        "href" : "https://www.linkedin.com/company/enowick"
+      },
+      "open_in_new_tab" : true
     }
   }, {
     "member_name" : "Rohan Sharma",
@@ -321,26 +311,21 @@
       }
     },
     "show_social_links" : true,
-    "twitter_url" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : "#"
-      }
-    },
     "instagram_url" : {
       "url" : {
         "content_id" : null,
         "type" : "EXTERNAL",
-        "href" : "#"
-      }
+        "href" : "https://www.instagram.com/enowick.official"
+      },
+      "open_in_new_tab" : true
     },
     "linkedin_url" : {
       "url" : {
         "content_id" : null,
         "type" : "EXTERNAL",
-        "href" : "#"
-      }
+        "href" : "https://www.linkedin.com/company/enowick"
+      },
+      "open_in_new_tab" : true
     }
   }, {
     "member_name" : "Neha Agarwal",
@@ -357,26 +342,21 @@
       }
     },
     "show_social_links" : true,
-    "twitter_url" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : "#"
-      }
-    },
     "instagram_url" : {
       "url" : {
         "content_id" : null,
         "type" : "EXTERNAL",
-        "href" : "#"
-      }
+        "href" : "https://www.instagram.com/enowick.official"
+      },
+      "open_in_new_tab" : true
     },
     "linkedin_url" : {
       "url" : {
         "content_id" : null,
         "type" : "EXTERNAL",
-        "href" : "#"
-      }
+        "href" : "https://www.linkedin.com/company/enowick"
+      },
+      "open_in_new_tab" : true
     }
   } ]
 } ]

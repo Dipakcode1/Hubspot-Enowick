@@ -1,4 +1,4 @@
-﻿[ {
+[ {
   "id" : "heading",
   "name" : "heading",
   "label" : "Footer Heading",
@@ -176,39 +176,44 @@
   "type" : "group",
   "display_width" : null,
   "default" : [ {
-    "platform_name" : "twitter",
+    "platform_name" : "linkedin",
     "social_link_url" : {
       "url" : {
-        "href" : "#"
-      }
+        "href" : "https://www.linkedin.com/company/enowick"
+      },
+      "open_in_new_tab" : true
     }
   }, {
     "platform_name" : "instagram",
     "social_link_url" : {
       "url" : {
-        "href" : "#"
-      }
+        "href" : "https://www.instagram.com/enowick.official"
+      },
+      "open_in_new_tab" : true
     }
   }, {
-    "platform_name" : "linkedin",
+    "platform_name" : "youtube",
     "social_link_url" : {
       "url" : {
-        "href" : "#"
-      }
+        "href" : "https://www.youtube.com/@enowick.official"
+      },
+      "open_in_new_tab" : true
     }
   }, {
-    "platform_name" : "pinterest",
+    "platform_name" : "facebook",
     "social_link_url" : {
       "url" : {
-        "href" : "#"
-      }
+        "href" : "https://www.facebook.com/enowick.official/"
+      },
+      "open_in_new_tab" : true
     }
   }, {
-    "platform_name" : "behance",
+    "platform_name" : "threads",
     "social_link_url" : {
       "url" : {
-        "href" : "#"
-      }
+        "href" : "https://www.threads.com/@enowick.official"
+      },
+      "open_in_new_tab" : true
     }
   } ]
 } ]
