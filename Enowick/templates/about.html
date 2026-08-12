@@ -12,11 +12,10 @@
 <main>
 
     {# Breadcrumb Banner Module #}
-    {% module "about_breadcrumb" path="../modules/breadcrumb.module" label="Breadcrumb Banner", title="About Enowick",
-    current_page_title="About Us" %}
+    {% module "about_breadcrumb" path="../modules/breadcrumb.module" label="Breadcrumb Banner", title="About Us", current_page_title="About Us" %}
 
     <!-- About area start -->
-    <section class="ew-about-area pt-130 pb-124">
+    <section class="ew-about-area pt-124 pb-130">
         <div class="container container-1617">
             <div class="row">
                 <div class="col-lg-4">
@@ -123,6 +122,119 @@
         </div>
     </section>
     <!-- Counter Area End -->
+
+    <!-- Testimonial area start -->
+    <section class="ew-testimonial-area pt-124">
+        <div class="container container-1617">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="ew-testimonial-shape">
+                        <img class="rotate2" src="{{ get_asset_url('../images/testimonial/shape-text.png') }}" alt="Testimonial Shape">
+                        <div class="ew-testimonial-icon">
+                            <img src="{{ get_asset_url('../images/testimonial/Icon.svg') }}" alt="Testimonial Icon">
+                        </div>
+                    </div>                                    
+                </div>
+                <div class="col-lg-8 position-relative">
+                    <div class="swiper ew-testimonial card-testimonial">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="ew-testimonial-box">
+                                    <div class="ew-testimonial-text">
+                                        <h2>“Enowick team quickly understood our requirements <br class="d-none d-xxl-block"> and were proactive and flexible with support and <br class="d-none d-xxl-block"> ongoing complex developments. You can definitely trust <br class="d-none d-xxl-block"> them for complex project requirements as they are <br class="d-none d-xxl-block"> top-notch in their field.”</h2>
+                                    </div>
+                                    <div class="ew-testimonial-main">
+                                        <div class="ew-testimonial-thumb">
+                                            <img src="{{ get_asset_url('../images/testimonial/testimonial1.jpg') }}" alt="Client photo">
+                                        </div>
+                                        <div class="ew-testimonial-address">
+                                            <h3>Abu Talha</h3>
+                                            <span>Senior Marketing Manager</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ew-testimonial-box">
+                                    <div class="ew-testimonial-text">
+                                        <h2>“Enowick team quickly understood our requirements <br class="d-none d-xxl-block"> and were proactive and flexible with support and <br class="d-none d-xxl-block"> ongoing complex developments. You can definitely trust <br class="d-none d-xxl-block"> them for complex project requirements as they are <br class="d-none d-xxl-block"> top-notch in their field.”</h2>
+                                    </div>
+                                    <div class="ew-testimonial-main">
+                                        <div class="ew-testimonial-thumb">
+                                            <img src="{{ get_asset_url('../images/testimonial/testimonial1.jpg') }}" alt="Client photo">
+                                        </div>
+                                        <div class="ew-testimonial-address">
+                                            <h3>Abu Talha</h3>
+                                            <span>Senior Marketing Manager</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ew-testimonial-box">
+                                    <div class="ew-testimonial-text">
+                                        <h2>“Enowick team quickly understood our requirements <br class="d-none d-xxl-block"> and were proactive and flexible with support and <br class="d-none d-xxl-block"> ongoing complex developments. You can definitely trust <br class="d-none d-xxl-block"> them for complex project requirements as they are <br class="d-none d-xxl-block"> top-notch in their field.”</h2>
+                                    </div>
+                                    <div class="ew-testimonial-main">
+                                        <div class="ew-testimonial-thumb">
+                                            <img src="{{ get_asset_url('../images/testimonial/testimonial2.jpg') }}" alt="Client photo">
+                                        </div>
+                                        <div class="ew-testimonial-address">
+                                            <h3>Jinnira Alam</h3>
+                                            <span>Senior Marketing Manager</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ew-swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial area end -->
+
+    <!-- Award area start -->
+    <section class="ew-award-area pb-95">
+        <div class="container container-1617">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ew-award-text">
+                        <h3>Awards</h3>
+                    </div>
+                    <div class="ew-award-items">
+                        <p class="group">Winner - Best eCommerce Websites</p> 
+                        <p class="time">2022</p>
+                        <p class="award">NY. America</p>                                 
+                    </div>
+                    <div class="ew-award-items">
+                        <p class="group">Awarded - Top Agency in United State</p> 
+                        <p class="time">2023</p>
+                        <p class="award">NY. America</p>                                 
+                    </div>
+                    <div class="ew-award-items">
+                        <p class="group">Mentioned - Honorable Mentioned</p> 
+                        <p class="time">2024</p>
+                        <p class="award">NY. America</p>                                 
+                    </div>
+                    <div class="ew-award-items">
+                        <p class="group">Winner - Featured App Design of the Week</p> 
+                        <p class="time">2025</p>
+                        <p class="award">NY. America</p>                                 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Award area end -->
+
+    <!-- Team area start -->
+    {% module "team_section"
+      path="../modules/team-section.module",
+      label="Team Section"
+    %}
+    <!-- Team area end -->
 
 </main>
 
