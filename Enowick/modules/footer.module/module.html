@@ -1,5 +1,6 @@
 {% set main_nav = menu(module.menu, "site_root").children if module.menu else [] %}
-{% set legal_nav = menu(module.legal_menu, "site_root").children if module.legal_menu else [] %}
+{% set has_custom_legal_menu = module.legal_menu and module.legal_menu != "default" and module.legal_menu != module.menu and module.legal_menu != "" %}
+{% set legal_nav = menu(module.legal_menu, "site_root").children if has_custom_legal_menu else [] %}
 
 <footer class="ew-footer-2-area">
     <div class="container-fluid">
@@ -86,7 +87,7 @@
                 <div class="col-lg-6 p-0">
                     <div class="ew-copyright-2-list copyright-2-title copyright-2-title2">
                         <ul>
-                            {% if legal_nav and legal_nav|length > 0 %}
+                            {% if has_custom_legal_menu and legal_nav and legal_nav|length > 0 %}
                                 {% for link in legal_nav %}
                                     <li><a href="{{ link.url if link.url else '#' }}">{{ link.label }}</a></li>
                                 {% endfor %}
