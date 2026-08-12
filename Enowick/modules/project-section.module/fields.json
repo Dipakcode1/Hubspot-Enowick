@@ -1,4 +1,4 @@
-﻿[ {
+[ {
   "id" : "heading",
   "name" : "heading",
   "label" : "Section Heading",
@@ -7,7 +7,7 @@
   "allow_new_line" : false,
   "type" : "text",
   "display_width" : null,
-  "default" : "Featured Projects"
+  "default" : "Latest Projects"
 }, {
   "id" : "button_text",
   "name" : "button_text",

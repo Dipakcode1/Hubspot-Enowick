@@ -8,11 +8,13 @@
             <div class="col-lg-12">
                 <div class="ew-hero-3-text">
                     {% if module.heading %}
-                        <div class="ew-hero-heading-wrapper">
-                            <h1 class="ew-text-revel-anim">
-                                {{ module.heading }}
-                            </h1>
-                        </div>
+                        {% set heading_html = module.heading %}
+                        {% if '<span>' in heading_html and not ('rotate2' in heading_html) %}
+                            {% set heading_html = heading_html|replace('<span>', '<span> <img class="rotate2" src="' ~ shape_1 ~ '" alt="shape"> ') %}
+                        {% endif %}
+                        <h1 class="ew-text-revel-anim">
+                            {{ heading_html }}
+                        </h1>
                     {% else %}
                         <h1 class="ew-text-revel-anim">Next Generation <br class="d-none d-xxl-block">
                             <span> <img class="rotate2" src="{{ shape_1 }}" alt="shape"> Digital Agency</span>
@@ -31,7 +33,7 @@
                     <div class="ew-hero-3-btn">
                         <a class="ew-btn-one black-bg-btn" href="{{ href }}" target="{{ target }}" rel="{{ rel }}">
                             <span class="btn-text"> <span>{{ module.button_text }}</span> </span>
-                            <span class="btn-icon btn-icon2"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            <span class="btn-icon btn-icon2"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
                         </a>
                     </div>
                 {% endif %}

@@ -17,9 +17,14 @@
   opacity: 0.95;
 }
 
-.ew-header-dropdown nav ul li.has-dropdown::after,
-.ew-header-dropdown nav ul li.has-dropdown:hover::after {
+.ew-header-dropdown nav ul li.has-dropdown > a::after,
+.ew-header-dropdown nav ul li.has-dropdown:hover > a::after {
   color: #ffffff !important;
+}
+
+.ew-header-dropdown nav ul li.has-dropdown::after {
+  content: none !important;
+  display: none !important;
 }
 
 /* Sticky Header & Small Screen Overflow Fix */
