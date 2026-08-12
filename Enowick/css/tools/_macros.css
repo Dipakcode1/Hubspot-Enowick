@@ -43,4 +43,4 @@ Example:
 
   rgba({{ colorhex }}, {{ coloropacity }})
 
-{% endmacro %}
+{% endmacro %} 

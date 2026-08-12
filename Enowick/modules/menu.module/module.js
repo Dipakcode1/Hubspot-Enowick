@@ -69,4 +69,4 @@ if (childToggle) {
     });
 
   });
-}
+} 

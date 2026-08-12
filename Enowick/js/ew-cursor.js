@@ -157,4 +157,4 @@ function is_rtl(){
     return $('html').attr('dir') == 'rtl' ? true: false;
 }
 
-})(jQuery);
+})(jQuery); 

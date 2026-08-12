@@ -10078,16 +10078,22 @@ max-width: 70% !important;
   position: relative;
   z-index: 1;
 }
-.ew-video-icon a i {
+.ew-video-icon a i,
+.ew-video-icon a svg {
   font-size: 30px;
   width: 83.61px;
   height: 83.61px;
   line-height: 83.61px;
-  background: var(--ew-common-white);
-  color: var(--ew-common-black);
+  background: var(--ew-common-white) !important;
+  color: var(--ew-common-black) !important;
+  fill: var(--ew-common-black) !important;
   text-align: center;
   border-radius: 50%;
   margin-top: 44px;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box;
 }
 .ew-video-shape {
   position: absolute;
@@ -10651,3 +10657,4 @@ max-width: 70% !important;
 
 
 
+ 
