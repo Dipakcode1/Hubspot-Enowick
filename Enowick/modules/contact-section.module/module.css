@@ -1,120 +1,220 @@
-/* Contact Section module CSS */
+/* Contact Section Module CSS */
 
-/* HubSpot Form Styling */
-.ew-contact-main .hs-form,
-.ew-service-details-from .hs-form,
-.hs-form {
-  width: 100%;
+.ew-contact-main {
+  background: var(--ew-common-gray);
+  padding: 40px 42px 44px 42px !important;
+  border-radius: 18px;
+  --hsf-default-background__padding: 0px !important;
+  --hsf-background__padding: 0px !important;
+  --hsf-default-row__horizontal-spacing: 14px !important;
+  --hsf-default-row__vertical-spacing: 16px !important;
+  --hsf-default-button__background-color: #191919 !important;
+  --hsf-default-button__color: #ffffff !important;
+  --hsf-default-button__border-radius: 50px !important;
+  --hsf-default-button__padding: 15px 32px !important;
 }
 
-.ew-contact-main .hs-form-field,
-.ew-service-details-from .hs-form-field,
-.hs-form .hs-form-field {
-  margin-bottom: 20px;
-  position: relative;
+@media (max-width: 575px) {
+  .ew-contact-main {
+    padding: 30px 20px 34px 20px !important;
+  }
 }
 
-.ew-contact-main .hs-form fieldset,
-.ew-service-details-from .hs-form fieldset,
-.hs-form fieldset {
+.ew-contact-main h4 {
+  font-size: 44px !important;
+  line-height: 54px !important;
+  margin-bottom: 28px !important;
+  color: var(--ew-common-black) !important;
+  font-weight: 700 !important;
+}
+
+/* Remove 40px padding from HubSpot V4 Form Step & Container */
+.ew-contact-main [data-hsfc-id="Renderer"] .hsfc-Step .hsfc-Step__Content,
+.ew-contact-main .hsfc-Step__Content {
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.ew-contact-main [data-hsfc-id="Renderer"] .hsfc-Step,
+.ew-contact-main .hsfc-Step {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.ew-contact-main [data-hsfc-id="Renderer"] .hsfc-Form,
+.ew-contact-main .hsfc-Form,
+.ew-contact-main .hs-form {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Row & Field Grid (V2 & V4 Engine) */
+.ew-contact-main .hsfc-Row,
+.ew-contact-main [data-hsfc-id="Renderer"] .hsfc-Row,
+.ew-contact-main .hs-form fieldset {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  grid-template-columns: none !important;
+  width: 100% !important;
+  gap: 14px !important;
+  margin-bottom: 16px !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* Single-field rows take 100% full width */
+.ew-contact-main .hsfc-Row > *,
+.ew-contact-main .hs-form-field {
+  width: 100% !important;
+  flex: 1 1 100% !important;
   max-width: 100% !important;
-  border: none;
-  padding: 0;
-  margin: 0;
+  box-sizing: border-box !important;
 }
 
+/* 2-Column fields (First Name + Last Name) */
+.ew-contact-main .hsfc-Row > *:not(:only-child),
+.ew-contact-main .hs-form fieldset .hs-form-field {
+  flex: 1 1 calc(50% - 7px) !important;
+  min-width: 140px !important;
+  width: auto !important;
+}
+
+/* Labels */
 .ew-contact-main .hs-form label,
-.ew-service-details-from .hs-form label,
-.hs-form label {
-  display: block;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--ew-common-black);
-  margin-bottom: 8px;
+.ew-contact-main .hsfc-FieldLabel {
+  display: block !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--ew-common-black) !important;
+  margin-bottom: 7px !important;
 }
 
+/* Input Fields (Text, Email, Select, Textarea) */
 .ew-contact-main .hs-input,
-.ew-service-details-from .hs-input,
-.hs-form .hs-input:not([type="checkbox"]):not([type="radio"]) {
+.ew-contact-main .hs-form .hs-input:not([type="checkbox"]):not([type="radio"]),
+.ew-contact-main .hsfc-TextInput,
+.ew-contact-main .hsfc-TextareaInput,
+.ew-contact-main .hsfc-DropdownInput {
   width: 100% !important;
   border: 1px solid var(--ew-border-1) !important;
-  font-size: 18px !important;
-  padding: 16px 20px !important;
+  font-size: 16px !important;
+  padding: 13px 18px !important;
   border-radius: 10px !important;
   background: var(--ew-common-white) !important;
-  color: var(--ew-common-text-body) !important;
+  color: var(--ew-common-black) !important;
   outline: none !important;
   box-shadow: none !important;
-  transition: border-color 0.3s ease;
+  box-sizing: border-box !important;
+  transition: border-color 0.3s ease !important;
 }
 
 .ew-contact-main .hs-input:focus,
-.ew-service-details-from .hs-input:focus,
-.hs-form .hs-input:focus {
+.ew-contact-main .hsfc-TextInput:focus,
+.ew-contact-main .hsfc-TextareaInput:focus {
   border-color: var(--ew-common-black) !important;
 }
 
 .ew-contact-main textarea.hs-input,
-.ew-service-details-from textarea.hs-input,
-.hs-form textarea.hs-input {
-  height: 140px !important;
-  resize: vertical;
+.ew-contact-main .hsfc-TextareaInput {
+  height: 125px !important;
+  resize: vertical !important;
+  padding: 13px 18px !important;
 }
 
-.ew-contact-main select.hs-input,
-.ew-service-details-from select.hs-input,
-.hs-form select.hs-input {
-  appearance: none;
-  -webkit-appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23191919' viewBox='0 0 16 16'><path d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") !important;
-  background-repeat: no-repeat !important;
-  background-position: right 18px center !important;
-  padding-right: 40px !important;
+/* Phone Field Bar Alignment */
+.ew-contact-main .hsfc-PhoneInput,
+.ew-contact-main .hs-phone-number {
+  display: flex !important;
+  width: 100% !important;
+  gap: 8px !important;
 }
 
-/* Submit Button Styling */
+.ew-contact-main .hsfc-PhoneInput > *,
+.ew-contact-main .hs-phone-number .hs-input {
+  flex: 1 !important;
+}
+
+/* Submit Button */
+.ew-contact-main .hs-submit,
+.ew-contact-main .hs-form .actions,
+.ew-contact-main .hsfc-NavigationRow,
+.ew-contact-main .hsfc-NavigationRow__Buttons {
+  margin-top: 15px !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
 .ew-contact-main .hs-button,
-.ew-service-details-from .hs-button,
-.hs-form .hs-button,
-.hs-form input[type="submit"] {
+.ew-contact-main input[type="submit"],
+.ew-contact-main .hs-form .hs-button.primary,
+.ew-contact-main .hsfc-Button {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
+  width: 100% !important;
   background: var(--ew-common-black) !important;
+  background-color: var(--ew-common-black) !important;
   color: var(--ew-common-white) !important;
-  font-size: 18px !important;
+  font-size: 17px !important;
   font-weight: 600 !important;
-  padding: 16px 36px !important;
-  border-radius: 40px !important;
-  border: 1px solid var(--ew-common-black) !important;
+  padding: 15px 32px !important;
+  border-radius: 50px !important;
+  border: none !important;
   cursor: pointer !important;
   transition: all 0.3s ease !important;
-  margin-top: 10px !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+  transform: none !important;
 }
 
 .ew-contact-main .hs-button:hover,
-.ew-service-details-from .hs-button:hover,
-.hs-form .hs-button:hover,
-.hs-form input[type="submit"]:hover {
-  background: var(--ew-theme-primary) !important;
-  border-color: var(--ew-theme-primary) !important;
+.ew-contact-main input[type="submit"]:hover,
+.ew-contact-main .hsfc-Button:hover {
+  background: #333333 !important;
+  background-color: #333333 !important;
   color: var(--ew-common-white) !important;
+  transform: translateY(-2px) !important;
 }
 
 /* Error Messages */
-.hs-error-msgs {
+.ew-contact-main .hs-error-msgs {
   margin-top: 5px;
   padding: 0;
   list-style: none;
 }
 
-.hs-error-msg {
+.ew-contact-main .hs-error-msg {
   color: #dc3545;
-  font-size: 14px;
+  font-size: 13px;
 }
 
-.hs-form-required {
+.ew-contact-main .hs-form-required {
   color: #dc3545;
   margin-left: 3px;
 }
- 
+
+/* Google Map Section Zero Padding Fix */
+.ew-contact-map-area {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.map-wrap {
+  line-height: 0 !important;
+  font-size: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.map-wrap iframe {
+  width: 100% !important;
+  height: 550px !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}

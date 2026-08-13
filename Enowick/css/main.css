@@ -9203,9 +9203,23 @@ max-width: 70% !important;
   padding: 22px 0px;
 }
 
+.ew-contact-map-area {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+.map-wrap {
+  line-height: 0 !important;
+  font-size: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
 .map-wrap iframe {
-  width: 100%;
-  height: 700px;
+  width: 100% !important;
+  height: 550px !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
 }
 
 /*----------------------------------------*/
@@ -10575,34 +10589,46 @@ max-width: 70% !important;
   max-width: 100% !important;
   border: none !important;
   padding: 0 !important;
-  margin: 0 0 10px 0 !important;
+  margin: 0 0 12px 0 !important;
   display: flex !important;
   flex-wrap: wrap !important;
-  gap: 10px !important;
+  gap: 12px !important;
 }
 
 .ew-service-details-from .hsfc-Row,
+.ew-contact-main .hsfc-Row,
 .hsfc-Row {
   width: 100% !important;
   display: flex !important;
-  gap: 10px !important;
-  margin-bottom: 10px !important;
+  flex-wrap: wrap !important;
+  grid-template-columns: none !important;
+  gap: 12px !important;
+  margin-bottom: 14px !important;
 }
 
+/* Single-field rows take 100% full width */
+.ew-service-details-from .hsfc-Row > *,
+.ew-contact-main .hsfc-Row > *,
+.hsfc-Row > *,
+.ew-contact-main .hs-form-field,
+.ew-service-details-from .hs-form-field {
+  width: 100% !important;
+  flex: 1 1 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 2-Column fields (First Name + Last Name) */
+.ew-service-details-from .hsfc-Row > *:not(:only-child),
+.ew-contact-main .hsfc-Row > *:not(:only-child),
+.hsfc-Row > *:not(:only-child),
 .ew-service-details-from .hs-form fieldset .hs-form-field,
 .ew-contact-main .hs-form fieldset .hs-form-field,
 .hs-form fieldset .hs-form-field {
-  flex: 1 1 0% !important;
-  min-width: 120px !important;
-  margin-bottom: 0 !important;
-}
-
-.ew-contact-main .hs-form-field,
-.ew-service-details-from .hs-form-field,
-.hs-form .hs-form-field {
-  margin-bottom: 12px !important;
-  position: relative !important;
-  width: 100% !important;
+  flex: 1 1 calc(50% - 7px) !important;
+  min-width: 130px !important;
+  width: auto !important;
+  max-width: 100% !important;
 }
 
 .ew-contact-main .hs-form label,
@@ -10610,10 +10636,10 @@ max-width: 70% !important;
 .hs-form label,
 .hsfc-FieldLabel {
   display: block !important;
-  font-size: 14px !important;
+  font-size: 15px !important;
   font-weight: 600 !important;
   color: var(--ew-common-black) !important;
-  margin-bottom: 5px !important;
+  margin-bottom: 6px !important;
 }
 
 .ew-contact-main .hs-input,
@@ -10625,7 +10651,7 @@ max-width: 70% !important;
   width: 100% !important;
   border: 1px solid var(--ew-border-1) !important;
   font-size: 15px !important;
-  padding: 10px 14px !important;
+  padding: 11px 16px !important;
   border-radius: 8px !important;
   background: var(--ew-common-white) !important;
   color: var(--ew-common-black) !important;
@@ -10647,9 +10673,9 @@ max-width: 70% !important;
 .ew-service-details-from textarea.hs-input,
 .hs-form textarea.hs-input,
 .hsfc-TextareaInput {
-  height: 90px !important;
+  height: 100px !important;
   resize: vertical !important;
-  padding: 10px 14px !important;
+  padding: 11px 16px !important;
 }
 
 .ew-contact-main select.hs-input,
