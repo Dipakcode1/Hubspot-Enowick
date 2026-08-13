@@ -6139,9 +6139,13 @@ max-width: 70% !important;
   }
 }
 .ew-brand-box img {
-  transition: 0.6s;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.4s ease;
 }
 .ew-brand-box:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
   transform: scale(1.1);
 }
 
@@ -6397,13 +6401,14 @@ max-width: 70% !important;
 }
 .ew-hero-3-p {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-right: 150px;
   margin-top: 25px;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
   .ew-hero-3-p {
-    justify-content: left;
+    justify-content: flex-end;
+    margin-right: 50px;
   }
 }
 .ew-hero-3-p p {

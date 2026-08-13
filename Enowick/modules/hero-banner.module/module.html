@@ -23,7 +23,7 @@
                 </div>
                 {% if module.subheading %}
                     <div class="ew-hero-3-p">
-                        <p>{{ module.subheading }}</p>
+                        <p>{{ module.subheading|safe }}</p>
                     </div>
                 {% endif %}
                 {% if module.button_text %}

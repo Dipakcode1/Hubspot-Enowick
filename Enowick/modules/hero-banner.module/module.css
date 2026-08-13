@@ -1,2 +1,28 @@
 /* Hero Banner module CSS */
+.ew-hero-3-p {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 150px;
+  margin-top: 25px;
+}
+.ew-hero-3-p p {
+  color: var(--ew-common-white);
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+  max-width: 600px;
+  text-align: left;
+}
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
+  .ew-hero-3-p {
+    justify-content: flex-end;
+    margin-right: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .ew-hero-3-p {
+    justify-content: flex-start;
+    margin-right: 0;
+  }
+}
  

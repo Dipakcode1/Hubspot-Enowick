@@ -1,4 +1,4 @@
-﻿[ {
+[ {
   "id" : "heading",
   "name" : "heading",
   "label" : "Heading",
@@ -16,7 +16,7 @@
   "allow_new_line" : false,
   "type" : "text",
   "display_width" : null,
-  "default" : "Enowick helps businesses across India build powerful digital experiences — from cutting-edge websites and AI solutions to results-driven digital marketing."
+  "default" : "Enowick helps businesses across India build powerful digital experiences — from <br> cutting-edge websites and AI solutions to results-driven digital marketing"
 }, {
   "id" : "button_text",
   "name" : "button_text",

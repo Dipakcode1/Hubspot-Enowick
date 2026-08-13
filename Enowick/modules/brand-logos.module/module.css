@@ -1,2 +1,13 @@
 /* Brand Logos module CSS */
+.ew-brand-box img {
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.4s ease;
+}
+
+.ew-brand-box:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
  
