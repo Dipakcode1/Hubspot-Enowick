@@ -251,4 +251,27 @@
     "question" : "Do You Work With Businesses Of All Sizes?",
     "answer" : "<p>Yes, we work with ambitious startups, scaling growth companies, and global enterprise brands.</p>"
   } ]
+}, {
+  "id" : "form_title",
+  "name" : "form_title",
+  "label" : "Sidebar Form Title",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Get AI Consultation"
+}, {
+  "id" : "form",
+  "name" : "form",
+  "label" : "HubSpot Form",
+  "required" : false,
+  "locked" : false,
+  "embed_versions" : [ "v2", "v4" ],
+  "type" : "form",
+  "display_width" : null,
+  "default" : {
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form."
+  }
 } ] 

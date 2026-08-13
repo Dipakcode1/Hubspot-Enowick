@@ -41,8 +41,8 @@
                         </div>
                     {% endif %}
 
-                    <div class="ew-service-details-main">
-                        <div class="ew-service-details-right w-100">
+                    <div class="ew-service-details-main mt-50">
+                        <div class="ew-service-details-right">
                             <div class="ew-service-details-text2">
                                 {% if module.benefits_heading %}
                                     <h2>{{ module.benefits_heading }}</h2>
@@ -71,6 +71,42 @@
                                     </div>
                                 {% endif %}
                             </div>
+                        </div>
+
+                        <div class="ew-service-details-from">
+                            {% if module.form_title %}
+                                <h3>{{ module.form_title }}</h3>
+                            {% else %}
+                                <h3>Get AI Consultation</h3>
+                            {% endif %}
+
+                            {% if module.form.form_id %}
+                                {% form
+                                    form_to_use="{{ module.form.form_id }}",
+                                    response_response_type="{{ module.form.response_type }}",
+                                    response_message="{{ module.form.message }}",
+                                    response_redirect_id="{{ module.form.redirect_id }}",
+                                    response_redirect_url="{{ module.form.redirect_url }}"
+                                %}
+                            {% else %}
+                                <form action="#" method="post">
+                                    <div class="ew-service-details-from-inner mb-20">
+                                        <input type="text" name="firstname" placeholder="Your Full Name" required>
+                                    </div>
+                                    <div class="ew-service-details-from-inner2 mb-20">
+                                        <input type="email" name="email" placeholder="Work Email Address" required>
+                                    </div>
+                                    <div class="ew-service-details-from-inner3 mb-20">
+                                        <textarea name="message" placeholder="Describe your web design requirement"></textarea>
+                                    </div>
+                                    <div class="ew-service-details-btn">
+                                        <button type="submit" class="ew-btn-one border-0">
+                                            <span class="btn-text"> <span>Book AI Web Strategy</span> </span>
+                                            <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                                        </button>
+                                    </div>
+                                </form>
+                            {% endif %}
                         </div>
                     </div>
 
