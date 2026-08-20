@@ -1,0 +1,101 @@
+{% set bg_url = module.background_image.src if (module.background_image and module.background_image.src) else get_asset_url('../../images/video/bg.jpg') %}
+{% set badge_url = module.video_badge_image.src if (module.video_badge_image and module.video_badge_image.src) else get_asset_url('../../images/video/shape.png') %}
+{% set video_link = module.video_url or 'https://www.youtube.com/watch?v=MLpWrANjFbI' %}
+
+<section class="ew-video-section-module">
+    <div class="ew-video-section-wrap" style="background-image: url('{{ bg_url }}');" data-background="{{ bg_url }}">
+        <div class="container-fluid ew-video-container">
+            <div class="row align-items-end ew-video-main-row">
+                <!-- Left Video Column (Play Icon in center, Social Bar at bottom) -->
+                <div class="{% if module.show_form_box %}col-xl-8 col-lg-7 col-md-12{% else %}col-12{% endif %} ew-video-left-col">
+                    <div class="ew-video-left-inner">
+                        {% if module.show_video_button %}
+                            <div class="ew-video-center-content">
+                                <div class="ew-video-icon">
+                                    <div class="ew-video-icon-inner">
+                                        <a class="popup-video ew-about-playbtn" href="{{ video_link }}" aria-label="Play Video">
+                                            <i class="fa-solid fa-play"></i>
+                                        </a>
+                                        <div class="ew-video-shape">
+                                            <img class="rotate2" src="{{ badge_url }}" alt="Play Intro Video">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+
+                        <!-- Bottom Left Social Links Bar -->
+                        {% if module.show_social_links %}
+                            <div class="ew-video-social-bar">
+                                <ul>
+                                    {% if module.social_links and module.social_links|length > 0 %}
+                                        {% for item in module.social_links %}
+                                            {% set href = item.social_link_url.url.href if (item.social_link_url.url and item.social_link_url.url.href) else (item.social_link_url.href if item.social_link_url.href else '#') %}
+                                            {% set target = '_blank' if item.social_link_url.open_in_new_tab else '_self' %}
+                                            {% set platform = item.platform_name if item.platform_name else (item.label if item.label else '') %}
+                                            {% if platform %}
+                                                <li><a href="{{ href }}" target="{{ target }}" rel="noopener">{{ platform }}</a></li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% else %}
+                                        <li><a href="https://www.instagram.com/enowick.official" target="_blank" rel="noopener">Instagram</a></li>
+                                        <li><a href="https://www.linkedin.com/company/enowick" target="_blank" rel="noopener">Linkedin</a></li>
+                                        <li><a href="https://dribbble.com/enowick" target="_blank" rel="noopener">Dribbble</a></li>
+                                        <li><a href="https://www.behance.net/enowick" target="_blank" rel="noopener">Behance</a></li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Right Side Form Box -->
+                {% if module.show_form_box %}
+                    <div class="col-xl-4 col-lg-5 col-md-12 ew-video-right-col">
+                        <div class="ew-video-form-card">
+                            {% if module.heading %}
+                                <div class="ew-video-form-title">
+                                    {{ module.heading }}
+                                </div>
+                            {% endif %}
+                            
+                            {% if module.description %}
+                                <div class="ew-video-form-desc">
+                                    {{ module.description }}
+                                </div>
+                            {% endif %}
+
+                            <div class="ew-video-form-container">
+                                {% if module.form.form_id %}
+                                    {% form
+                                        form_to_use="{{ module.form.form_id }}",
+                                        response_response_type="{{ module.form.response_type }}",
+                                        response_message="{{ module.form.message }}",
+                                        response_redirect_id="{{ module.form.redirect_id }}",
+                                        response_redirect_url="{{ module.form.redirect_url }}"
+                                    %}
+                                {% else %}
+                                    <form action="#" method="post" class="ew-video-default-form">
+                                        <div class="ew-video-field-group">
+                                            <label for="newsletter_name">Full Name</label>
+                                            <input id="newsletter_name" type="text" name="firstname" placeholder="Enter Your Name">
+                                        </div>
+                                        <div class="ew-video-field-group">
+                                            <label for="newsletter_email">Email*</label>
+                                            <input id="newsletter_email" type="email" name="email" placeholder="{{ module.placeholder_text or 'Enter Your Email' }}" required>
+                                        </div>
+                                        <div class="ew-video-submit-group">
+                                            <button type="submit" class="ew-video-submit-btn">
+                                                {{ module.button_text or 'Submit' }}
+                                            </button>
+                                        </div>
+                                    </form>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

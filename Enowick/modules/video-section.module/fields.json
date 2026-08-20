@@ -1,0 +1,235 @@
+[
+  {
+    "id": "background_image",
+    "name": "background_image",
+    "label": "Background Image",
+    "required": false,
+    "locked": false,
+    "responsive": false,
+    "resizable": true,
+    "show_loading": false,
+    "type": "image",
+    "display_width": null,
+    "default": {
+      "src": "",
+      "alt": "Video Section Background",
+      "size_type": null,
+      "width": null,
+      "height": null,
+      "max_width": null,
+      "max_height": null,
+      "loading": "lazy"
+    }
+  },
+  {
+    "id": "show_video_button",
+    "name": "show_video_button",
+    "label": "Show Play Video Button",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "video_url",
+    "name": "video_url",
+    "label": "Video Popup URL (YouTube / Vimeo / MP4)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "https://www.youtube.com/watch?v=MLpWrANjFbI"
+  },
+  {
+    "id": "video_badge_image",
+    "name": "video_badge_image",
+    "label": "Play Button Rotating Badge Image",
+    "required": false,
+    "locked": false,
+    "responsive": false,
+    "resizable": true,
+    "show_loading": false,
+    "type": "image",
+    "display_width": null,
+    "default": {
+      "src": "",
+      "alt": "Play Intro Video",
+      "size_type": null,
+      "width": null,
+      "height": null,
+      "max_width": null,
+      "max_height": null,
+      "loading": "lazy"
+    }
+  },
+  {
+    "id": "show_form_box",
+    "name": "show_form_box",
+    "label": "Show Right Side Form Box",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Form Box Heading",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "Stay Ahead <br class=\"d-none d-xxl-block\"> with Enowick"
+  },
+  {
+    "id": "description",
+    "name": "description",
+    "label": "Form Box Description",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "Get insights on web development, digital marketing, and AI trends — straight to your inbox."
+  },
+  {
+    "id": "form",
+    "name": "form",
+    "label": "HubSpot Form",
+    "required": false,
+    "locked": false,
+    "embed_versions": ["v2", "v4"],
+    "type": "form",
+    "display_width": null,
+    "default": {
+      "response_type": "inline",
+      "message": "Thank you for subscribing! We'll keep you updated."
+    }
+  },
+  {
+    "id": "placeholder_text",
+    "name": "placeholder_text",
+    "label": "Fallback Input Placeholder",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Enter Your Email"
+  },
+  {
+    "id": "button_text",
+    "name": "button_text",
+    "label": "Fallback Button Label",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "SUBSCRIBE"
+  },
+  {
+    "id": "show_social_links",
+    "name": "show_social_links",
+    "label": "Show Bottom Left Social Links",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "social_links",
+    "name": "social_links",
+    "label": "Social Media Links",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 0,
+      "max": 10,
+      "sorting_label_field": null,
+      "default": null
+    },
+    "children": [
+      {
+        "id": "social_platform_name",
+        "name": "platform_name",
+        "label": "Platform Name",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Instagram"
+      },
+      {
+        "id": "social_link_url",
+        "name": "social_link_url",
+        "label": "Link URL",
+        "required": false,
+        "locked": false,
+        "supported_types": ["EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG"],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "https://www.instagram.com/enowick.official"
+          },
+          "open_in_new_tab": true,
+          "no_follow": false
+        }
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "platform_name": "Instagram",
+        "social_link_url": {
+          "url": {
+            "href": "https://www.instagram.com/enowick.official"
+          },
+          "open_in_new_tab": true
+        }
+      },
+      {
+        "platform_name": "Linkedin",
+        "social_link_url": {
+          "url": {
+            "href": "https://www.linkedin.com/company/enowick"
+          },
+          "open_in_new_tab": true
+        }
+      },
+      {
+        "platform_name": "Dribbble",
+        "social_link_url": {
+          "url": {
+            "href": "https://dribbble.com/enowick"
+          },
+          "open_in_new_tab": true
+        }
+      },
+      {
+        "platform_name": "Behance",
+        "social_link_url": {
+          "url": {
+            "href": "https://www.behance.net/enowick"
+          },
+          "open_in_new_tab": true
+        }
+      }
+    ]
+  }
+]

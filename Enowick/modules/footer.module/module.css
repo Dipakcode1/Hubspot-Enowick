@@ -1,2 +1,23 @@
-/* Footer module CSS */
- 
+/* Footer Home Module CSS */
+.ew-footer-2-area {
+  background: var(--ew-common-black, #0f0f0f);
+  padding-top: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.ew-footer-2-text {
+  text-align: center;
+  margin-top: 0;
+  margin-left: 0;
+  padding-bottom: 70px;
+}
+
+@media (max-width: 991px) {
+  .ew-footer-2-area {
+    padding-top: 60px;
+  }
+  .ew-footer-2-text {
+    padding-bottom: 40px;
+  }
+}

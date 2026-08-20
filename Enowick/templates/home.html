@@ -52,7 +52,7 @@
       label="Team Section"
     %}
     <!-- Team area end -->
-
+{# Dipak halder #}
     <!-- Testimonial 2 area start -->
     <section class="ew-testimonial-2-area pt-124 pb-124" data-background="{{ get_asset_url('../images/testimonial/bg.jpg') }}" style="background-image: url('{{ get_asset_url('../images/testimonial/bg.jpg') }}');">
         <div class="container container-1617">
@@ -249,24 +249,12 @@
     </section>
     <!-- Blog 2 area end -->
 
-    <!-- Video area Start -->
-    <div class="ew-video-area" data-background="{{ get_asset_url('../images/video/bg.jpg') }}" style="background-image: url('{{ get_asset_url('../images/video/bg.jpg') }}');">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="ew-video-icon">
-                        <div class="ew-video-icon-inner">
-                            <a class="popup-video ew-about-playbtn" href="https://www.youtube.com/watch?v=MLpWrANjFbI"><i class="fa-solid fa-play"></i></a>
-                            <div class="ew-video-shape">
-                                <img class="rotate2" src="{{ get_asset_url('../images/video/shape.png') }}" alt="Watch Enowick in action">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Video area  End -->
+    <!-- Video Section start -->
+    {% module "video_section"
+      path="../modules/video-section.module",
+      label="Video Section"
+    %}
+    <!-- Video Section end -->
 
 </main>
 
