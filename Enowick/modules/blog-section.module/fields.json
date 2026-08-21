@@ -1,0 +1,204 @@
+[
+  {
+    "id": "section_subtitle",
+    "name": "section_subtitle",
+    "label": "Section Subtitle",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Our Insights"
+  },
+  {
+    "id": "section_title",
+    "name": "section_title",
+    "label": "Section Title",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Recent News & Updates"
+  },
+  {
+    "id": "button_text",
+    "name": "button_text",
+    "label": "Button Text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Visit Our Blog"
+  },
+  {
+    "id": "button_url",
+    "name": "button_url",
+    "label": "Button URL",
+    "required": false,
+    "locked": false,
+    "supported_types": ["EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG"],
+    "show_advanced_rel_options": false,
+    "type": "link",
+    "display_width": null,
+    "default": {
+      "url": {
+        "content_id": null,
+        "type": "EXTERNAL",
+        "href": "/blog"
+      }
+    }
+  },
+  {
+    "id": "posts",
+    "name": "posts",
+    "label": "Featured Blog Posts",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 0,
+      "max": 10,
+      "sorting_label_field": null,
+      "default": null
+    },
+    "children": [
+      {
+        "id": "category",
+        "name": "category",
+        "label": "Category / Tag",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Insight"
+      },
+      {
+        "id": "read_time",
+        "name": "read_time",
+        "label": "Read Time",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "5 minute read"
+      },
+      {
+        "id": "title",
+        "name": "title",
+        "label": "Post Title",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "How AI is Revolutionising Web Development in India"
+      },
+      {
+        "id": "author",
+        "name": "author",
+        "label": "Author",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Enowick Team"
+      },
+      {
+        "id": "date",
+        "name": "date",
+        "label": "Date",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "August 2026"
+      },
+      {
+        "id": "featured_image",
+        "name": "featured_image",
+        "label": "Featured Image",
+        "required": false,
+        "locked": false,
+        "responsive": false,
+        "resizable": true,
+        "show_loading": false,
+        "type": "image",
+        "display_width": null,
+        "default": {
+          "src": "",
+          "alt": "Blog post",
+          "size_type": null,
+          "width": null,
+          "height": null,
+          "max_width": null,
+          "max_height": null,
+          "loading": "lazy"
+        }
+      },
+      {
+        "id": "excerpt",
+        "name": "excerpt",
+        "label": "Short Excerpt",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "display_width": null,
+        "default": "<p>Discover how AI-powered tools are transforming the way Indian businesses build, launch, and scale their digital presence in 2026 and beyond.</p>"
+      },
+      {
+        "id": "post_link",
+        "name": "post_link",
+        "label": "Post Link",
+        "required": false,
+        "locked": false,
+        "supported_types": ["EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG"],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/blog"
+          }
+        }
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "category": "Insight",
+        "read_time": "5 minute read",
+        "title": "How AI is Revolutionising Web Development in India",
+        "author": "Enowick Team",
+        "date": "August 2026",
+        "excerpt": "<p>Discover how AI-powered tools are transforming the way Indian businesses build, launch, and scale their digital presence in 2026 and beyond.</p>"
+      },
+      {
+        "category": "Insight",
+        "read_time": "4 minute read",
+        "title": "Top Digital Marketing Strategies for Indian Businesses in 2026",
+        "author": "Enowick Team",
+        "date": "August 2026",
+        "excerpt": "<p>From local SEO in Ghaziabad to pan-India digital campaigns — explore the strategies that are driving real ROI for Indian brands this year.</p>"
+      },
+      {
+        "category": "Insight",
+        "read_time": "5 minute read",
+        "title": "Designing for Conversion: UI/UX Best Practices for Growth",
+        "author": "Enowick Team",
+        "date": "August 2026",
+        "excerpt": "<p>Learn how strategic UI/UX design decisions turn casual site visitors into loyal, paying customers with intuitive user flows and micro-interactions.</p>"
+      }
+    ]
+  }
+]

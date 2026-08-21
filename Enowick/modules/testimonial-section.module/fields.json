@@ -1,0 +1,152 @@
+[
+  {
+    "id": "background_image",
+    "name": "background_image",
+    "label": "Background Image",
+    "required": false,
+    "locked": false,
+    "responsive": false,
+    "resizable": true,
+    "show_loading": false,
+    "type": "image",
+    "display_width": null,
+    "default": {
+      "src": "",
+      "alt": "Testimonials Background",
+      "size_type": null,
+      "width": null,
+      "height": null,
+      "max_width": null,
+      "max_height": null,
+      "loading": "lazy"
+    }
+  },
+  {
+    "id": "section_subtitle",
+    "name": "section_subtitle",
+    "label": "Section Subtitle",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Client Stories"
+  },
+  {
+    "id": "section_title",
+    "name": "section_title",
+    "label": "Section Title",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "What Our Clients Say"
+  },
+  {
+    "id": "testimonials",
+    "name": "testimonials",
+    "label": "Testimonial Items",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 0,
+      "max": 20,
+      "sorting_label_field": null,
+      "default": null
+    },
+    "children": [
+      {
+        "id": "client_image",
+        "name": "client_image",
+        "label": "Client Image",
+        "required": false,
+        "locked": false,
+        "responsive": false,
+        "resizable": true,
+        "show_loading": false,
+        "type": "image",
+        "display_width": null,
+        "default": {
+          "src": "",
+          "alt": "Client",
+          "size_type": null,
+          "width": null,
+          "height": null,
+          "max_width": null,
+          "max_height": null,
+          "loading": "lazy"
+        }
+      },
+      {
+        "id": "client_quote",
+        "name": "client_quote",
+        "label": "Quote / Feedback",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "display_width": null,
+        "default": "<p>\"Enowick transformed our outdated website into a high-performing digital platform. Our leads increased by 3x within two months of launch. Truly a world-class team right here in India.\"</p>"
+      },
+      {
+        "id": "client_name",
+        "name": "client_name",
+        "label": "Client Name",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Priya Sharma"
+      },
+      {
+        "id": "client_designation",
+        "name": "client_designation",
+        "label": "Client Designation / Company",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Founder, TechVenture Delhi"
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "client_name": "Priya Sharma",
+        "client_designation": "Founder, TechVenture Delhi",
+        "client_quote": "<p>\"Enowick transformed our outdated website into a high-performing digital platform. Our leads increased by 3x within two months of launch. Truly a world-class team right here in India.\"</p>"
+      },
+      {
+        "client_name": "Rajesh Gupta",
+        "client_designation": "CEO, ShopBridge India",
+        "client_quote": "<p>\"Working with Enowick on our e-commerce platform was seamless. They understood our vision, delivered a stunning UI/UX design, and drove measurable growth through their SEO expertise.\"</p>"
+      },
+      {
+        "client_name": "Anika Mehra",
+        "client_designation": "Operations Head, Nexus Infra",
+        "client_quote": "<p>\"Enowick's AI-powered solutions helped us automate key business workflows, saving us 40+ hours a week. Their team is incredibly knowledgeable and always a step ahead.\"</p>"
+      },
+      {
+        "client_name": "Vikram Malhotra",
+        "client_designation": "Managing Director, Zenith Corp",
+        "client_quote": "<p>\"From initial UI/UX strategy to full web stack deployment, Enowick executed flawlessly. Their ongoing SEO support has given us consistent top Google rankings.\"</p>"
+      },
+      {
+        "client_name": "Siddharth Roy",
+        "client_designation": "CTO, FinEdge Global",
+        "client_quote": "<p>\"The software development team at Enowick built our custom SaaS dashboard ahead of schedule and with incredible precision. Outstanding experience overall.\"</p>"
+      },
+      {
+        "client_name": "Kavita Singhania",
+        "client_designation": "Brand Director, Luxury Living",
+        "client_quote": "<p>\"Enowick's digital marketing campaigns helped us expand our reach across major metros in India. Highly recommended for any brand looking to scale fast.\"</p>"
+      }
+    ]
+  }
+]

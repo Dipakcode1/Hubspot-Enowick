@@ -1,0 +1,75 @@
+{% set btn_href = module.button_url.url.href if (module.button_url.url and module.button_url.url.href) else (module.button_url.href if module.button_url.href else '/blog') %}
+
+<section class="ew-blog-2-area pt-124 pb-124">
+    <div class="container container-1617">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ew-blog-2-main">
+                    <div class="ew-section-title pb-20">
+                        {% if module.section_subtitle %}
+                            <span>{{ module.section_subtitle }}</span>
+                        {% endif %}
+                        {% if module.section_title %}
+                            <h2 class="ew-text-revel-anim">{{ module.section_title }}</h2>
+                        {% endif %}
+                    </div>
+                    {% if module.button_text %}
+                        <div class="ew-blog-2-btn">
+                            <a class="ew-btn-one black-bg-btn border-btn" href="{{ btn_href }}">
+                                <span class="btn-text"> <span>{{ module.button_text }}</span> </span>
+                                <span class="btn-icon btn-icon2"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-lg-12">
+                {% if module.posts and module.posts|length > 0 %}
+                    {% for post in module.posts %}
+                        {% set post_url = post.post_link.url.href if (post.post_link.url and post.post_link.url.href) else '/blog' %}
+                        {% set post_img = post.featured_image.src if (post.featured_image and post.featured_image.src) else get_asset_url('../../images/blog/blog' ~ ((loop.index % 3) + 6) ~ '.jpg') %}
+                        <div class="ew-blog-2-box">
+                            <div class="ew-blog-2-text">
+                                {% if post.category %}
+                                    <span class="blog-2-border">{{ post.category }}</span>
+                                {% endif %}
+                                {% if post.read_time %}
+                                    <span>{{ post.read_time }}</span>
+                                {% endif %}
+                                <h3><a class="underline-black" href="{{ post_url }}">{{ post.title }}</a></h3>
+                                {% if post.author %}
+                                    <span class="project-dot2">{{ post.author }}</span>
+                                {% endif %}
+                                {% if post.date %}
+                                    <span>{{ post.date }}</span>
+                                {% endif %}
+                            </div>
+                            <div class="ew-blog-2-thumb">
+                                <img src="{{ post_img }}" alt="{{ post.title }}">
+                            </div>
+                            <div class="ew-blog-2-p">
+                                {{ post.excerpt }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="ew-blog-2-box">
+                        <div class="ew-blog-2-text">
+                            <span class="blog-2-border">Insight</span>
+                            <span>5 minute read</span>
+                            <h3><a class="underline-black" href="/blog">How AI is Revolutionising Web Development in India</a></h3>
+                            <span class="project-dot2">Enowick Team</span>
+                            <span>August 2026</span>
+                        </div>
+                        <div class="ew-blog-2-thumb">
+                            <img src="{{ get_asset_url('../../images/blog/blog6.jpg') }}" alt="AI and web development insights from Enowick">
+                        </div>
+                        <div class="ew-blog-2-p">
+                            <p>Discover how AI-powered tools are transforming the way Indian businesses build, launch, and scale their digital presence in 2026 and beyond.</p>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

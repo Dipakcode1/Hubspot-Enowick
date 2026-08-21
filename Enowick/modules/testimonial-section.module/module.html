@@ -1,0 +1,75 @@
+{% set bg_url = module.background_image.src if (module.background_image and module.background_image.src) else get_asset_url('../../images/testimonial/bg.jpg') %}
+
+<section class="ew-testimonial-2-area pt-124 pb-124" data-background="{{ bg_url }}" style="background-image: url('{{ bg_url }}');">
+    <div class="container container-1617">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="ew-testimonial-slider-wrap">
+                    <div class="swiper ew-testimonial-bottom-thumb-active">
+                        <div class="swiper-wrapper">
+                            {% if module.testimonials and module.testimonials|length > 0 %}
+                                {% for item in module.testimonials %}
+                                    {% set img_url = item.client_image.src if (item.client_image and item.client_image.src) else get_asset_url('../../images/testimonial/t' ~ ((loop.index % 3) + 1) ~ '.png') %}
+                                    <div class="swiper-slide">
+                                        <img src="{{ img_url }}" alt="{{ item.client_name or 'Client testimonial' }}">
+                                    </div>
+                                {% endfor %}
+                            {% else %}
+                                <div class="swiper-slide"><img src="{{ get_asset_url('../../images/testimonial/t1.png') }}" alt="Client testimonial"></div>
+                                <div class="swiper-slide"><img src="{{ get_asset_url('../../images/testimonial/t2.png') }}" alt="Client testimonial"></div>
+                                <div class="swiper-slide"><img src="{{ get_asset_url('../../images/testimonial/t3.png') }}" alt="Client testimonial"></div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="ew-section-title ew-white pb-40">
+                    {% if module.section_subtitle %}
+                        <span>{{ module.section_subtitle }}</span>
+                    {% endif %}
+                    {% if module.section_title %}
+                        <h2 class="ew-text-revel-anim">{{ module.section_title }}</h2>
+                    {% endif %}
+                </div>
+                <div class="swiper ew-testimonial-content-active">
+                    <div class="swiper-wrapper">
+                        {% if module.testimonials and module.testimonials|length > 0 %}
+                            {% for item in module.testimonials %}
+                                <div class="swiper-slide">
+                                    <div class="ew-testimonial-2-text">
+                                        {{ item.client_quote }}
+                                    </div>
+                                    <div class="ew-testimonial-2-main">
+                                        <div class="ew-testimonial-2-title">
+                                            <h3>{{ item.client_name }}</h3>
+                                            <span>{{ item.client_designation }}</span>
+                                        </div>
+                                        <div class="ew-testimonial-2-shape">
+                                            <img src="{{ get_asset_url('../../images/testimonial/shape.png') }}" alt="quote shape">
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class="swiper-slide">
+                                <div class="ew-testimonial-2-text">
+                                    <p>"Enowick transformed our outdated website into a high-performing digital platform. Our leads increased by 3x within two months of launch."</p>
+                                </div>
+                                <div class="ew-testimonial-2-main">
+                                    <div class="ew-testimonial-2-title">
+                                        <h3>Priya Sharma</h3>
+                                        <span>Founder, TechVenture Delhi</span>
+                                    </div>
+                                    <div class="ew-testimonial-2-shape">
+                                        <img src="{{ get_asset_url('../../images/testimonial/shape.png') }}" alt="shape">
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

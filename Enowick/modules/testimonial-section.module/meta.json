@@ -1,0 +1,9 @@
+{
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
+  "categories" : [ "media" ],
+  "host_template_types" : [ "PAGE" ],
+  "label" : "Testimonial Section",
+  "icon" : "fontawesome",
+  "is_available_for_new_content" : true
+}
