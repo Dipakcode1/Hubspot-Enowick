@@ -8,140 +8,182 @@
 
 {% block body %}
 
-<main class="body-container-wrapper">
-  {% dnd_area "dnd_area"
-    label="Main content area",
-    class=""
+{% dnd_area "dnd_area"
+  label="Main content area"
+%}
+
+  {# 1. Hero Banner Section #}
+  {% dnd_section
+    max_width=0,
+    full_width=true,
+    padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
+    margin={ "top": 0, "bottom": 0 }
   %}
-
-    {# 1. Hero Banner Section #}
-    {% dnd_section
+    {% dnd_column
       padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
       margin={ "top": 0, "bottom": 0 }
     %}
-      {% dnd_column %}
-        {% dnd_module
-          path="../modules/hero-banner.module",
-          label="Hero Banner"
-        %}
-        {% end_dnd_module %}
-      {% end_dnd_column %}
-    {% end_dnd_section %}
+      {% dnd_module
+        path="../modules/hero-banner.module",
+        label="Hero Banner"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
 
-    {# 2. Brand Logos Section #}
-    {% dnd_section
+  {# 2. Brand Logos Section #}
+  {% dnd_section
+    max_width=0,
+    full_width=true,
+    padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
+    margin={ "top": 0, "bottom": 0 }
+  %}
+    {% dnd_column
       padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
       margin={ "top": 0, "bottom": 0 }
     %}
-      {% dnd_column %}
-        {% dnd_module
-          path="../modules/brand-logos.module",
-          label="Brand Logos"
-        %}
-        {% end_dnd_module %}
-      {% end_dnd_column %}
-    {% end_dnd_section %}
+      {% dnd_module
+        path="../modules/brand-logos.module",
+        label="Brand Logos"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
 
-    {# 3. About Section #}
-    {% dnd_section
+  {# 3. About Section #}
+  {% dnd_section
+    max_width=0,
+    full_width=true,
+    padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
+    margin={ "top": 0, "bottom": 0 }
+  %}
+    {% dnd_column
       padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
       margin={ "top": 0, "bottom": 0 }
     %}
-      {% dnd_column %}
-        {% dnd_module
-          path="../modules/about-section.module",
-          label="About Section"
-        %}
-        {% end_dnd_module %}
-      {% end_dnd_column %}
-    {% end_dnd_section %}
+      {% dnd_module
+        path="../modules/about-section.module",
+        label="About Section"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
 
-    {# 4. Service Section #}
-    {% dnd_section
+  {# 4. Service Section #}
+  {% dnd_section
+    max_width=0,
+    full_width=true,
+    padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
+    margin={ "top": 0, "bottom": 0 }
+  %}
+    {% dnd_column
       padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
       margin={ "top": 0, "bottom": 0 }
     %}
-      {% dnd_column %}
-        {% dnd_module
-          path="../modules/service-section.module",
-          label="Service Section"
-        %}
-        {% end_dnd_module %}
-      {% end_dnd_column %}
-    {% end_dnd_section %}
+      {% dnd_module
+        path="../modules/service-section.module",
+        label="Service Section"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
 
-    {# 5. Project Section #}
-    {% dnd_section
+  {# 5. Project Section #}
+  {% dnd_section
+    max_width=0,
+    full_width=true,
+    padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
+    margin={ "top": 0, "bottom": 0 }
+  %}
+    {% dnd_column
       padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
       margin={ "top": 0, "bottom": 0 }
     %}
-      {% dnd_column %}
-        {% dnd_module
-          path="../modules/project-section.module",
-          label="Project Section"
-        %}
-        {% end_dnd_module %}
-      {% end_dnd_column %}
-    {% end_dnd_section %}
+      {% dnd_module
+        path="../modules/project-section.module",
+        label="Project Section"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
 
-    {# 6. Team Section #}
-    {% dnd_section
+  {# 6. Team Section #}
+  {% dnd_section
+    max_width=0,
+    full_width=true,
+    padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
+    margin={ "top": 0, "bottom": 0 }
+  %}
+    {% dnd_column
       padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
       margin={ "top": 0, "bottom": 0 }
     %}
-      {% dnd_column %}
-        {% dnd_module
-          path="../modules/team-section.module",
-          label="Team Section"
-        %}
-        {% end_dnd_module %}
-      {% end_dnd_column %}
-    {% end_dnd_section %}
+      {% dnd_module
+        path="../modules/team-section.module",
+        label="Team Section"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
 
-    {# 7. Testimonial Section #}
-    {% dnd_section
+  {# 7. Testimonial Section #}
+  {% dnd_section
+    max_width=0,
+    full_width=true,
+    padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
+    margin={ "top": 0, "bottom": 0 }
+  %}
+    {% dnd_column
       padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
       margin={ "top": 0, "bottom": 0 }
     %}
-      {% dnd_column %}
-        {% dnd_module
-          path="../modules/testimonial-section.module",
-          label="Testimonial Section"
-        %}
-        {% end_dnd_module %}
-      {% end_dnd_column %}
-    {% end_dnd_section %}
+      {% dnd_module
+        path="../modules/testimonial-section.module",
+        label="Testimonial Section"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
 
-    {# 8. Blog Section #}
-    {% dnd_section
+  {# 8. Blog Section #}
+  {% dnd_section
+    max_width=0,
+    full_width=true,
+    padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
+    margin={ "top": 0, "bottom": 0 }
+  %}
+    {% dnd_column
       padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
       margin={ "top": 0, "bottom": 0 }
     %}
-      {% dnd_column %}
-        {% dnd_module
-          path="../modules/blog-section.module",
-          label="Blog Section"
-        %}
-        {% end_dnd_module %}
-      {% end_dnd_column %}
-    {% end_dnd_section %}
+      {% dnd_module
+        path="../modules/blog-section.module",
+        label="Blog Section"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
 
-    {# 9. Video Section #}
-    {% dnd_section
+  {# 9. Video Section #}
+  {% dnd_section
+    max_width=0,
+    full_width=true,
+    padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
+    margin={ "top": 0, "bottom": 0 }
+  %}
+    {% dnd_column
       padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 },
       margin={ "top": 0, "bottom": 0 }
     %}
-      {% dnd_column %}
-        {% dnd_module
-          path="../modules/video-section.module",
-          label="Video Section"
-        %}
-        {% end_dnd_module %}
-      {% end_dnd_column %}
-    {% end_dnd_section %}
+      {% dnd_module
+        path="../modules/video-section.module",
+        label="Video Section"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
 
-  {% end_dnd_area %}
-</main>
+{% end_dnd_area %}
 
 {% endblock body %}
 

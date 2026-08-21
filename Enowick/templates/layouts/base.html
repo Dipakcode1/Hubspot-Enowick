@@ -27,6 +27,58 @@
     {{ require_css(get_asset_url("../../css/main.css")) }}
 
     {{ standard_header_includes }}
+
+    <style>
+      /* Complete HubSpot DND Full-Width & Zero Padding Override */
+      html, body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+      .container-fluid,
+      .container-fluid.dnd-section,
+      div[class*="container-fluid"],
+      .body-wrapper,
+      #smooth-wrapper,
+      #smooth-content,
+      #main-content,
+      .body-container-wrapper,
+      .body-container,
+      .body-container--home,
+      div.dnd_area,
+      div[class*="dnd_area"],
+      div.dnd-section,
+      div[class*="dnd-section"],
+      div.dnd-column,
+      div[class*="dnd-column"],
+      div.dnd-row,
+      div.row-fluid,
+      div.widget-type-cell,
+      div.widget-type-section,
+      div.widget-type-row {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        --bs-gutter-x: 0 !important;
+      }
+      .dnd-section > .row-fluid,
+      .dnd-column > .row-fluid,
+      .dnd_area > .row-fluid {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        --bs-gutter-x: 0 !important;
+      }
+      .dnd-section .dnd-column {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+    </style>
   </head>
   <body class="ew-magic-cursor">
 
