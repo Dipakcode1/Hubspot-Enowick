@@ -1,0 +1,64 @@
+[
+  {
+    "name": "counters",
+    "label": "Counter Items",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 10,
+      "default": 4
+    },
+    "default": [
+      {
+        "number": 200,
+        "suffix": "+",
+        "stat_label": "Projects Delivered",
+        "duration": 1
+      },
+      {
+        "number": 150,
+        "suffix": "+",
+        "stat_label": "Happy Clients",
+        "duration": 1
+      },
+      {
+        "number": 5,
+        "suffix": "+",
+        "stat_label": "Years Experience",
+        "duration": 1
+      },
+      {
+        "number": 98,
+        "suffix": "%",
+        "stat_label": "Client Satisfaction",
+        "duration": 1
+      }
+    ],
+    "children": [
+      {
+        "name": "number",
+        "label": "Counter Number",
+        "type": "number",
+        "default": 100
+      },
+      {
+        "name": "suffix",
+        "label": "Suffix Symbol (e.g. + or %)",
+        "type": "text",
+        "default": "+"
+      },
+      {
+        "name": "stat_label",
+        "label": "Description Label",
+        "type": "text",
+        "default": "Happy Clients"
+      },
+      {
+        "name": "duration",
+        "label": "Animation Duration (seconds)",
+        "type": "number",
+        "default": 1
+      }
+    ]
+  }
+]

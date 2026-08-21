@@ -1,0 +1,80 @@
+[
+  {
+    "name": "circular_badge_text",
+    "label": "Circular Badge Text (Clear Bold Rotating Text)",
+    "type": "text",
+    "default": "TRUSTED BY CLIENTS • ENOWICK DIGITAL • EXCELLENCE • "
+  },
+  {
+    "name": "badge_shape_image",
+    "label": "Custom Badge Image (Optional - overrides text)",
+    "type": "image",
+    "default": {
+      "src": ""
+    }
+  },
+  {
+    "name": "badge_icon",
+    "label": "Center Quote Icon",
+    "type": "image",
+    "default": {
+      "src": ""
+    }
+  },
+  {
+    "name": "testimonials",
+    "label": "Testimonials",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 2
+    },
+    "default": [
+      {
+        "client_quote": "<h2>“Enowick team quickly understood our requirements and were proactive and flexible with support and ongoing complex developments. You can definitely trust them for complex project requirements as they are top-notch in their field.”</h2>",
+        "client_image": {
+          "src": ""
+        },
+        "client_name": "Abu Talha",
+        "client_designation": "Senior Marketing Manager"
+      },
+      {
+        "client_quote": "<h2>“Enowick team quickly understood our requirements and were proactive and flexible with support and ongoing complex developments. You can definitely trust them for complex project requirements as they are top-notch in their field.”</h2>",
+        "client_image": {
+          "src": ""
+        },
+        "client_name": "Jinnira Alam",
+        "client_designation": "Senior Marketing Manager"
+      }
+    ],
+    "children": [
+      {
+        "name": "client_quote",
+        "label": "Client Quote",
+        "type": "richtext",
+        "default": "<h2>“Enowick team quickly understood our requirements...”</h2>"
+      },
+      {
+        "name": "client_image",
+        "label": "Client Photo",
+        "type": "image",
+        "default": {
+          "src": ""
+        }
+      },
+      {
+        "name": "client_name",
+        "label": "Client Name",
+        "type": "text",
+        "default": "Abu Talha"
+      },
+      {
+        "name": "client_designation",
+        "label": "Client Designation",
+        "type": "text",
+        "default": "Senior Marketing Manager"
+      }
+    ]
+  }
+]

@@ -1,219 +1,269 @@
-[ {
-  "id" : "heading",
-  "name" : "heading",
-  "label" : "Footer Heading",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null,
-  "default" : "Let's Work Together"
-}, {
-  "id" : "description",
-  "name" : "description",
-  "label" : "Footer Description",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null,
-  "default" : "Enowick is your full-service digital partner — delivering web development, UI/UX design, digital marketing, and AI solutions to businesses across India."
-}, {
-  "id" : "background_image",
-  "name" : "background_image",
-  "label" : "Background Image",
-  "required" : false,
-  "locked" : false,
-  "responsive" : false,
-  "resizable" : true,
-  "show_loading" : false,
-  "type" : "image",
-  "display_width" : null,
-  "default" : {
-    "src" : "",
-    "alt" : null,
-    "size_type" : null,
-    "width" : null,
-    "height" : null,
-    "max_width" : null,
-    "max_height" : null,
-    "loading" : "disabled"
-  }
-}, {
-  "id" : "logo",
-  "name" : "logo",
-  "label" : "Footer Logo (White)",
-  "required" : false,
-  "locked" : false,
-  "responsive" : false,
-  "resizable" : true,
-  "show_loading" : false,
-  "type" : "image",
-  "display_width" : null,
-  "default" : {
-    "src" : "",
-    "alt" : null,
-    "size_type" : null,
-    "width" : null,
-    "height" : null,
-    "max_width" : null,
-    "max_height" : null,
-    "loading" : "disabled"
-  }
-}, {
-  "id" : "logo_tagline",
-  "name" : "logo_tagline",
-  "label" : "Logo Tagline",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null,
-  "default" : "Building digital experiences that inspire, convert, and grow."
-}, {
-  "id" : "email_address",
-  "name" : "email_address",
-  "label" : "Contact Email",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null,
-  "default" : "hello@enowick.com"
-}, {
-  "id" : "phone_number",
-  "name" : "phone_number",
-  "label" : "Phone Number",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null,
-  "default" : "+91 88267 54759"
-}, {
-  "id" : "location_address",
-  "name" : "location_address",
-  "label" : "Location Address",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null,
-  "default" : "Ghaziabad, Uttar Pradesh, India"
-}, {
-  "id" : "menu",
-  "name" : "menu",
-  "label" : "Quick Links Menu",
-  "required" : false,
-  "locked" : false,
-  "type" : "menu",
-  "display_width" : null
-}, {
-  "id" : "support_menu",
-  "name" : "support_menu",
-  "label" : "Support Menu",
-  "required" : false,
-  "locked" : false,
-  "type" : "menu",
-  "display_width" : null
-}, {
-  "id" : "copyright_text",
-  "name" : "copyright_text",
-  "label" : "Copyright Text",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null,
-  "default" : "All rights reserved — {{ year }} © Enowick"
-}, {
-  "id" : "social_links",
-  "name" : "social_links",
-  "label" : "Social Media Links",
-  "required" : false,
-  "locked" : false,
-  "occurrence" : {
-    "min" : 0,
-    "max" : null,
-    "sorting_label_field" : null,
-    "default" : 5
+[
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Footer Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Let's Work Together"
   },
-  "children" : [ {
-    "id" : "platform_name",
-    "name" : "platform_name",
-    "label" : "Platform Name (e.g. twitter, instagram, linkedin, pinterest, behance)",
-    "required" : false,
-    "locked" : false,
-    "allow_new_line" : false,
-    "type" : "text",
-    "display_width" : null
-  }, {
-    "id" : "social_link_url",
-    "name" : "social_link_url",
-    "label" : "Link URL",
-    "required" : false,
-    "locked" : false,
-    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
-    "show_advanced_rel_options" : false,
-    "type" : "link",
-    "display_width" : null,
-    "default" : {
-      "url" : {
-        "type" : "EXTERNAL",
-        "content_id" : null,
-        "href" : "",
-        "href_with_scheme" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false,
-      "sponsored" : false,
-      "user_generated_content" : false
+  {
+    "id": "description",
+    "name": "description",
+    "label": "Footer Description",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Enowick is your full-service digital partner — delivering web development, UI/UX design, digital marketing, and AI solutions to businesses across India."
+  },
+  {
+    "id": "background_image",
+    "name": "background_image",
+    "label": "Background Image",
+    "required": false,
+    "locked": false,
+    "responsive": false,
+    "resizable": true,
+    "show_loading": false,
+    "type": "image",
+    "display_width": null,
+    "default": {
+      "src": "",
+      "alt": null,
+      "size_type": null,
+      "width": null,
+      "height": null,
+      "max_width": null,
+      "max_height": null,
+      "loading": "disabled"
     }
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "group_occurrence_meta" : null,
-  "type" : "group",
-  "display_width" : null,
-  "default" : [ {
-    "platform_name" : "linkedin",
-    "social_link_url" : {
-      "url" : {
-        "href" : "https://www.linkedin.com/company/enowick"
-      },
-      "open_in_new_tab" : true
+  },
+  {
+    "id": "logo",
+    "name": "logo",
+    "label": "Footer Logo (White)",
+    "required": false,
+    "locked": false,
+    "responsive": false,
+    "resizable": true,
+    "show_loading": false,
+    "type": "image",
+    "display_width": null,
+    "default": {
+      "src": "",
+      "alt": null,
+      "size_type": null,
+      "width": null,
+      "height": null,
+      "max_width": null,
+      "max_height": null,
+      "loading": "disabled"
     }
-  }, {
-    "platform_name" : "instagram",
-    "social_link_url" : {
-      "url" : {
-        "href" : "https://www.instagram.com/enowick.official"
+  },
+  {
+    "id": "logo_tagline",
+    "name": "logo_tagline",
+    "label": "Logo Tagline",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Building digital experiences that inspire, convert, and grow."
+  },
+  {
+    "id": "email_address",
+    "name": "email_address",
+    "label": "Contact Email",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "hello@enowick.com"
+  },
+  {
+    "id": "phone_number",
+    "name": "phone_number",
+    "label": "Phone Number",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "+91 88267 54759"
+  },
+  {
+    "id": "location_address",
+    "name": "location_address",
+    "label": "Location Address",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Ghaziabad, Uttar Pradesh, India"
+  },
+  {
+    "id": "quick_links_heading",
+    "name": "quick_links_heading",
+    "label": "Quick Links Column Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Quick Links"
+  },
+  {
+    "id": "menu",
+    "name": "menu",
+    "label": "Quick Links Menu",
+    "required": false,
+    "locked": false,
+    "type": "menu",
+    "display_width": null
+  },
+  {
+    "id": "services_heading",
+    "name": "services_heading",
+    "label": "Services Column Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Service"
+  },
+  {
+    "id": "support_menu",
+    "name": "support_menu",
+    "label": "Services Menu",
+    "required": false,
+    "locked": false,
+    "type": "menu",
+    "display_width": null
+  },
+  {
+    "id": "copyright_text",
+    "name": "copyright_text",
+    "label": "Copyright Text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "All rights reserved — {{ year }} © Enowick"
+  },
+  {
+    "id": "social_links",
+    "name": "social_links",
+    "label": "Social Media Links",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 0,
+      "max": null,
+      "sorting_label_field": null,
+      "default": 5
+    },
+    "children": [
+      {
+        "id": "platform_name",
+        "name": "platform_name",
+        "label": "Platform Name (e.g. twitter, instagram, linkedin, pinterest, behance)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null
       },
-      "open_in_new_tab" : true
-    }
-  }, {
-    "platform_name" : "youtube",
-    "social_link_url" : {
-      "url" : {
-        "href" : "https://www.youtube.com/@enowick.official"
+      {
+        "id": "social_link_url",
+        "name": "social_link_url",
+        "label": "Link URL",
+        "required": false,
+        "locked": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG"
+        ],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "type": "EXTERNAL",
+            "content_id": null,
+            "href": "",
+            "href_with_scheme": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false,
+          "sponsored": false,
+          "user_generated_content": false
+        }
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "platform_name": "linkedin",
+        "social_link_url": {
+          "url": {
+            "href": "https://www.linkedin.com/company/enowick"
+          },
+          "open_in_new_tab": true
+        }
       },
-      "open_in_new_tab" : true
-    }
-  }, {
-    "platform_name" : "facebook",
-    "social_link_url" : {
-      "url" : {
-        "href" : "https://www.facebook.com/enowick.official/"
+      {
+        "platform_name": "instagram",
+        "social_link_url": {
+          "url": {
+            "href": "https://www.instagram.com/enowick.official"
+          },
+          "open_in_new_tab": true
+        }
       },
-      "open_in_new_tab" : true
-    }
-  }, {
-    "platform_name" : "threads",
-    "social_link_url" : {
-      "url" : {
-        "href" : "https://www.threads.com/@enowick.official"
+      {
+        "platform_name": "youtube",
+        "social_link_url": {
+          "url": {
+            "href": "https://www.youtube.com/@enowick.official"
+          },
+          "open_in_new_tab": true
+        }
       },
-      "open_in_new_tab" : true
-    }
-  } ]
-} ] 
+      {
+        "platform_name": "facebook",
+        "social_link_url": {
+          "url": {
+            "href": "https://www.facebook.com/enowick.official/"
+          },
+          "open_in_new_tab": true
+        }
+      },
+      {
+        "platform_name": "threads",
+        "social_link_url": {
+          "url": {
+            "href": "https://www.threads.com/@enowick.official"
+          },
+          "open_in_new_tab": true
+        }
+      }
+    ]
+  }
+]

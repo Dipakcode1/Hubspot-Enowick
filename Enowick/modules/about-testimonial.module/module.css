@@ -1,0 +1,138 @@
+.ew-testimonial-shape {
+  position: relative;
+  background: var(--ew-common-white, #ffffff);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 320px;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin-top: 0;
+}
+
+@media (max-width: 991px) {
+  .ew-testimonial-shape {
+    width: 260px;
+    height: 260px;
+    margin: 0 auto 30px auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .ew-testimonial-shape {
+    display: none;
+  }
+}
+
+.ew-testimonial-svg-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ew-testimonial-svg-wrap svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.ew-testimonial-svg-wrap text {
+  letter-spacing: 3.5px;
+  font-family: var(--ew-ff-body, 'General Sans', sans-serif);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.ew-testimonial-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ew-common-gray, #f6f6f6);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@media (max-width: 991px) {
+  .ew-testimonial-icon {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.ew-testimonial-icon img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Remove stray bullet dots from rich text or swiper */
+.card-testimonial,
+.card-testimonial ul,
+.card-testimonial li,
+.ew-testimonial-box,
+.ew-testimonial-box ul,
+.ew-testimonial-box li,
+.ew-testimonial-text ul,
+.ew-testimonial-text li {
+  list-style: none !important;
+  list-style-type: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.card-testimonial .swiper-slide {
+  list-style: none !important;
+  list-style-type: none !important;
+}
+
+.card-testimonial .swiper-slide::marker,
+.card-testimonial .swiper-slide::before {
+  display: none !important;
+  content: "" !important;
+}
+
+/* Client Profile Photo 80x80 Circle with Object-fit Cover */
+.ew-testimonial-thumb {
+  width: 80px !important;
+  height: 80px !important;
+  min-width: 80px !important;
+  min-height: 80px !important;
+  max-width: 80px !important;
+  max-height: 80px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+}
+
+.ew-testimonial-thumb img {
+  width: 80px !important;
+  height: 80px !important;
+  min-width: 80px !important;
+  min-height: 80px !important;
+  max-width: 80px !important;
+  max-height: 80px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+.ew-testimonial-main {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+}
+

@@ -1,0 +1,49 @@
+<section class="ew-counter-area pt-130 pb-124">
+    <div class="container container-1617">
+        <div class="ew-counter-wrapper">
+            <div class="ew-counter-wrapper-box">
+                {% if module.counters and module.counters|length > 0 %}
+                    {% for item in module.counters %}
+                        <div class="ew-counter-box {% if not loop.first %}counter-mt{% endif %}">
+                            <div class="ew-counter-text">
+                                <h1 data-purecounter-duration="{{ item.duration or 1 }}" data-purecounter-end="{{ item.number or 100 }}" class="purecounter">{{ item.number or 100 }}</h1>
+                                {% if item.suffix %}
+                                    <h2>{{ item.suffix }}</h2>
+                                {% endif %}
+                                <span>{{ item.stat_label }}</span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="ew-counter-box">
+                        <div class="ew-counter-text">
+                            <h1 data-purecounter-duration="1" data-purecounter-end="200" class="purecounter">200</h1>
+                            <h2>+</h2>
+                            <span>Projects Delivered</span>
+                        </div>
+                    </div>
+                    <div class="ew-counter-box counter-mt">
+                        <div class="ew-counter-text">
+                            <h1 data-purecounter-duration="1" data-purecounter-end="150" class="purecounter">150</h1>
+                            <h2>+</h2>
+                            <span>Happy Clients</span>
+                        </div>
+                    </div>
+                    <div class="ew-counter-box counter-mt">
+                        <div class="ew-counter-text">
+                            <h1 data-purecounter-duration="1" data-purecounter-end="5" class="purecounter">5</h1>
+                            <h2>+</h2>
+                            <span>Years Experience</span>
+                        </div>
+                    </div>
+                    <div class="ew-counter-box counter-mt">
+                        <div class="ew-counter-text">
+                            <h1 data-purecounter-duration="1" data-purecounter-end="98" class="purecounter">98</h1>
+                            <span>% Client Satisfaction</span>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

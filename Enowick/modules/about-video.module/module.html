@@ -1,0 +1,22 @@
+{% set bg_url = module.background_image.src if (module.background_image and module.background_image.src) else get_asset_url('../../images/video/bg.jpg') %}
+{% set shape_url = module.shape_image.src if (module.shape_image and module.shape_image.src) else get_asset_url('../../images/video/shape.png') %}
+{% set video_url = module.video_url if module.video_url else 'https://www.youtube.com/watch?v=MLpWrANjFbI' %}
+
+<div class="ew-video-area" data-background="{{ bg_url }}" style="background-image: url('{{ bg_url }}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                {% if module.show_play_button %}
+                    <div class="ew-video-icon">
+                        <div class="ew-video-icon-inner">
+                            <a class="popup-video ew-about-playbtn" href="{{ video_url }}"><i class="fa-solid fa-play"></i></a>
+                            <div class="ew-video-shape">
+                                <img class="rotate2" src="{{ shape_url }}" alt="Watch video">
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,93 @@
+{% set badge_icon = module.badge_icon.src if (module.badge_icon and module.badge_icon.src) else get_asset_url('../../images/testimonial/Icon.svg') %}
+
+<section class="ew-testimonial-area pt-124 pb-124">
+    <div class="container container-1617">
+        <div class="row align-items-center">
+            <div class="col-lg-4">
+                <div class="ew-testimonial-shape">
+                    {% if module.badge_shape_image and module.badge_shape_image.src %}
+                        <img class="rotate2" src="{{ module.badge_shape_image.src }}" alt="Testimonial Badge">
+                    {% else %}
+                        {% set badge_text = module.circular_badge_text or 'TRUSTED BY CLIENTS • ENOWICK DIGITAL • EXCELLENCE • ' %}
+                        <div class="ew-testimonial-svg-wrap rotate2">
+                            <svg viewBox="0 0 300 300" width="100%" height="100%">
+                                <defs>
+                                    <path id="aboutTestimonialCirclePath" d="M 150, 150 m -115, 0 a 115,115 0 1,1 230,0 a 115,115 0 1,1 -230,0" fill="none" />
+                                </defs>
+                                <text font-family="'General Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14.5" font-weight="700" fill="#111111" letter-spacing="3.2">
+                                    <textPath href="#aboutTestimonialCirclePath" startOffset="0%">
+                                        {{ badge_text }}
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </div>
+                    {% endif %}
+                    <div class="ew-testimonial-icon">
+                        <img src="{{ badge_icon }}" alt="Quote Icon">
+                    </div>
+                </div>                                    
+            </div>
+            <div class="col-lg-8 position-relative">
+                <div class="swiper ew-testimonial card-testimonial">
+                    <div class="swiper-wrapper">
+                        {% if module.testimonials and module.testimonials|length > 0 %}
+                            {% for item in module.testimonials %}
+                                {% set client_img = item.client_image.src if (item.client_image and item.client_image.src) else get_asset_url('../../images/testimonial/testimonial' ~ ((loop.index % 2) + 1) ~ '.jpg') %}
+                                <div class="swiper-slide">
+                                    <div class="ew-testimonial-box">
+                                        <div class="ew-testimonial-text">
+                                            {{ item.client_quote }}
+                                        </div>
+                                        <div class="ew-testimonial-main">
+                                            <div class="ew-testimonial-thumb">
+                                                <img src="{{ client_img }}" alt="{{ item.client_name }}">
+                                            </div>
+                                            <div class="ew-testimonial-address">
+                                                <h3>{{ item.client_name }}</h3>
+                                                <span>{{ item.client_designation }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class="swiper-slide">
+                                <div class="ew-testimonial-box">
+                                    <div class="ew-testimonial-text">
+                                        <h2>“Enowick team quickly understood our requirements and were proactive and flexible with support and ongoing complex developments. You can definitely trust them for complex project requirements as they are top-notch in their field.”</h2>
+                                    </div>
+                                    <div class="ew-testimonial-main">
+                                        <div class="ew-testimonial-thumb">
+                                            <img src="{{ get_asset_url('../../images/testimonial/testimonial1.jpg') }}" alt="Abu Talha">
+                                        </div>
+                                        <div class="ew-testimonial-address">
+                                            <h3>Abu Talha</h3>
+                                            <span>Senior Marketing Manager</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ew-testimonial-box">
+                                    <div class="ew-testimonial-text">
+                                        <h2>“Enowick team quickly understood our requirements and were proactive and flexible with support and ongoing complex developments. You can definitely trust them for complex project requirements as they are top-notch in their field.”</h2>
+                                    </div>
+                                    <div class="ew-testimonial-main">
+                                        <div class="ew-testimonial-thumb">
+                                            <img src="{{ get_asset_url('../../images/testimonial/testimonial2.jpg') }}" alt="Jinnira Alam">
+                                        </div>
+                                        <div class="ew-testimonial-address">
+                                            <h3>Jinnira Alam</h3>
+                                            <span>Senior Marketing Manager</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="ew-swiper-scrollbar"></div>
+            </div>
+        </div>
+    </div>
+</section>

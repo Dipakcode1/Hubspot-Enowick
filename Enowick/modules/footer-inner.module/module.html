@@ -50,17 +50,17 @@
             </div>
             <div class="col-lg-3">
                 <div class="ew-footer-list footer-right">
-                    <h2>Support</h2>
+                    <h2>{{ module.services_heading or 'Service' }}</h2>
                     <ul>
                         {% if support_nav and support_nav|length > 0 %}
                             {% for link in support_nav %}
                                 <li><a href="{{ link.url if link.url else '#' }}">{{ link.label }}</a></li>
                             {% endfor %}
                         {% else %}
-                            <li><a href="#">Style guide</a></li>
-                            <li><a href="#">License</a></li>
-                            <li><a href="#">Changelog</a></li>
-                            <li><a href="#">404 Error</a></li>
+                            <li><a href="/service">Web Development</a></li>
+                            <li><a href="/service">UI/UX Design</a></li>
+                            <li><a href="/service">Digital Marketing</a></li>
+                            <li><a href="/service">AI Solutions</a></li>
                         {% endif %}
                     </ul>
                 </div>

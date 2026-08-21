@@ -1,0 +1,30 @@
+[
+  {
+    "name": "show_play_button",
+    "label": "Show Play Video Button",
+    "type": "boolean",
+    "default": true
+  },
+  {
+    "name": "video_url",
+    "label": "Popup Video URL (YouTube / Vimeo)",
+    "type": "text",
+    "default": "https://www.youtube.com/watch?v=MLpWrANjFbI"
+  },
+  {
+    "name": "background_image",
+    "label": "Background Image",
+    "type": "image",
+    "default": {
+      "src": ""
+    }
+  },
+  {
+    "name": "shape_image",
+    "label": "Rotating Badge Image",
+    "type": "image",
+    "default": {
+      "src": ""
+    }
+  }
+]
