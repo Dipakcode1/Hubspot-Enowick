@@ -24,10 +24,46 @@
                 </div>
             </div>
             <div class="col-lg-12">
-                {% if module.posts and module.posts|length > 0 %}
+                {% set use_dynamic = (not module.post_source or module.post_source == 'dynamic') %}
+                {% if use_dynamic %}
+                    {% set selected_blog = module.blog_field if module.blog_field else 'default' %}
+                    {% set limit_count = module.posts_limit|default(3) %}
+                    {% set dynamic_posts = blog_recent_posts(selected_blog, limit_count) %}
+                {% endif %}
+
+                {% if use_dynamic and dynamic_posts and dynamic_posts|length > 0 %}
+                    {% for post in dynamic_posts %}
+                        {% set post_category = post.topic_list[0].name if (post.topic_list and post.topic_list|length > 0) else 'Insight' %}
+                        {% set post_img = post.featured_image if post.featured_image else get_asset_url('../../images/blog/blog' ~ ((loop.index0 % 3) + 6) ~ '.jpg') %}
+                        {% set post_author = post.blog_post_author.display_name if post.blog_post_author else 'Enowick Team' %}
+                        {% set post_date = post.publish_date|datetimeformat('%B %Y') %}
+                        {% set post_words = post.post_body|wordcount if post.post_body else 500 %}
+                        {% set calculated_read_time = ((post_words / 200)|round|int) %}
+                        {% set read_time_str = (calculated_read_time if calculated_read_time > 0 else 3) ~ ' minute read' %}
+                        {% set post_summary_clean = post.post_summary|striptags if post.post_summary else (post.post_body|striptags) %}
+
+                        <div class="ew-blog-2-box">
+                            <div class="ew-blog-2-text">
+                                <span class="blog-2-border">{{ post_category }}</span>
+                                <span>{{ read_time_str }}</span>
+                                <h3><a class="underline-black" href="{{ post.absolute_url }}">{{ post.name }}</a></h3>
+                                <span class="project-dot2">{{ post_author }}</span>
+                                <span>{{ post_date }}</span>
+                            </div>
+                            <div class="ew-blog-2-thumb">
+                                <a href="{{ post.absolute_url }}">
+                                    <img src="{{ post_img }}" alt="{{ post.name|striptags|escape_attr }}">
+                                </a>
+                            </div>
+                            <div class="ew-blog-2-p">
+                                <p>{{ post_summary_clean|truncate(150) }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% elif module.posts and module.posts|length > 0 %}
                     {% for post in module.posts %}
                         {% set post_url = post.post_link.url.href if (post.post_link.url and post.post_link.url.href) else '/blog' %}
-                        {% set post_img = post.featured_image.src if (post.featured_image and post.featured_image.src) else get_asset_url('../../images/blog/blog' ~ ((loop.index % 3) + 6) ~ '.jpg') %}
+                        {% set post_img = post.featured_image.src if (post.featured_image and post.featured_image.src) else get_asset_url('../../images/blog/blog' ~ ((loop.index0 % 3) + 6) ~ '.jpg') %}
                         <div class="ew-blog-2-box">
                             <div class="ew-blog-2-text">
                                 {% if post.category %}
@@ -45,7 +81,9 @@
                                 {% endif %}
                             </div>
                             <div class="ew-blog-2-thumb">
-                                <img src="{{ post_img }}" alt="{{ post.title }}">
+                                <a href="{{ post_url }}">
+                                    <img src="{{ post_img }}" alt="{{ post.title|striptags|escape_attr }}">
+                                </a>
                             </div>
                             <div class="ew-blog-2-p">
                                 {{ post.excerpt }}

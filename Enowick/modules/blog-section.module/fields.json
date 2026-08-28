@@ -1,5 +1,40 @@
 [
   {
+    "id": "post_source",
+    "name": "post_source",
+    "label": "Blog Post Source",
+    "required": false,
+    "locked": false,
+    "type": "choice",
+    "display": "select",
+    "choices": [
+      ["dynamic", "Dynamic (Recent Blog Posts from HubSpot)"],
+      ["manual", "Manual (Curated / Custom Posts)"]
+    ],
+    "default": "dynamic"
+  },
+  {
+    "id": "blog_field",
+    "name": "blog_field",
+    "label": "Select Blog (for Dynamic Posts)",
+    "required": false,
+    "locked": false,
+    "type": "blog",
+    "default": "default"
+  },
+  {
+    "id": "posts_limit",
+    "name": "posts_limit",
+    "label": "Number of Posts to Display",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "min": 1,
+    "max": 10,
+    "step": 1,
+    "default": 3
+  },
+  {
     "id": "section_subtitle",
     "name": "section_subtitle",
     "label": "Section Subtitle",
@@ -53,7 +88,7 @@
   {
     "id": "posts",
     "name": "posts",
-    "label": "Featured Blog Posts",
+    "label": "Manual Featured Blog Posts",
     "required": false,
     "locked": false,
     "occurrence": {

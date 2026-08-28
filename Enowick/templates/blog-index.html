@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   templateType: blog_listing
   isAvailableForNewContent: true
   label: Blog Listing
@@ -7,87 +7,79 @@
 {% extends "./layouts/base.html" %}
 
 {% block body %}
-{#
-dipak
- #}
 <main>
 
-    {# Breadcrumb Banner Module #}
-    {% module "blog_breadcrumb" path="../modules/breadcrumb.module" label="Breadcrumb Banner", title="Our Blog", current_page_title="Our Blog" %}
+    {# Dynamic Breadcrumb Title depending on topic / author filter #}
+    {% if topic %}
+        {% set page_title = "Topic: " ~ topic %}
+    {% elif blog_author %}
+        {% set page_title = "Author: " ~ blog_author.display_name %}
+    {% else %}
+        {% set page_title = group.public_title if (group and group.public_title) else "Our Blog" %}
+    {% endif %}
 
-    <!-- Blog Area Start -->
+    {# Breadcrumb Banner Module #}
+    {% module "blog_breadcrumb" path="../modules/breadcrumb.module" label="Breadcrumb Banner", title="{{ page_title }}", parent_page_title="Home", current_page_title="{{ page_title }}" %}
+
+    <!-- Blog 3 Area Start -->
     <section class="ew-blog-3-area pt-130 pb-130">
         <div class="container container-1617">
             <div class="row">
-                {% for content in contents %}
-                    <div class="col-lg-4">
-                        <div class="ew-blog-3-box text-center mb-40">
-                            <div class="ew-blog-3-thumb">
-                                {% if content.featured_image %}
-                                    <img src="{{ content.featured_image }}" alt="{{ content.name }}">
-                                {% else %}
-                                    <img src="{{ get_asset_url('../images/blog/blog9.jpg') }}" alt="{{ content.name }}">
-                                {% endif %}
+                {% if contents and contents|length > 0 %}
+                    {% for content in contents %}
+                        {% set post_thumb = content.featured_image if content.featured_image else get_asset_url('../images/blog/blog' ~ ((loop.index0 % 9) + 9) ~ '.jpg') %}
+                        {% set post_topic = content.topic_list[0].name if (content.topic_list and content.topic_list|length > 0) else 'Branding' %}
+                        <div class="col-lg-4 col-md-6">
+                            <div class="ew-blog-3-box text-center mb-40">
+                                <div class="ew-blog-3-thumb">
+                                    <a href="{{ content.absolute_url }}">
+                                        <img src="{{ post_thumb }}" alt="{{ content.name|striptags|escape_attr }}">
+                                    </a>
+                                </div>
                                 <div class="ew-blog-3-text blog-3-text2">
-                                    {% if content.topic_list %}
-                                        <span class="project-dot">{{ content.topic_list[0].name }}</span>
-                                    {% else %}
-                                        <span class="project-dot">Insight</span>
-                                    {% endif %}
-                                    <span>{{ content.publish_date|datetimeformat('%b %e, %Y') }}</span>
+                                    <span class="project-dot">{{ post_topic }}</span>
+                                    <span>{{ content.publish_date|datetimeformat('%e %B, %Y') }}</span>
                                     <h3><a class="underline-black" href="{{ content.absolute_url }}">{{ content.name }}</a></h3>
-                                    <span><a href="{{ content.absolute_url }}">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span>
+                                    <div><a href="{{ content.absolute_url }}">Read more <i class="fa-sharp fa-regular fa-arrow-right"></i></a></div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    {% endfor %}
                 {% else %}
-                    <div class="col-lg-4">
-                        <div class="ew-blog-3-box text-center mb-40">
-                            <div class="ew-blog-3-thumb">
-                                <img src="{{ get_asset_url('../images/blog/blog9.jpg') }}" alt="blog">
-                                <div class="ew-blog-3-text blog-3-text2">
-                                    <span class="project-dot">Branding</span>
-                                    <span>March 24, 2026</span>
-                                    <h3><a class="underline-black" href="#">Reveal business opportunities with our brand audit</a></h3>
-                                    <span><a href="#">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span>
-                                </div>
-                            </div>
+                    <div class="col-12 text-center py-5">
+                        <div class="ew-section-title">
+                            <h2>No posts available in this blog yet.</h2>
+                            <p class="mt-20">Please publish posts in HubSpot Blog to see them listed here.</p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="ew-blog-3-box text-center mb-40">
-                            <div class="ew-blog-3-thumb">
-                                <img src="{{ get_asset_url('../images/blog/blog10.jpg') }}" alt="blog">
-                                <div class="ew-blog-3-text blog-3-text2">
-                                    <span class="project-dot">Marketing</span>
-                                    <span>March 24, 2026</span>
-                                    <h3><a class="underline-black" href="#">Future of Digital Marketing Trends for Business</a></h3>
-                                    <span><a href="#">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span>
-                                </div>
-                            </div>
+                {% endif %}
+
+                {# HubL Pagination #}
+                {% if contents.total_page_count > 1 %}
+                    <div class="col-lg-12">
+                        <div class="ew-blog-standard-number text-center mt-30">
+                            <ul>
+                                {% if last_page_num %}
+                                    <li><a href="{{ blog_page_link(last_page_num) }}"><i class="fa-sharp fa-regular fa-angles-left"></i></a></li>
+                                {% endif %}
+                                {% set page_list = [-2, -1, 0, 1, 2] %}
+                                {% for p in page_list %}
+                                    {% set page_to_check = current_page_num + p %}
+                                    {% if page_to_check > 0 and page_to_check <= contents.total_page_count %}
+                                        <li><a class="{% if current_page_num == page_to_check %}active{% endif %}" href="{{ blog_page_link(page_to_check) }}">{{ page_to_check }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                                {% if next_page_num %}
+                                    <li><a href="{{ blog_page_link(next_page_num) }}"><i class="fa-sharp fa-regular fa-angles-right"></i></a></li>
+                                {% endif %}
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="ew-blog-3-box text-center mb-40">
-                            <div class="ew-blog-3-thumb">
-                                <img src="{{ get_asset_url('../images/blog/blog11.jpg') }}" alt="blog">
-                                <div class="ew-blog-3-text blog-3-text2">
-                                    <span class="project-dot">AI & Design</span>
-                                    <span>March 24, 2026</span>
-                                    <h3><a class="underline-black" href="#">How Enowick is Revolutionising AI-Driven Creative Workflows</a></h3>
-                                    <span><a href="#">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
+                {% endif %}
             </div>
         </div>
     </section>
-    <!-- Blog Area End -->
+    <!-- Blog 3 Area End -->
 
 </main>
-
 {% endblock body %}
- 
