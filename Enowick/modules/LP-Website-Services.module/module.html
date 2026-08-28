@@ -1,0 +1,99 @@
+<!-- Services Section -->
+<section class="py-section-gap {{name}}" id="services">
+
+  <div class="max-w-container-max mx-auto px-gutter">
+
+    <div class="text-center max-w-2xl mx-auto mb-20">
+      <p class="text-primary-container font-bold uppercase tracking-widest text-xs mb-4">
+        {{ module.eyebrow }}
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight section-heading">
+        {{ module.heading }}
+      </h2>
+
+      <p class="text-on-surface-variant text-lg">
+        {{ module.description }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {% for item in module.services %}
+
+      <div class="bg-white p-10 rounded-2xl card-shadow border border-outline-variant/30 flex flex-col items-center text-center">
+
+        <div
+          class="w-16 h-16 rounded-2xl flex items-center justify-center mb-8"
+          style="
+            background-color: rgba({{ item.icon_color.color|convert_rgb }},0.1);
+            color: {{ item.icon_color.color }};
+          "
+        >
+          <span class="material-symbols-outlined text-3xl w-[30px]">
+            	{% if item.image_field.src %}
+                {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
+                {% if item.image_field.size_type == 'auto' %}
+                  {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                {% elif item.image_field.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+                <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+          </span>
+        </div>
+
+        <h3 class="text-xl font-bold mb-4">
+          {{ item.title }}
+        </h3>
+
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+          {{ item.description }}
+        </p>
+
+        {% if item.link.url.href %}
+        <a
+          href="{{ item.link.url.href }}"
+          {% if item.link.open_in_new_tab %}target="_blank"{% endif %}
+          class="text-primary font-bold text-sm inline-flex items-center gap-1 group">
+
+          {{ item.link_text }}
+
+          <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">
+            chevron_right
+          </span>
+        </a>
+        {% endif %}
+
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>
+
+{% require_css %}
+<style>
+  .{{ name }} .section-heading {
+    max-width: 550px;
+    margin: 0 auto 40px;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+
+  @media (max-width: 767px) {
+    .{{ name }} .section-heading {
+      max-width: 100%;
+      font-size: 2rem;
+      margin-bottom: 32px;
+    }
+  }
+</style>
+{% end_require_css %}

@@ -1,0 +1,472 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Digital Marketing Landing Page (DND)
+  screenshotPath: ../images/template-previews/home.png
+-->
+
+<!doctype html>
+<html lang="{{ html_lang }}" {% if html_lang_dir %}dir="{{ html_lang_dir }}"{% endif %}>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>{{ page_meta.html_title }}</title>
+
+  {% if page_meta.meta_description %}
+  <meta name="description" content="{{ page_meta.meta_description }}">
+  {% endif %}
+
+  {% if content.absolute_url %}
+  <link rel="canonical" href="{{ content.absolute_url }}">
+  {% endif %}
+
+  <meta property="og:title" content="{{ page_meta.html_title }}">
+  <meta property="og:description" content="{{ page_meta.meta_description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ content.absolute_url }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ get_asset_url('../css/landing-page.css') }}">
+
+  <style>
+    /* Critical Instant-Render CSS (Zero FOUC / Zero 1-sec break) */
+    :root {
+      --color-primary: #b32915;
+      --color-primary-container: #ff5f45;
+      --color-on-surface: #161d1f;
+      --color-on-surface-variant: #5a413c;
+      --color-surface: #ffffff;
+      --color-inverse-surface: #2b3234;
+      --spacing-container-max: 1200px;
+      --spacing-gutter: 24px;
+      --spacing-section-gap: 80px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #ffffff;
+      color: var(--color-on-surface);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    
+    .max-w-container-max { max-width: 1200px; margin-left: auto; margin-right: auto; }
+    .px-gutter { padding-left: 24px; padding-right: 24px; }
+    .py-section-gap { padding-top: 80px; padding-bottom: 80px; }
+
+    .grid { display: grid; }
+    .flex { display: flex; }
+    .inline-flex { display: inline-flex; }
+    .flex-col { flex-direction: column; }
+    .items-center { align-items: center; }
+    .justify-center { justify-content: center; }
+    .justify-between { justify-content: space-between; }
+    .text-center { text-align: center; }
+
+    .gap-4 { gap: 1rem; }
+    .gap-6 { gap: 1.5rem; }
+    .gap-8 { gap: 2rem; }
+    .gap-10 { gap: 2.5rem; }
+    .gap-12 { gap: 3rem; }
+    .gap-16 { gap: 4rem; }
+    .gap-20 { gap: 5rem; }
+
+    @media (min-width: 768px) {
+      .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .md\:flex-row { flex-direction: row; }
+      .md\:items-end { align-items: flex-end; }
+      .py-section-gap { padding-top: 100px; padding-bottom: 100px; }
+    }
+
+    @media (min-width: 1024px) {
+      .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    }
+
+    .bg-white { background-color: #ffffff; }
+    .bg-surface { background-color: #ffffff; }
+    .bg-inverse-surface { background-color: #2b3234; }
+    
+    .rounded-xl { border-radius: 0.75rem; }
+    .rounded-2xl { border-radius: 1rem; }
+    .rounded-3xl { border-radius: 1.5rem; }
+    .rounded-full { border-radius: 9999px; }
+
+    .p-6 { padding: 1.5rem; }
+    .p-8 { padding: 2rem; }
+    .p-10 { padding: 2.5rem; }
+    .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+    .py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+    .py-32 { padding-top: 8rem; padding-bottom: 8rem; }
+
+    .text-primary-container { color: #ff5f45; }
+    .text-primary { color: #b32915; }
+    .text-on-surface-variant { color: #5a413c; }
+
+    .glass-header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(142,112,107,.1);
+    }
+
+    .hero-gradient {
+      background: transparent;
+    }
+
+    .card-shadow {
+      box-shadow: 0 4px 20px -2px rgba(0,0,0,.05);
+      transition: all .3s ease;
+    }
+
+    .card-shadow:hover {
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,.1);
+      transform: translateY(-4px);
+    }
+
+    .step-line::after {
+      content:'';
+      position:absolute;
+      top:1.5rem;
+      left:3rem;
+      right:-1rem;
+      height:2px;
+      background:repeating-linear-gradient(
+        to right,
+        #ff5f45 0,
+        #ff5f45 4px,
+        transparent 4px,
+        transparent 8px
+      );
+      z-index:0;
+    }
+
+    .cps-get-in-touch {
+      background: #ffffff;
+      bottom: 10px;
+      height: 32px;
+      left: 10px;
+      position: fixed;
+      width: 145px;
+      z-index: 999999;
+      border-radius: 6px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .cps-get-in-touch .wa-btn {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      color: #111827 !important;
+      text-decoration: none;
+    }
+
+    .cps-get-in-touch .wa-btn i.fa-whatsapp {
+      font-size: 18px;
+      color: #25D366 !important;
+      line-height: 1;
+    }
+
+    .cps-get-in-touch .wa-btn:hover {
+      opacity: 1;
+    }
+
+    .cps-get-in-touch:hover .wa-btn {
+      transform: scale(1.02);
+    }
+
+    .cps-get-in-touch .wa-btn span {
+      transition: transform 0.2s ease;
+    }
+
+    .cps-get-in-touch:hover .wa-btn span {
+      transform: translateX(1px);
+    }
+
+    .cp-call-btn {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 64px;
+      height: 64px;
+      border-radius: 999px;
+      background: #16a34a;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(22, 163, 74, 0.35);
+      transition: all 0.3s ease;
+    }
+
+    .cp-call-btn:hover {
+      transform: translateY(-4px) scale(1.05);
+    }
+
+    .cp-call-btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: rgba(22,163,74,.4);
+      animation: cpPulse 2s infinite;
+    }
+
+    @keyframes cpPulse {
+      0% { transform: scale(1); opacity: .8; }
+      70% { transform: scale(1.7); opacity: 0; }
+      100% { transform: scale(1.7); opacity: 0; }
+    }
+
+    @media (max-width:768px){
+      .step-line::after{ display:none; }
+    }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary": "#b32915",
+            "primary-container": "#ff5f45",
+            "on-primary": "#ffffff",
+            "surface": "#ffffff",
+            "background": "#ffffff",
+            "on-surface": "#161d1f",
+            "on-surface-variant": "#5a413c",
+            "outline": "#8e706b",
+            "outline-variant": "#e2beb8",
+            "surface-container": "#ffffff",
+            "surface-container-high": "#f8fafc",
+            "secondary": "#5644d0",
+            "tertiary": "#006a67",
+            "inverse-surface": "#2b3234"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "element-gap-md": "16px",
+            "container-max": "1200px",
+            "element-gap-sm": "8px",
+            "margin-mobile": "20px",
+            "gutter": "24px",
+            "section-gap": "120px",
+            "element-gap-lg": "32px"
+          },
+          "fontFamily": {
+            "body": ["Plus Jakarta Sans", "sans-serif"],
+            "display": ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+
+  {{ standard_header_includes }}
+</head>
+
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-white">
+
+<header>
+  {% module "navbar"
+    path="../modules/LP-Navbar.module",
+    label="LP Navbar"
+  %}
+</header>
+
+<main id="main-content">
+
+{% dnd_area "main_content", label="Landing Page Content" %}
+
+  {# 1. Hero V1 #}
+  {% dnd_section max_width=0, padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 }, margin={ "top": 0, "bottom": 0 } %}
+    {% dnd_module "hero_v1"
+      path="../modules/LP-Hero-V1.module",
+      label="LP Hero V1"
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {# 2. Trust Bar #}
+  {% dnd_section max_width=0, padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 }, margin={ "top": 0, "bottom": 0 } %}
+    {% dnd_module "trust_bar"
+      path="../modules/LP-Trust-Bar.module",
+      label="LP Trust Bar"
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {# 3. Website Services #}
+  {% dnd_section max_width=0, padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 }, margin={ "top": 0, "bottom": 0 } %}
+    {% dnd_module "website_services"
+      path="../modules/LP-Website-Services.module",
+      label="LP Website Services"
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {# 4. Results Brand #}
+  {% dnd_section max_width=0, padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 }, margin={ "top": 0, "bottom": 0 } %}
+    {% dnd_module "results_brand"
+      path="../modules/LP-Results-Brand.module",
+      label="LP Results Brand"
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {# 5. Case Studies #}
+  {% dnd_section max_width=0, padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 }, margin={ "top": 0, "bottom": 0 } %}
+    {% dnd_module "case_studies"
+      path="../modules/LP_Case_Studies.module",
+      label="LP Case Studies"
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {# 6. Media Portfolio #}
+  {% dnd_section max_width=0, padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 }, margin={ "top": 0, "bottom": 0 } %}
+    {% dnd_module "media_portfolio"
+      path="../modules/LP_media_portfolio.module",
+      label="LP Media Portfolio"
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {# 7. Website Portfolio #}
+  {% dnd_section max_width=0, padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 }, margin={ "top": 0, "bottom": 0 } %}
+    {% dnd_module "website_portfolio"
+      path="../modules/LP-Website Portfolio.module",
+      label="LP Website Portfolio"
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {# 8. Growth Steps #}
+  {% dnd_section max_width=0, padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 }, margin={ "top": 0, "bottom": 0 } %}
+    {% dnd_module "growth_steps"
+      path="../modules/LP-Growth-Steps.module",
+      label="LP Growth Steps"
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {# 9. Service Cards #}
+  {% dnd_section max_width=0, padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 }, margin={ "top": 0, "bottom": 0 } %}
+    {% dnd_module "service_cards"
+      path="../modules/LP_Service_Card_Icon_Left.module",
+      label="LP Service Cards"
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {# 10. Image Content Split #}
+  {% dnd_section max_width=0, padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 }, margin={ "top": 0, "bottom": 0 } %}
+    {% dnd_module "image_content_split"
+      path="../modules/LP-Image-Content-Split.module",
+      label="LP Image Content Split"
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {# 11. Hero V2 #}
+  {% dnd_section max_width=0, padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 }, margin={ "top": 0, "bottom": 0 } %}
+    {% dnd_module "hero_v2"
+      path="../modules/LP-Hero-V2.module",
+      label="LP Hero V2"
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {# 12. Contact Form with Audit Box #}
+  {% dnd_section max_width=0, padding={ "top": 0, "bottom": 0, "left": 0, "right": 0 }, margin={ "top": 0, "bottom": 0 } %}
+    {% dnd_module "audit_form"
+      path="../modules/LP- Contact-From-With-Audit-Box.module",
+      label="LP Contact Form with Audit Box"
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+{% end_dnd_area %}
+
+</main>
+
+<footer>
+  {% module "footer"
+    path="../modules/LP-Footer.module",
+    label="LP Footer"
+  %}
+  
+  <div class="cps-get-in-touch">
+    <a 
+       href="https://wa.me/918826754759?text=Hi%20I%20want%20to%20know%20more"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="wa-btn"
+       style="color: black; font-weight: bold;"
+    >
+      <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
+      <span>Whatsapp</span>
+    </a>
+  </div>
+  <a href="tel:+918826754759" class="cp-call-btn" aria-label="Call Now">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M22 16.92V20a2 2 0 0 1-2.18 2
+      19.79 19.79 0 0 1-8.63-3.07
+      19.5 19.5 0 0 1-6-6
+      19.79 19.79 0 0 1-3.07-8.67
+      A2 2 0 0 1 4.11 2h3.09
+      a2 2 0 0 1 2 1.72
+      c.12.89.34 1.76.65 2.6
+      a2 2 0 0 1-.45 2.11L8.09 9.91
+      a16 16 0 0 0 6 6
+      l1.48-1.31
+      a2 2 0 0 1 2.11-.45
+      c.84.31 1.71.53 2.6.65
+      A2 2 0 0 1 22 16.92Z"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"/>
+    </svg>
+  </a>
+</footer>
+
+{{ standard_footer_includes }}
+
+</body>
+</html>

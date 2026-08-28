@@ -1,0 +1,353 @@
+[ {
+  "id" : "aaea6f7a-00bd-93e9-858d-4604f685f9d8",
+  "name" : "section_id",
+  "label" : "Section ID",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null
+}, {
+  "id" : "8db974c9-d80c-2aae-9c64-62f5255451aa",
+  "name" : "badge_text",
+  "label" : "Badge Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "#1 Social Agency in North Bengal"
+}, {
+  "id" : "392682af-d235-5fd2-24a2-88b12fd0e0c1",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Build a Brand that Siliguri Loves."
+}, {
+  "id" : "2479dea3-0da4-71c5-75a5-691035f656b8",
+  "name" : "highlight_text",
+  "label" : "Highlight Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Expert Social Media"
+}, {
+  "id" : "ce3cb063-b1fb-08d6-d011-4b592fe0f188",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "We tell your story where Siliguri hangs out. Creative storytelling and localized community engagement on TikTok, Instagram, and Facebook designed to d rive real growth."
+}, {
+  "id" : "f6b3feba-9a73-2afd-85d4-f771329b5500",
+  "name" : "cta_text",
+  "label" : "CTA Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Book Free Audit"
+}, {
+  "id" : "d80c8508-b113-7181-7ddc-d64ecdd7f5fb",
+  "name" : "cta_link",
+  "label" : "CTA Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "PHONE_NUMBER", "PAYMENT" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "href" : "https://codepoetry.in",
+      "type" : "EXTERNAL"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "a9d4fe1f-8ddc-c210-a959-df8ee67a137d",
+  "name" : "stats_number",
+  "label" : "Stats Number",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "50+"
+}, {
+  "id" : "a438b193-a287-c6da-8c6d-ad2771f76920",
+  "name" : "stats_text",
+  "label" : "Stats Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Local Brands Managed"
+}, {
+  "id" : "bc6c2088-2862-81e0-1619-8aadb6ab5afe",
+  "name" : "left_card",
+  "label" : "Left Card",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "2995c791-615c-eda3-c2d0-7537a584f69d",
+    "name" : "icon",
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-6.4.2",
+    "type" : "icon",
+    "display_width" : null,
+    "default" : {
+      "name" : "Arrow Trend Up",
+      "unicode" : "e098",
+      "type" : "SOLID"
+    }
+  }, {
+    "id" : "7dec91d6-9e4a-67e7-56db-ea5a942af865",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Viral Reach"
+  }, {
+    "id" : "1dd26436-76c4-13cb-85e9-fc98953eca6b",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "+240% reach in Siliguri"
+  }, {
+    "id" : "a3c63ded-bfab-ce39-3d32-8d6bc92ab4ae",
+    "name" : "icon_color",
+    "label" : "Icon Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FAFAFA",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "d548d849-3de0-080f-c616-96f1819c8788",
+    "name" : "card_bg",
+    "label" : "Card BG",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FCE5CD",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "8c907171-d7b5-3001-d6cf-8b57a3e4d1d2",
+    "name" : "card_bg_opacity",
+    "label" : "Card BG Opacity",
+    "required" : false,
+    "locked" : false,
+    "display" : "slider",
+    "min" : 0,
+    "max" : 100,
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 15
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "icon" : {
+      "name" : "Arrow Trend Up",
+      "unicode" : "e098",
+      "type" : "SOLID"
+    },
+    "title" : "Viral Reach",
+    "description" : "+240% reach in Siliguri",
+    "icon_color" : {
+      "color" : "#FAFAFA",
+      "opacity" : 100
+    },
+    "card_bg" : {
+      "color" : "#FCE5CD",
+      "opacity" : 100
+    },
+    "card_bg_opacity" : 15
+  }
+}, {
+  "id" : "016e8ca7-9b60-f29b-2f55-a89f45fe46ff",
+  "name" : "right_card",
+  "label" : "Right Card",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "9b7995f6-c1f8-dbf2-f317-7e31dbfd9da6",
+    "name" : "icon",
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-6.4.2",
+    "type" : "icon",
+    "display_width" : null,
+    "default" : {
+      "name" : "Arrow Trend Up",
+      "unicode" : "e098",
+      "type" : "SOLID"
+    }
+  }, {
+    "id" : "80ddce2c-e029-de96-1cae-237d49004aa8",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Viral Reach"
+  }, {
+    "id" : "12276acb-a261-2e59-b3f2-05f7fcaa0a05",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "+240% reach in Siliguri"
+  }, {
+    "id" : "d96af708-b1b6-a722-19ae-05980cf30d35",
+    "name" : "icon_color",
+    "label" : "Icon Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FAFAFA",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "a5d68495-8b4a-1823-4815-96dd1f3a3c9e",
+    "name" : "card_bg",
+    "label" : "Card BG",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FCE5CD",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "4cf194f0-5cb6-c0fa-513e-e18780dbdbd3",
+    "name" : "card_bg_opacity",
+    "label" : "Card BG Opacity copy",
+    "required" : false,
+    "locked" : false,
+    "display" : "slider",
+    "min" : 0,
+    "max" : 100,
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 15
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "icon" : {
+      "name" : "Arrow Trend Up",
+      "unicode" : "e098",
+      "type" : "SOLID"
+    },
+    "title" : "Viral Reach",
+    "description" : "+240% reach in Siliguri",
+    "icon_color" : {
+      "color" : "#FAFAFA",
+      "opacity" : 100
+    },
+    "card_bg" : {
+      "color" : "#FCE5CD",
+      "opacity" : 100
+    },
+    "card_bg_opacity" : 15
+  }
+}, {
+  "id" : "28c036bb-5664-31ac-e95d-3d14f381b4e5",
+  "name" : "left_image",
+  "label" : "Left Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/unnamed%20(2)-1.png",
+    "alt" : "unnamed (2)-1",
+    "loading" : "lazy",
+    "width" : 512,
+    "height" : 512,
+    "max_width" : 512,
+    "max_height" : 512
+  }
+}, {
+  "id" : "d08835a3-bbaf-d59c-3910-5fb87a272ad4",
+  "name" : "left_image_overlay",
+  "label" : "Left Image Overlay",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Professional Filming in North Bengal"
+}, {
+  "id" : "6a29914c-3722-fe21-5d8d-afa3cb48d5a9",
+  "name" : "right_image",
+  "label" : "Right Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/unnamed%20(2)-1.png",
+    "alt" : "unnamed (2)-1",
+    "loading" : "lazy",
+    "width" : 512,
+    "height" : 512,
+    "max_width" : 512,
+    "max_height" : 512
+  }
+} ]

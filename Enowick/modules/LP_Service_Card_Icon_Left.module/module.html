@@ -1,0 +1,264 @@
+<section
+  class="{{ name }}"
+  {% if module.section_id %}
+  id="{{ module.section_id }}"
+  {% endif %}
+>
+  <div class="container">
+
+    <div class="section-header">
+      {% if module.heading %}
+      <h2>{{ module.heading }}</h2>
+      {% endif %}
+
+      {% if module.description %}
+      <p>{{ module.description }}</p>
+      {% endif %}
+    </div>
+
+    <div class="services-grid">
+
+      {% for item in module.services %}
+      <div
+        class="service-card"
+        {% if item.card_background.color %}
+        style="background-color: rgba({{ item.card_background.color|convert_rgb }},.15);"
+        {% endif %}
+      >
+
+        <div
+          class="service-icon"
+          style="
+            background-color: rgba({{ item.icon_background.color|convert_rgb }}, .15);
+            color: {{ item.icon_color.color }};
+          "
+        >
+
+          {% icon
+            name="{{ item.icon.name }}"
+            style="{{ item.icon.type }}"
+            unicode="{{ item.icon.unicode }}"
+            icon_set="{{ item.icon.icon_set }}"
+          %}
+
+        </div>
+
+        {% if item.title %}
+        <h3>{{ item.title }}</h3>
+        {% endif %}
+
+        {% if item.description %}
+        <p>{{ item.description }}</p>
+        {% endif %}
+
+        {% if item.link.href %}
+        <a
+          href="{{ item.link.href }}"
+          {% if item.link.open_in_new_tab %}
+          target="_blank"
+          rel="noopener"
+          {% endif %}
+          class="service-link"
+        >
+          {{ item.link_text }}
+        </a>
+        {% endif %}
+
+      </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>
+
+{% require_css %}
+<style>
+  
+  
+.{{ name }} {
+  padding: 120px 0;
+  background-color: #eef5f7;
+}
+
+.{{ name }} .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.{{ name }} .section-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.{{ name }} .section-title {
+  font-size: clamp(36px, 5vw, 48px);
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  color: #161d1f;
+}
+
+.{{ name }} .section-description {
+  font-size: 20px;
+  color: #5a413c;
+  max-width: 672px;
+  margin: 0 auto;
+}
+
+.{{ name }} .services-grid {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .{{ name }} .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .{{ name }} .services-grid {
+    grid-template-columns: repeat({{ module.desktop_columns|default(4) }}, 1fr);
+  }
+}
+
+.{{ name }} .service-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 32px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.05);
+  transition: all .3s ease;
+  height: 100%;
+}
+
+.{{ name }} .service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,.1);
+}
+
+.{{ name }} .service-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: transform .3s ease;
+}
+
+.{{ name }} .service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+.{{ name }} .service-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.{{ name }} .service-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #161d1f;
+}
+
+.{{ name }} .service-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #5a413c;
+}
+
+@media (max-width: 767px) {
+  .{{ name }} {
+    padding: 80px 0;
+  }
+
+  .{{ name }} .section-header {
+    margin-bottom: 48px;
+  }
+
+  .{{ name }} .section-title {
+    font-size: 32px;
+  }
+
+  .{{ name }} .section-description {
+    font-size: 18px;
+  }
+
+  .{{ name }} .service-card {
+    padding: 24px;
+  }
+
+  .{{ name }} .service-title {
+    font-size: 20px;
+  }
+}
+
+
+.{{ name }} .services-grid{
+  display:grid;
+  grid-template-columns:repeat(1,minmax(0,1fr));
+  gap:24px;
+}
+
+@media(min-width:768px){
+  .{{ name }} .services-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(min-width:1024px){
+  .{{ name }} .services-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+  }
+}
+
+.{{ name }} .service-card{
+  padding:32px;
+  border-radius:32px;
+  transition:all .3s ease;
+}
+
+.{{ name }} .service-card:hover{
+  transform:translateY(-4px);
+}
+
+.{{ name }} .service-icon{
+  width:56px;
+  height:56px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:24px;
+}
+
+.{{ name }} .service-icon svg{
+  width:24px;
+  height:24px;
+}
+
+.{{ name }} .service-icon svg path{
+  fill:currentColor;
+}
+
+.{{ name }} .service-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.{{ name }} .service-link:hover,
+.{{ name }} .service-card:hover .service-link {
+/*   color: {{ module.link_hover_color.color }}; */
+  transform: translateX(4px);
+}
+
+</style>
+{% end_require_css %}

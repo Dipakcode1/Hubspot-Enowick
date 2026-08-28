@@ -1,0 +1,170 @@
+[ {
+  "id" : "464af69e-609f-c0f3-ce8f-03d28eca0f4e",
+  "name" : "section_id",
+  "label" : "Section id",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null
+}, {
+  "id" : "0a8845cf-94d7-fb43-7bdf-591727597013",
+  "name" : "image",
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/pexels-theshantanukr-16504587%20(2).jpg",
+    "alt" : "pexels-theshantanukr-16504587 (2)",
+    "loading" : "lazy",
+    "width" : 1250,
+    "height" : 1000,
+    "max_width" : 1250,
+    "max_height" : 1000
+  }
+}, {
+  "id" : "22ccdb97-46ec-4dff-525d-e8d7db5051ae",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Change This Eyebrew"
+}, {
+  "id" : "adcf0a6c-300f-afb2-489d-40aad1ab9da4",
+  "name" : "title",
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Regional Storytelling with Global Standards"
+}, {
+  "id" : "dbc15df8-cb0d-73da-7021-7ecc4025195c",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "We don't just post content; we capture the soul of Siliguri. Whether it's the premium aesthetic of a Tea estate, the adventure of Himalayan tourism, or the fast-paced retail energy of North Bengal, our storytelling resonates locally while maintaining world-class production quality."
+}, {
+  "id" : "5c359284-3dc5-1104-21ec-e03c5e8f553b",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "18f0c2f9-58ca-aafd-a1f8-e4462834e9de",
+    "name" : "icon_color",
+    "label" : "Icon Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#900e00",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "bef6a737-2e2c-d73a-bd1e-8f861ceab875",
+    "name" : "layout",
+    "label" : "Layout",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "image-left", "image-left" ], [ "image-right", "image-right" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "image-left"
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "icon_color" : {
+      "color" : "#900e00",
+      "opacity" : 100
+    },
+    "layout" : "image-left"
+  }
+}, {
+  "id" : "f0a02817-1b45-9772-2c0d-6768efebf26d",
+  "name" : "check_items",
+  "label" : "Check Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "a25d94a2-2344-33b8-9f00-a4f8d69a3df4",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Vernacular Scriptwriting & Messaging"
+  }, {
+    "id" : "f59d0867-d00b-99f8-d2e2-31494e19860f",
+    "name" : "icon_field",
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-5.14.0",
+    "type" : "icon",
+    "display_width" : null,
+    "default" : {
+      "name" : "Check Circle",
+      "unicode" : "f058",
+      "type" : "SOLID"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "text" : "Vernacular Scriptwriting & Messaging",
+    "icon_field" : {
+      "name" : "Check Circle",
+      "unicode" : "f058",
+      "type" : "SOLID"
+    }
+  }, {
+    "text" : "Vernacular Scriptwriting & Messaging",
+    "icon_field" : {
+      "name" : "Check Circle",
+      "unicode" : "f058",
+      "type" : "SOLID"
+    }
+  }, {
+    "text" : "Vernacular Scriptwriting & Messaging",
+    "icon_field" : {
+      "name" : "Check Circle",
+      "unicode" : "f058",
+      "type" : "SOLID"
+    }
+  } ]
+} ]

@@ -1,0 +1,129 @@
+/* Landing Page Custom Components & Helpers */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.glass-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(142, 112, 107, 0.1);
+}
+
+.hero-gradient {
+  background: transparent;
+}
+
+.card-shadow {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card-shadow:hover {
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.step-line::after {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  left: 3rem;
+  right: -1rem;
+  height: 2px;
+  background: repeating-linear-gradient(to right, #ff5f45 0, #ff5f45 4px, transparent 4px, transparent 8px);
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .step-line::after {
+    display: none;
+  }
+}
+
+.cps-get-in-touch {
+  background: #ffffff;
+  bottom: 10px;
+  height: 32px;
+  left: 10px;
+  position: fixed;
+  width: 145px;
+  z-index: 999999;
+  border-radius: 6px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.cps-get-in-touch .wa-btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #111827 !important;
+  text-decoration: none;
+}
+
+.cps-get-in-touch .wa-btn i.fa-whatsapp {
+  font-size: 18px;
+  color: #25D366 !important;
+  line-height: 1;
+}
+
+.cps-get-in-touch .wa-btn:hover {
+  opacity: 1;
+}
+
+.cps-get-in-touch:hover .wa-btn {
+  transform: scale(1.02);
+}
+
+.cps-get-in-touch .wa-btn span {
+  transition: transform 0.2s ease;
+}
+
+.cps-get-in-touch:hover .wa-btn span {
+  transform: translateX(1px);
+}
+
+.cp-call-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  background: #16a34a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(22, 163, 74, 0.35);
+  transition: all 0.3s ease;
+}
+
+.cp-call-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+}
+
+.cp-call-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(22, 163, 74, 0.4);
+  animation: cpPulse 2s infinite;
+}
+
+@keyframes cpPulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  70% { transform: scale(1.7); opacity: 0; }
+  100% { transform: scale(1.7); opacity: 0; }
+}

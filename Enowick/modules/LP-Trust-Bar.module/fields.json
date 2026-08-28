@@ -1,0 +1,126 @@
+[ {
+  "id" : "4deb65ae-63a3-9251-f716-2855f8db763d",
+  "name" : "items",
+  "label" : "Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "c9a47287-b2ca-6c23-10cf-2a5d8bc54dcd",
+    "name" : "logo",
+    "label" : "Logos",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Google_Ads_icon.svg-1.png",
+      "alt" : "Google_Ads_icon.svg-1",
+      "loading" : "lazy",
+      "width" : 960,
+      "height" : 960,
+      "max_width" : 960,
+      "max_height" : 960
+    }
+  }, {
+    "id" : "2267fa0e-4fb2-6083-b97d-dc0b8a4103cc",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Google"
+  }, {
+    "id" : "635dfe6f-2220-26c5-8560-fcc86d11d999",
+    "name" : "subtitle",
+    "label" : "Subtitle",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Partner"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "logo" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Google_Ads_icon.svg-1.png",
+      "alt" : "Google_Ads_icon.svg-1",
+      "loading" : "lazy",
+      "width" : 960,
+      "height" : 960,
+      "max_width" : 960,
+      "max_height" : 960
+    },
+    "title" : "Google",
+    "subtitle" : "Partner"
+  }, {
+    "logo" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Google_Ads_icon.svg-1.png",
+      "alt" : "Google_Ads_icon.svg-1",
+      "loading" : "lazy",
+      "width" : 960,
+      "height" : 960,
+      "max_width" : 960,
+      "max_height" : 960
+    },
+    "title" : "Google",
+    "subtitle" : "Partner"
+  }, {
+    "logo" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Google_Ads_icon.svg-1.png",
+      "alt" : "Google_Ads_icon.svg-1",
+      "loading" : "lazy",
+      "width" : 960,
+      "height" : 960,
+      "max_width" : 960,
+      "max_height" : 960
+    },
+    "title" : "Google",
+    "subtitle" : "Partner"
+  }, {
+    "logo" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Google_Ads_icon.svg-1.png",
+      "alt" : "Google_Ads_icon.svg-1",
+      "loading" : "lazy",
+      "width" : 960,
+      "height" : 960,
+      "max_width" : 960,
+      "max_height" : 960
+    },
+    "title" : "Google",
+    "subtitle" : "Partner"
+  }, {
+    "logo" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Google_Ads_icon.svg-1.png",
+      "alt" : "Google_Ads_icon.svg-1",
+      "loading" : "lazy",
+      "width" : 960,
+      "height" : 960,
+      "max_width" : 960,
+      "max_height" : 960
+    },
+    "title" : "Google",
+    "subtitle" : "Partner"
+  } ]
+} ]

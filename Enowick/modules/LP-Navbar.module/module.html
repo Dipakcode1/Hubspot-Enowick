@@ -1,0 +1,96 @@
+<header class="fixed top-0 w-full z-50 glass-header {{name}}">
+  <nav class="max-w-container-max mx-auto px-gutter py-2 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="flex items-center">
+      {% if module.logo.src %}
+      <img
+        src="{{ module.logo.src }}"
+        alt="{{ module.logo.alt }}"
+        class="h-16 w-auto object-contain"
+        loading="lazy">
+      {% endif %}
+    </div>
+    <!-- Navigation -->
+    <div class="hidden md:flex items-center gap-8 text-sm font-semibold">
+      {% for item in module.menu_items %}
+      <a
+        href="{{ item.link_field.url.href }}"
+        {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %}
+        class="hover:text-primary-container transition-colors">
+        {{ item.nav_label }}
+      </a>
+      {% endfor %}
+    </div>
+
+    <!-- CTA -->
+    <div class="flex items-center gap-4">           
+      <a
+        href="{{ module.button_link.url.href }}"
+        {% if module.button_link.open_in_new_tab %}target="_blank"{% endif %}
+        {% if module.button_link.rel %}rel="{{ module.button_link.rel }}"{% endif %}
+        class="cta-attention flex items-center gap-2 text-sm font-semibold bg-primary-container text-white px-4 py-2 rounded-full">
+
+        <span class="material-symbols-outlined text-lg">
+          {{ module.button_icon|default('call') }}
+        </span>
+
+        {{ module.button_text }}
+      </a>
+
+    </div>
+  </nav>
+</header>
+
+{% require_css %}
+<style>
+  .{{ name }} .cta-attention {
+    position: relative;
+    overflow: hidden;
+    animation: cta-scale-{{ name }} 2s infinite;
+    transform-origin: center;
+  }
+
+  .{{ name }} .cta-attention::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,0.5),
+      transparent
+    );
+    transform: skewX(-25deg);
+    animation: cta-shine-{{ name }} 3s infinite;
+  }
+
+  .{{ name }} .cta-attention:hover {
+    animation-play-state: paused;
+    transform: scale(1.05);
+  }
+
+  @keyframes cta-scale-{{ name }} {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.08);
+    }
+  }
+
+  @keyframes cta-shine-{{ name }} {
+    0% {
+      left: -120%;
+    }
+    40% {
+      left: 140%;
+    }
+    100% {
+      left: 140%;
+    }
+  }
+</style>
+{% end_require_css %}

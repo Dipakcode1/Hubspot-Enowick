@@ -1,0 +1,303 @@
+<section class="py-20 transition-all duration-1000 opacity-100 translate-y-0 {{name}}" id="contact">
+  <div class="max-w-container-max mx-auto px-gutter">
+
+    <!-- Audit Banner -->
+    <div class="bg-inverse-surface rounded-[2rem] p-8 md:p-16 mb-20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12" style="margin-bottom:80px;"> 
+
+      <div class="relative z-10 max-w-xl text-white">
+
+        <h2 class="text-4xl font-bold mb-6 text-white">
+          {{ module.audit_card_group.audit_heading }}
+        </h2>
+
+        <p class="text-white/70 mb-10">
+          {{ module.audit_card_group.audit_description }}
+        </p>
+
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+
+          {% for item in module.audit_card_group.audit_items %}
+          <li class="flex items-center gap-2 text-sm">
+            <span class="material-symbols-outlined text-primary-container text-xl">
+              check_circle
+            </span>
+            {{ item.text }}
+          </li>
+          {% endfor %}
+
+        </ul>
+
+        {% if module.audit_card_group.audit_cta.url.href %}
+        <a
+          href="{{ module.audit_card_group.audit_cta.url.href }}"
+          {% if module.audit_card_group.audit_cta.open_in_new_tab %}target="_blank"{% endif %}
+          class="inline-block bg-white text-inverse-surface px-8 py-4 rounded-full font-bold hover:scale-105 transition-all">
+
+          {{ module.audit_card_group.audit_cta_text }}
+
+        </a>
+        {% endif %}
+
+      </div>
+
+      <div class="relative z-10 w-full md:w-auto">
+
+        {% if module.audit_card_group.audit_card_image.src %}
+
+          <img
+            src="{{ module.audit_card_group.audit_card_image.src }}"
+            alt="{{ module.audit_card_group.audit_card_image.alt }}"
+            loading="lazy"
+            class="audit-card-image">
+
+        {% else %}
+
+          <div class="bg-white p-4 rounded-2xl shadow-2xl rotate-3">
+
+            <div class="audit-card-content">
+
+              <span class="material-symbols-outlined text-primary-container text-6xl mb-4">
+                assessment
+              </span>
+
+              <p class="text-on-surface font-bold">
+                {{ module.audit_card_group.audit_card_title }}
+              </p>
+
+            </div>
+
+          </div>
+
+        {% endif %}
+
+      </div>
+
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="grid lg:grid-cols-2 gap-20 m">
+
+      <!-- Contact Info -->
+      <div>
+
+        <p class="text-primary-container font-bold uppercase tracking-widest text-xs mb-4">
+          {{ module.form_group.contact_eyebrow }}
+        </p>
+
+        <h2 class="text-4xl font-bold mb-8">
+          {{ module.form_group.contact_heading }}
+        </h2>
+
+        <p class="text-on-surface-variant mb-12">
+          {{ module.form_group.contact_description }}
+        </p>
+
+        <div class="space-y-8">
+
+            <!-- Address -->
+            <div class="flex items-start gap-6">
+                <div class="w-12 h-12 bg-primary-container text-white rounded-full flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined">location_on</span>
+                </div>
+                <div>
+                    <p class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">
+                        Address
+                    </p>
+                    <p class="font-bold">
+                        Chayan Para, East, West Bengal<br>
+                        Siliguri 734006
+                    </p>
+                </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-center gap-6">
+                <div class="w-12 h-12 bg-primary-container text-white rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined">call</span>
+                </div>
+                <div>
+                    <p class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">
+                        Contact
+                    </p>
+                    <p class="font-bold">
+                        <a href="tel:+919641866113" class="hover:text-primary-container transition-colors">
+                            +91 96418 66113
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-center gap-6">
+                <div class="w-12 h-12 bg-primary-container text-white rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined">mail</span>
+                </div>
+                <div>
+                    <p class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">
+                        Email
+                    </p>
+                    <p class="font-bold">
+                        <a href="mailto:info@codepoetry.in" class="hover:text-primary-container transition-colors">
+                            info@codepoetry.in
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+      </div>
+
+      <!-- Form -->
+      <div class="bg-white rounded-3xl shadow-2xl border border-outline-variant/30 p-8 md:p-12">
+        {% form
+          form_to_use="{{ module.form_group.form_field.form_id }}"
+          response_response_type="{{ module.form_group.form_field.response_type }}"
+          response_message="{{ module.form_group.form_field.message }}"
+          response_redirect_id="{{ module.form_group.form_field.redirect_id }}"
+          response_redirect_url="{{module.form_group.form_field.redirect_url}}"
+          gotowebinar_webinar_key="{{ module.form_group.form_field.gotowebinar_webinar_key }}"
+        %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+/* Audit card image styling */
+  .{{ name }} .audit-card-content {
+    width: 16rem;
+    height: 20rem;
+    background: var(--surface-container, #f5f5f5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .{{ name }} .audit-card-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    max-width: 400px;
+  }
+
+/* ============================================
+   HubSpot Form Styling (HSFC Renderer classes)
+   Scoped strictly to THIS module's .hs-form-html
+   so nothing outside this form is affected.
+   ============================================ */
+
+.{{ name }} .hs-form-html .hsfc-Row {
+    margin-bottom: 20px !important;
+}
+
+.{{ name }} .hs-form-html .hsfc-Step__Content {
+    padding: 0 !important;
+}
+
+/* Labels */
+.{{ name }} .hs-form-html .hsfc-FieldLabel {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #6b7280 !important;
+    margin-bottom: 6px !important;
+}
+
+.{{ name }} .hs-form-html .hsfc-FieldLabel__RequiredIndicator {
+    color: #dc2626 !important;
+}
+
+/* Text / textarea inputs */
+.{{ name }} .hs-form-html .hsfc-TextInput,
+.{{ name }} .hs-form-html .hsfc-TextareaInput {
+    background-color: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 8px !important;
+    padding: 14px 16px !important;
+    font-size: 15px !important;
+    color: #111827 !important;
+    box-shadow: none !important;
+    transition: border-color .2s ease !important;
+}
+
+.{{ name }} .hs-form-html .hsfc-TextInput:hover,
+.{{ name }} .hs-form-html .hsfc-TextareaInput:hover {
+    border-color: #9ca3af !important;
+    box-shadow: none !important;
+}
+
+.{{ name }} .hs-form-html .hsfc-TextInput:focus,
+.{{ name }} .hs-form-html .hsfc-TextareaInput:focus {
+    border-color: #ff5130 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Phone field (flag box + input are two pieces) */
+.{{ name }} .hs-form-html .hsfc-PhoneInput__FlagAndCaret {
+    background-color: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+    border-right: none !important;
+    border-top-left-radius: 8px !important;
+    border-bottom-left-radius: 8px !important;
+}
+
+.{{ name }} .hs-form-html .hsfc-PhoneInput {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+.{{ name }} .hs-form-html .hsfc-PhoneInput__FlagAndCaret {
+    flex: 0 0 auto !important;
+}
+
+.{{ name }} .hs-form-html .hsfc-PhoneInput > .hsfc-TextInput {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+/* Submit button */
+.{{ name }} .hs-form-html .hsfc-Button {
+    width: 100% !important;
+    background-color: #ff5130 !important;
+    color: #ffffff !important;
+    padding: 16px 24px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    box-shadow: none !important;
+    transition: background-color .2s ease !important;
+}
+
+.{{ name }} .hs-form-html .hsfc-Button:hover {
+    background-color: #e6461f !important;
+    transform: none !important;
+}
+
+/* Helper text under form ("We usually respond within...") */
+.{{ name }} .hs-form-html .hsfc-RichText,
+.{{ name }} .hs-form-html .hsfc-RichText p,
+.{{ name }} .hs-form-html .hsfc-RichText span {
+    font-size: 13px !important;
+    color: #6b7280 !important;
+}
+
+@media (max-width: 768px) {
+    .{{ name }} .hs-form-html fieldset.form-columns-2 {
+        display: block !important;
+    }
+}
+</style>

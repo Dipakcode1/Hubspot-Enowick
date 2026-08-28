@@ -1,0 +1,247 @@
+[ {
+  "id" : "a393e585-132e-9092-019e-fe74d1fc9682",
+  "name" : "section_id",
+  "label" : "Section ID",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null
+}, {
+  "id" : "26923f7d-1918-308f-15b5-01b9bbbb4183",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Full-Service Management"
+}, {
+  "id" : "7a6b87ed-9fb3-1398-2918-097514eaa31d",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "From strategy to execution, we handle everything so you can focus on running your business."
+}, {
+  "id" : "298f57b0-5f78-094b-83ed-0f2e414e99ff",
+  "name" : "services",
+  "label" : "Services",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "f6441fd4-6022-70c1-7a1d-846e6aa57bcf",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Content Creation"
+  }, {
+    "id" : "432311ca-f740-41a3-6258-47a00bfb886b",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Professional photography and viral video production tailored for North Bengal audiences."
+  }, {
+    "id" : "496f0daf-35b0-bd0d-6907-c42ea887642e",
+    "name" : "link",
+    "label" : "URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "PHONE_NUMBER", "PAYMENT" ],
+    "type" : "url",
+    "display_width" : null,
+    "default" : {
+      "content_id" : null,
+      "href" : "https://codepoetry.in/",
+      "type" : "EXTERNAL"
+    }
+  }, {
+    "id" : "f791ef26-fe15-7760-88cd-51d2f7122832",
+    "name" : "link_text",
+    "label" : "Link Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Click Here"
+  }, {
+    "id" : "9f5ae4e2-987f-d2ae-e033-364ff8e5bdbe",
+    "name" : "card_background",
+    "label" : "Card Background",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FFF2CC",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "c2ca4211-f110-4505-66e7-98a70f0aaa0e",
+    "name" : "icon_background",
+    "label" : "Icon Background",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#E06666",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "56346ffb-7147-bd1a-566f-8c4be9d740e5",
+    "name" : "icon_color",
+    "label" : "Icon Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#E06666",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "e519d558-eee9-47e8-3cdc-9510f0146b2c",
+    "name" : "icon",
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-6.4.2",
+    "type" : "icon",
+    "display_width" : null,
+    "default" : {
+      "name" : "Buffer",
+      "unicode" : "f837",
+      "type" : "REGULAR"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "Content Creation",
+    "description" : "Professional photography and viral video production tailored for North Bengal audiences.",
+    "link" : {
+      "content_id" : null,
+      "href" : "https://codepoetry.in/",
+      "type" : "EXTERNAL"
+    },
+    "link_text" : "Click Here",
+    "card_background" : {
+      "color" : "#FFF2CC",
+      "opacity" : 100
+    },
+    "icon_background" : {
+      "color" : "#E06666",
+      "opacity" : 100
+    },
+    "icon_color" : {
+      "color" : "#E06666",
+      "opacity" : 100
+    },
+    "icon" : {
+      "name" : "Buffer",
+      "unicode" : "f837",
+      "type" : "REGULAR"
+    }
+  }, {
+    "title" : "Content Creation",
+    "description" : "Professional photography and viral video production tailored for North Bengal audiences.",
+    "link" : {
+      "content_id" : null,
+      "href" : "https://codepoetry.in/",
+      "type" : "EXTERNAL"
+    },
+    "link_text" : "Click Here",
+    "card_background" : {
+      "color" : "#FFF2CC",
+      "opacity" : 100
+    },
+    "icon_background" : {
+      "color" : "#E06666",
+      "opacity" : 100
+    },
+    "icon_color" : {
+      "color" : "#E06666",
+      "opacity" : 100
+    },
+    "icon" : {
+      "name" : "Buffer",
+      "unicode" : "f837",
+      "type" : "REGULAR"
+    }
+  }, {
+    "title" : "Content Creation",
+    "description" : "Professional photography and viral video production tailored for North Bengal audiences.",
+    "link" : {
+      "content_id" : null,
+      "href" : "https://codepoetry.in/",
+      "type" : "EXTERNAL"
+    },
+    "link_text" : "Click Here",
+    "card_background" : {
+      "color" : "#FFF2CC",
+      "opacity" : 100
+    },
+    "icon_background" : {
+      "color" : "#E06666",
+      "opacity" : 100
+    },
+    "icon_color" : {
+      "color" : "#E06666",
+      "opacity" : 100
+    },
+    "icon" : {
+      "name" : "Buffer",
+      "unicode" : "f837",
+      "type" : "REGULAR"
+    }
+  }, {
+    "title" : "Content Creation",
+    "description" : "Professional photography and viral video production tailored for North Bengal audiences.",
+    "link" : {
+      "content_id" : null,
+      "href" : "https://codepoetry.in/",
+      "type" : "EXTERNAL"
+    },
+    "link_text" : "Click Here",
+    "card_background" : {
+      "color" : "#FFF2CC",
+      "opacity" : 100
+    },
+    "icon_background" : {
+      "color" : "#E06666",
+      "opacity" : 100
+    },
+    "icon_color" : {
+      "color" : "#E06666",
+      "opacity" : 100
+    },
+    "icon" : {
+      "name" : "Buffer",
+      "unicode" : "f837",
+      "type" : "REGULAR"
+    }
+  } ]
+} ]

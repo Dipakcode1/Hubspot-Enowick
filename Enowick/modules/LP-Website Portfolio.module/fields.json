@@ -1,0 +1,130 @@
+[ {
+  "id" : "9099dc77-be59-167b-fbaa-2204cc473571",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "High Performance Web"
+}, {
+  "id" : "bb18546d-ae99-8814-efba-7b1de97b7d49",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "This is a Heading"
+}, {
+  "id" : "cb776c42-fbc2-2bf2-7e56-23ba071cb78e",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Hover over the mockups to explore the full page designs we've crafted for North Bengal's leading businesses."
+}, {
+  "id" : "fce65ce2-4aa9-8bdc-09ec-08870703ed18",
+  "name" : "portfolio_items",
+  "label" : "Portfolio_Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 3,
+    "max" : 6,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "8a6a2be9-e704-6f68-7735-5ca80604c9ca",
+    "name" : "portfolio_image",
+    "label" : "Portfolio Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/WhatsApp%20Image%202026-06-10%20at%2011.35.14.jpeg",
+      "alt" : "sample portfolio",
+      "loading" : "lazy",
+      "width" : 627,
+      "height" : 627,
+      "max_width" : 627,
+      "max_height" : 627
+    }
+  }, {
+    "id" : "2ed49ef7-ae60-ce80-11d8-7f26bb16ca7d",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "This is a Title"
+  }, {
+    "id" : "4470bc83-1d05-7333-de7c-960a01ab5632",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "This is a Description"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "portfolio_image" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/WhatsApp%20Image%202026-06-10%20at%2011.35.14.jpeg",
+      "alt" : "sample portfolio",
+      "loading" : "lazy",
+      "width" : 627,
+      "height" : 627,
+      "max_width" : 627,
+      "max_height" : 627
+    },
+    "title" : "This is a Title",
+    "description" : "This is a Description"
+  }, {
+    "portfolio_image" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/WhatsApp%20Image%202026-06-10%20at%2011.35.14.jpeg",
+      "alt" : "sample portfolio",
+      "loading" : "lazy",
+      "width" : 627,
+      "height" : 627,
+      "max_width" : 627,
+      "max_height" : 627
+    },
+    "title" : "This is a Title",
+    "description" : "This is a Description"
+  }, {
+    "portfolio_image" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/WhatsApp%20Image%202026-06-10%20at%2011.35.14.jpeg",
+      "alt" : "sample portfolio",
+      "loading" : "lazy",
+      "width" : 627,
+      "height" : 627,
+      "max_width" : 627,
+      "max_height" : 627
+    },
+    "title" : "This is a Title",
+    "description" : "This is a Description"
+  } ]
+} ]

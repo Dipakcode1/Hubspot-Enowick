@@ -1,0 +1,147 @@
+[ {
+  "id" : "a269d732-3386-8f67-d423-b81a5acc7e09",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Visual Storytelling"
+}, {
+  "id" : "a72b19af-5b78-ba06-3b29-97d1c271c135",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Digital Media Portfolio"
+}, {
+  "id" : "7f25ccd6-b6db-2af9-4c3c-be47a91e12e5",
+  "name" : "media_items",
+  "label" : "Media Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 4,
+    "max" : 8,
+    "sorting_label_field" : "11e9210f-627c-c667-9597-62383d9f6b34",
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "98316ba2-e487-0b4e-c1e0-ff8c54698b7c",
+    "name" : "media_image",
+    "label" : "Media Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/unnamed%20(2).png",
+      "alt" : "unnamed (2)",
+      "loading" : "lazy",
+      "width" : 512,
+      "height" : 512,
+      "max_width" : 512,
+      "max_height" : 512
+    }
+  }, {
+    "id" : "8f5f459e-d40d-6f41-1667-dee0a1a73fcc",
+    "name" : "category",
+    "label" : "Category",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Instagram Campaign"
+  }, {
+    "id" : "11e9210f-627c-c667-9597-62383d9f6b34",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Luxury Resort Promo"
+  }, {
+    "id" : "bf22f610-0db3-bf7d-21df-33a1d988ea77",
+    "name" : "client",
+    "label" : "Client",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Darjeeling Heritage"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "media_image" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/unnamed%20(2).png",
+      "alt" : "unnamed (2)",
+      "loading" : "lazy",
+      "width" : 512,
+      "height" : 512,
+      "max_width" : 512,
+      "max_height" : 512
+    },
+    "category" : "Instagram Campaign",
+    "title" : "Luxury Resort Promo",
+    "client" : "Darjeeling Heritage"
+  }, {
+    "media_image" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/unnamed%20(2).png",
+      "alt" : "unnamed (2)",
+      "loading" : "lazy",
+      "width" : 512,
+      "height" : 512,
+      "max_width" : 512,
+      "max_height" : 512
+    },
+    "category" : "Instagram Campaign",
+    "title" : "Luxury Resort Promo",
+    "client" : "Darjeeling Heritage"
+  }, {
+    "media_image" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/unnamed%20(2).png",
+      "alt" : "unnamed (2)",
+      "loading" : "lazy",
+      "width" : 512,
+      "height" : 512,
+      "max_width" : 512,
+      "max_height" : 512
+    },
+    "category" : "Instagram Campaign",
+    "title" : "Luxury Resort Promo",
+    "client" : "Darjeeling Heritage"
+  }, {
+    "media_image" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/unnamed%20(2).png",
+      "alt" : "unnamed (2)",
+      "loading" : "lazy",
+      "width" : 512,
+      "height" : 512,
+      "max_width" : 512,
+      "max_height" : 512
+    },
+    "category" : "Instagram Campaign",
+    "title" : "Luxury Resort Promo",
+    "client" : "Darjeeling Heritage"
+  } ]
+} ]

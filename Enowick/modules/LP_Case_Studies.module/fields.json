@@ -1,0 +1,409 @@
+[ {
+  "id" : "75bfef39-9b47-c214-b125-f8ccd391e5cc",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Our Success Stories"
+}, {
+  "id" : "24b0fb24-2b89-c2fb-3c13-b1fa8f99c41b",
+  "name" : "heading",
+  "label" : "heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Recent Case Studies"
+}, {
+  "id" : "5c3e10c7-d30c-8275-b4fa-28c67871c6d1",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "ac388f87-7503-7579-f35e-e484c81fc871",
+    "name" : "card_color_pattern",
+    "label" : "Card Color Pattern",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#16a34a",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "card_color_pattern" : {
+      "color" : "#16a34a",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "27c41231-3246-526c-bb05-1cd7597673fb",
+  "name" : "case_studies",
+  "label" : "case_studies",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "f6b9658b-b648-df1a-96b0-57e22c486cf1",
+    "name" : "case_study_image",
+    "label" : "Case Study Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/unnamed%20(3).png",
+      "alt" : "unnamed (3)",
+      "loading" : "lazy",
+      "width" : 512,
+      "height" : 293,
+      "max_width" : 512,
+      "max_height" : 293
+    }
+  }, {
+    "id" : "c9dbe8c0-7c5d-c96e-842f-4a8bfe269c5e",
+    "name" : "category",
+    "label" : "Category",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Local Service"
+  }, {
+    "id" : "68df2c32-6af6-eb7c-36e6-8bbee2ccbd4c",
+    "name" : "platform",
+    "label" : "Platform",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 2
+    },
+    "children" : [ {
+      "id" : "24732aa7-6e57-8c37-14d9-b02a05d46bca",
+      "name" : "platform_type",
+      "label" : "Platform Type",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "Google Ads"
+    }, {
+      "id" : "e62cd508-9d91-62a7-4543-559428a88d0f",
+      "name" : "icon",
+      "label" : "icon",
+      "required" : false,
+      "locked" : false,
+      "responsive" : true,
+      "resizable" : true,
+      "show_loading" : false,
+      "type" : "image",
+      "display_width" : null,
+      "default" : {
+        "size_type" : "auto",
+        "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Google_Ads_icon.svg.png",
+        "alt" : "Google_Ads_icon.svg",
+        "loading" : "lazy",
+        "width" : 960,
+        "height" : 960,
+        "max_width" : 960,
+        "max_height" : 960
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : [ {
+      "platform_type" : "Google Ads",
+      "icon" : {
+        "size_type" : "auto",
+        "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Google_Ads_icon.svg.png",
+        "alt" : "Google_Ads_icon.svg",
+        "loading" : "lazy",
+        "width" : 960,
+        "height" : 960,
+        "max_width" : 960,
+        "max_height" : 960
+      }
+    }, {
+      "platform_type" : "Google Ads",
+      "icon" : {
+        "size_type" : "auto",
+        "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Google_Ads_icon.svg.png",
+        "alt" : "Google_Ads_icon.svg",
+        "loading" : "lazy",
+        "width" : 960,
+        "height" : 960,
+        "max_width" : 960,
+        "max_height" : 960
+      }
+    } ]
+  }, {
+    "id" : "5fa2e609-7cd1-2a58-c279-e9b679a00654",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "127 Leads in 30 Days"
+  }, {
+    "id" : "526f5c8c-de9c-1e96-08ee-84394d471a9c",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "We helped a local HVAC company in Siliguri scale their monthly leads by 127 within just 30 days using targeted Google Search Ads."
+  }, {
+    "id" : "04c543f9-dc74-037a-0ac9-a2f846b16929",
+    "name" : "stat_value",
+    "label" : "Stat Value",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "+127"
+  }, {
+    "id" : "2d4f5be2-3a3f-cc68-606f-dfa16c5feb73",
+    "name" : "stat_label",
+    "label" : "Stat Label",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "New Leads"
+  }, {
+    "id" : "ad979364-b1e3-2628-bd2b-ffb1bdd3d454",
+    "name" : "link",
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "+919641866113",
+        "type" : "PHONE_NUMBER"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "49e485d9-7414-7aac-5812-e8139ec6952c",
+    "name" : "card_theme_color",
+    "label" : "Card Theme Color",
+    "required" : false,
+    "locked" : false,
+    "show_opacity" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#16a34a",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "case_study_image" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/unnamed%20(3).png",
+      "alt" : "unnamed (3)",
+      "loading" : "lazy",
+      "width" : 512,
+      "height" : 293,
+      "max_width" : 512,
+      "max_height" : 293
+    },
+    "category" : "Local Service",
+    "platform" : [ {
+      "platform_type" : "Google Ads",
+      "icon" : {
+        "size_type" : "auto",
+        "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Google_Ads_icon.svg.png",
+        "alt" : "Google_Ads_icon.svg",
+        "loading" : "lazy",
+        "width" : 960,
+        "height" : 960,
+        "max_width" : 960,
+        "max_height" : 960
+      }
+    }, {
+      "platform_type" : "Google Ads",
+      "icon" : {
+        "size_type" : "auto",
+        "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Google_Ads_icon.svg.png",
+        "alt" : "Google_Ads_icon.svg",
+        "loading" : "lazy",
+        "width" : 960,
+        "height" : 960,
+        "max_width" : 960,
+        "max_height" : 960
+      }
+    } ],
+    "title" : "127 Leads in 30 Days",
+    "description" : "We helped a local HVAC company in Siliguri scale their monthly leads by 127 within just 30 days using targeted Google Search Ads.",
+    "stat_value" : "+127",
+    "stat_label" : "New Leads",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "+919641866113",
+        "type" : "PHONE_NUMBER"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "card_theme_color" : {
+      "color" : "#16a34a",
+      "opacity" : 100
+    }
+  }, {
+    "case_study_image" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/unnamed%20(3).png",
+      "alt" : "unnamed (3)",
+      "loading" : "lazy",
+      "width" : 512,
+      "height" : 293,
+      "max_width" : 512,
+      "max_height" : 293
+    },
+    "category" : "Local Service",
+    "platform" : [ {
+      "platform_type" : "Google Ads",
+      "icon" : {
+        "size_type" : "auto",
+        "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Google_Ads_icon.svg.png",
+        "alt" : "Google_Ads_icon.svg",
+        "loading" : "lazy",
+        "width" : 960,
+        "height" : 960,
+        "max_width" : 960,
+        "max_height" : 960
+      }
+    }, {
+      "platform_type" : "Google Ads",
+      "icon" : {
+        "size_type" : "auto",
+        "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Google_Ads_icon.svg.png",
+        "alt" : "Google_Ads_icon.svg",
+        "loading" : "lazy",
+        "width" : 960,
+        "height" : 960,
+        "max_width" : 960,
+        "max_height" : 960
+      }
+    } ],
+    "title" : "127 Leads in 30 Days",
+    "description" : "We helped a local HVAC company in Siliguri scale their monthly leads by 127 within just 30 days using targeted Google Search Ads.",
+    "stat_value" : "+127",
+    "stat_label" : "New Leads",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "+919641866113",
+        "type" : "PHONE_NUMBER"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "card_theme_color" : {
+      "color" : "#16a34a",
+      "opacity" : 100
+    }
+  }, {
+    "case_study_image" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/unnamed%20(3).png",
+      "alt" : "unnamed (3)",
+      "loading" : "lazy",
+      "width" : 512,
+      "height" : 293,
+      "max_width" : 512,
+      "max_height" : 293
+    },
+    "category" : "Local Service",
+    "platform" : [ {
+      "platform_type" : "Google Ads",
+      "icon" : {
+        "size_type" : "auto",
+        "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Google_Ads_icon.svg.png",
+        "alt" : "Google_Ads_icon.svg",
+        "loading" : "lazy",
+        "width" : 960,
+        "height" : 960,
+        "max_width" : 960,
+        "max_height" : 960
+      }
+    }, {
+      "platform_type" : "Google Ads",
+      "icon" : {
+        "size_type" : "auto",
+        "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Google_Ads_icon.svg.png",
+        "alt" : "Google_Ads_icon.svg",
+        "loading" : "lazy",
+        "width" : 960,
+        "height" : 960,
+        "max_width" : 960,
+        "max_height" : 960
+      }
+    } ],
+    "title" : "127 Leads in 30 Days",
+    "description" : "We helped a local HVAC company in Siliguri scale their monthly leads by 127 within just 30 days using targeted Google Search Ads.",
+    "stat_value" : "+127",
+    "stat_label" : "New Leads",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "+919641866113",
+        "type" : "PHONE_NUMBER"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "card_theme_color" : {
+      "color" : "#16a34a",
+      "opacity" : 100
+    }
+  } ]
+} ]

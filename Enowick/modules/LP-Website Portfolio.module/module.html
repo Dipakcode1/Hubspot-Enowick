@@ -1,0 +1,58 @@
+
+<!-- Website Portfolio -->
+<section class="py-section-gap bg-white {{name}}" id="web-portfolio">
+  <div class="max-w-container-max mx-auto px-gutter">
+
+    <div class="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-6">
+      <div class="max-w-xl">
+        <p class="text-primary-container font-bold uppercase tracking-widest text-xs mb-4">{{ module.eyebrow }}</p>
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+          {{ module.heading }}
+        </h2>
+      </div>
+
+      <p class="text-on-surface-variant max-w-xs text-sm">
+        {{ module.description }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      {% for item in module.portfolio_items %}
+      <div class="space-y-6">
+
+        <div class="website-scroll-container group relative h-[400px] w-full overflow-hidden rounded-xl border border-outline-variant/30 shadow-2xl bg-surface-container cursor-pointer">
+
+          <div class="absolute top-0 left-0 right-0 h-8 bg-white border-b border-outline-variant/20 z-10 flex items-center px-4 gap-1.5">
+            <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+          </div>
+
+          {% if item.portfolio_image.src %}
+          <img
+            class="website-mockup-image w-full mt-8"
+            src="{{ item.portfolio_image.src }}"
+            alt="{{ item.portfolio_image.alt|escape }}"
+            loading="lazy">
+          {% endif %}
+
+        </div>
+
+        <div>
+          <h4 class="text-xl font-bold">
+            {{ item.title }}
+          </h4>
+
+          <p class="text-on-surface-variant text-sm mt-1">
+            {{ item.description }}
+          </p>
+        </div>
+
+      </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>

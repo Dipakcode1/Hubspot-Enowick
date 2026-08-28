@@ -1,0 +1,130 @@
+<section class="py-section-gap {{name}}" id="case-studies">
+  <div class="max-w-container-max mx-auto px-gutter">
+
+    <div class="text-center mb-20">
+      <p class="text-primary-container font-bold uppercase tracking-widest text-xs mb-4">
+        {{ module.eyebrow }}
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight section-heading">
+        {{ module.heading }}
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      {% for item in module.case_studies %}     
+      <div
+        class="p-8 rounded-3xl flex flex-col"
+        style="
+          background-color: rgba({{ item.card_theme_color.color|convert_rgb }}, 0.05);
+          border: 1px solid rgba({{ item.card_theme_color.color|convert_rgb }}, 0.15);
+        ">
+        
+        <div class="mb-6 overflow-hidden rounded-2xl aspect-video bg-surface-container">
+          {% if item.case_study_image.src %}
+          <img
+            src="{{ item.case_study_image.src }}"
+            alt="{{ item.case_study_image.alt|escape }}"
+            class="w-full h-full object-cover"
+            loading="lazy">
+          {% endif %}
+        </div>
+
+        <div class="mb-6">
+          <span
+            class="text-[10px] font-bold px-3 py-1 rounded-full uppercase"
+            style="
+              background-color: rgba({{ item.card_theme_color.color|convert_rgb }}, 0.10);
+              color: {{ item.card_theme_color.color }};
+            ">
+            {{ item.category }}
+          </span>
+                  <div class="flex flex-wrap gap-3 mt-2">
+          {% for platform in item.platform %}
+            <div class="flex items-center gap-1">
+                {% if platform.icon.src %}
+                <div class="w-6 h-6 bg-white rounded-full shadow-sm flex items-center justify-center p-1">
+                  <img
+                    src="{{ platform.icon.src }}"
+                    alt="{{ platform.name }}"
+                    class="w-full h-full object-contain">
+                </div>
+                {% endif %}
+
+              <span class="text-[10px] font-bold text-on-surface-variant/60 uppercase tracking-wider">
+                {{ platform.platform_type }}
+              </span>
+
+            </div>
+          {% endfor %}
+        </div>
+        </div>
+
+        <h4 class="text-xl font-bold mb-4">
+          {{ item.title }}
+        </h4>
+
+        <p class="text-on-surface-variant text-sm mb-12 flex-grow">
+          {{ item.description }}
+        </p>
+
+        <div class="flex items-center justify-between mt-auto">
+
+          <div class="flex flex-col">
+            <span
+              class="text-2xl font-black"
+              style="color: {{ item.card_theme_color.color }};">
+              {{ item.stat_value }}
+            </span>
+
+            <span class="text-[10px] font-bold uppercase text-on-surface-variant">
+              {{ item.stat_label }}
+            </span>
+          </div>
+
+          {% if item.link.url.href %}
+          <a
+            href="{{ item.link.url.href }}"
+            {% if item.link.open_in_new_tab %}target="_blank"{% endif %}
+            class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-on-surface transition-all shadow-sm">
+
+            <span class="material-symbols-outlined">
+              arrow_outward
+            </span>
+          </a>
+          {% endif %}
+
+        </div>
+
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>
+
+{% require_css %}
+<style>
+  .{{ name }} .section-heading {
+    max-width: 550px;
+    margin: 0 auto 40px;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+
+  @media (max-width: 767px) {
+    .{{ name }} .section-heading {
+      max-width: 100%;
+      font-size: 2rem;
+      margin-bottom: 32px;
+    }
+  }
+</style>
+{% end_require_css %}
+

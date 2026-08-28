@@ -1,0 +1,43 @@
+<section class="py-10 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+
+    {% set total_items = module.items|length %}
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 divide-x divide-y divide-gray-200 border border-gray-200 rounded-xl overflow-hidden">
+
+      {% for item in module.items %}
+      <div
+        class="flex items-center gap-3 px-6 py-5 justify-center
+        {% if total_items == 5 and loop.last %}
+          col-span-2 md:col-span-1 lg:col-span-1
+        {% endif %}">
+
+        {% if item.logo.src %}
+        <img
+          src="{{ item.logo.src }}"
+          alt="{{ item.logo.alt }}"
+          class="h-10 w-auto object-contain flex-shrink-0"
+          loading="lazy">
+        {% endif %}
+
+        <div>
+          {% if item.title %}
+          <div class="text-xl md:text-2xl font-semibold text-gray-900 leading-none">
+            {{ item.title }}
+          </div>
+          {% endif %}
+
+          {% if item.subtitle %}
+          <div class="text-sm text-gray-500">
+            {{ item.subtitle }}
+          </div>
+          {% endif %}
+        </div>
+
+      </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>

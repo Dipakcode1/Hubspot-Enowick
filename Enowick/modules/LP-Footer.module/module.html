@@ -1,0 +1,148 @@
+<footer class="bg-inverse-surface text-white pt-20 pb-10 {{ name }}">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="grid md:grid-cols-4 gap-12 mb-20">
+      <!-- Company -->
+      <div>
+        {% if module.logo.src %}
+        <div class="mb-8">
+          <img
+            src="{{ module.logo.src }}"
+            alt="{{ module.logo.alt }}"
+            class="w-40 h-auto object-contain">
+        </div>
+        {% endif %}
+
+        <div class="text-white/60 leading-relaxed mb-8">
+          {{ module.description }}
+        </div>
+
+        <div class="flex gap-3">
+          {% for item in module.social_links %}
+          <a
+            href="{{ item.url_icon.url.href}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="{{ item.aria_label }}"
+            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary-container transition-all social-icon">
+            	{% icon
+                name="{{ item.icon_class.name }}"
+                style="{{ item.icon_class.type }}"
+                unicode="{{ item.icon_class.unicode }}"
+                icon_set="{{ item.icon_class.icon_set }}"
+              %}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h5 class="font-bold text-white mb-8">
+          What We Do
+        </h5>
+
+        <ul class="space-y-4 text-white/60 text-sm">
+          {% for item in module.services %}
+          <li>
+            <a
+              href="{{ item.url.url.href }}"
+              class="hover:text-white transition-all">
+              {{ item.text }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Presence -->
+      <div>
+        <h5 class="font-bold text-white mb-8">
+          Serving Businesses Across
+        </h5>
+
+        <ul class="space-y-4 text-white/60 text-sm">
+          {% for item in module.locations %}
+          <li>
+            <a
+              href="{{ item.url.url.href }}"
+              class="hover:text-white transition-all">
+              {{ item.text }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h5 class="font-bold mb-8">
+          Let's Talk
+        </h5>
+
+        <div class="space-y-4 text-white/60 text-sm">
+           {% if module.phone %}
+            <div class="flex items-start gap-3">
+              <i class="fas fa-phone text-primary-container mt-1"></i>
+              <a
+                href="tel:{{ module.phone|replace(' ','') }}"
+                class="text-white/80 hover:text-primary-container transition-all">
+                {{ module.phone }}
+              </a>
+            </div>
+            {% endif %}
+
+            {% if module.email %}
+            <div class="flex items-start gap-3">
+              <i class="fas fa-envelope text-primary-container mt-1"></i>
+              <a
+                href="mailto:{{ module.email }}"
+                class="text-white/80 hover:text-primary-container transition-all">
+                {{ module.email }}
+              </a>
+            </div>
+            {% endif %}
+
+            {% if module.address %}
+            <div class="flex items-start gap-3 text-white/80">
+              <i class="fas fa-location-dot text-primary-container mt-1"></i>
+              <div>
+                {{ module.address }}
+              </div>
+            </div>
+            {% endif %}
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-xs">
+
+      <p>
+        {{ module.copyright_text }}
+      </p>
+
+      <div class="flex gap-8">
+        {% for item in module.footer_links %}
+        <a
+          href="{{ item.url.url.href }}"
+          class="hover:text-white transition-all">
+          {{ item.text }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+{% require_css %}
+<style>
+ .{{ name }} .social-icon svg {
+    width:13px;
+  }
+.{{ name }} .social-icon svg path {
+  fill: #fff !important;
+}
+</style>
+{% end_require_css %}

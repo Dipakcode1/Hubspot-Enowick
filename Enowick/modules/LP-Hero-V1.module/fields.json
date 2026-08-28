@@ -1,0 +1,159 @@
+[ {
+  "id" : "d4393f68-e9ea-c02c-9928-2e248dd79486",
+  "name" : "badge_icon",
+  "label" : "Badge Icon",
+  "required" : false,
+  "locked" : false,
+  "icon_set" : "fontawesome-6.4.2",
+  "type" : "icon",
+  "display_width" : null,
+  "default" : {
+    "name" : "Arrow Trend Up",
+    "unicode" : "e098",
+    "type" : "SOLID"
+  }
+}, {
+  "id" : "d1e8d7fa-5029-b42b-6077-2abce3991084",
+  "name" : "badge_text",
+  "label" : "Badge Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Data-Driven Digital Marketing"
+}, {
+  "id" : "305a69e1-129c-ed51-a44e-81ce89ee64aa",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Get More</br><span class=\"text-primary-container\">Leads </span>, Not More Likes."
+}, {
+  "id" : "b689f58d-0a0f-66e2-cb45-b41692f50f63",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "We help businesses in Siliguri and North Bengal generate qualified enquiries through Google Ads, Meta Ads, SEO and high-converting websites."
+}, {
+  "id" : "d230c266-82d0-e082-21c1-66ab70f8ce01",
+  "name" : "trust_items",
+  "label" : "Trust Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "8a43661b-1f4b-8976-28af-5afcf43d1ecc",
+    "name" : "trust_option",
+    "label" : "Trust Option",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Google Partner"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "trust_option" : "Google Partner"
+  }, {
+    "trust_option" : "Google Partner"
+  }, {
+    "trust_option" : "Google Partner"
+  } ]
+}, {
+  "id" : "07e4551a-f2e6-31c3-4231-a267e60fcac8",
+  "name" : "primary_cta",
+  "label" : "Primary CTA",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "PHONE_NUMBER", "PAYMENT" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "href" : "https://codepoetry.in/",
+      "type" : "EXTERNAL"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "7cba16a5-4918-0bef-f5fb-5f6585d1e411",
+  "name" : "primary_cta_text",
+  "label" : "Primary CTA Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Get Free Audit"
+}, {
+  "id" : "b1bf6c25-37e6-220d-e31e-4c87d0c257b9",
+  "name" : "secondary_cta",
+  "label" : "Secondary CTA",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "PHONE_NUMBER", "PAYMENT" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "href" : "codepoetry.in",
+      "type" : "EXTERNAL"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "29ba7ca3-d9ab-7012-f781-35b2f5c16e07",
+  "name" : "secondary_cta_text",
+  "label" : "Secondary CTA Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "+91 98320 98320"
+}, {
+  "id" : "5a84ddd4-e094-3553-dc4e-3958597d62ab",
+  "name" : "hero_image",
+  "label" : "Hero Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/ChatGPT%20Image%20Jun%209%2c%202026%2c%2002_44_13%20PM.png",
+    "alt" : "ChatGPT Image Jun 9, 2026, 02_44_13 PM",
+    "loading" : "lazy",
+    "width" : 1536,
+    "height" : 1024,
+    "max_width" : 1536,
+    "max_height" : 1024
+  }
+} ]

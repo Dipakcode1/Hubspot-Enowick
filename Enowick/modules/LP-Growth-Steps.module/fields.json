@@ -1,0 +1,72 @@
+[ {
+  "id" : "3728b7ff-bb0b-e032-d8ee-ea17759f87ca",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Our Methodology"
+}, {
+  "id" : "2fb45c25-73b5-3112-ea1f-c4bbda2f2d60",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Our Proven 4-Step Growth Process"
+}, {
+  "id" : "0292d2ca-eafd-449e-3b87-d7178acf4e5c",
+  "name" : "steps",
+  "label" : "Steps",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "1d7281bb-17b0-f62c-f68d-a380725f4407",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Audit"
+  }, {
+    "id" : "2297e99d-2897-3416-205a-a981e6a03067",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "We analyze your business, website, competitors & current marketing performance."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "Audit",
+    "description" : "We analyze your business, website, competitors & current marketing performance."
+  }, {
+    "title" : "Audit",
+    "description" : "We analyze your business, website, competitors & current marketing performance."
+  }, {
+    "title" : "Audit",
+    "description" : "We analyze your business, website, competitors & current marketing performance."
+  }, {
+    "title" : "Audit",
+    "description" : "We analyze your business, website, competitors & current marketing performance."
+  } ]
+} ]

@@ -1,0 +1,13 @@
+{
+  "global" : false,
+  "content_types" : [ "KNOWLEDGE_BASE", "QUOTE_TEMPLATE", "CASE_STUDY", "SITE_PAGE", "CUSTOMER_PORTAL", "BLOG_LISTING", "WEB_INTERACTIVE", "BLOG_POST" ],
+  "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
+  "module_id" : 214640477805,
+  "css_assets" : [ {
+    "autoload" : true,
+    "path" : "../../css/landing-page.css",
+    "name" : "landing-page.css"
+  } ],
+  "label" : "Form Group",
+  "is_available_for_new_content" : true
+}

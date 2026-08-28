@@ -1,0 +1,232 @@
+[ {
+  "id" : "419d7301-3599-bc46-e223-e82666918211",
+  "name" : "form_group",
+  "label" : "Form Group",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "9a949977-3597-9aca-20cf-f565eecdcd47",
+    "name" : "form_field",
+    "label" : "Form",
+    "required" : false,
+    "locked" : false,
+    "embed_versions" : [ "v4" ],
+    "type" : "form",
+    "display_width" : null,
+    "default" : {
+      "form_id" : "f9862398-b9d2-469f-ab1a-96cdf35e7caa",
+      "response_type" : "inline",
+      "message" : "Thanks for submitting the form.",
+      "form_type" : "HUBSPOT"
+    }
+  }, {
+    "id" : "106c4d05-cd63-f4e8-4382-3fabedc2ca70",
+    "name" : "contact_eyebrow",
+    "label" : "Contact Eyebrow",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Get In Touch"
+  }, {
+    "id" : "2a5864e5-89cf-4a82-f123-cd0f09dedfab",
+    "name" : "contact_heading",
+    "label" : "Contact Heading",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Let's Grow Your Business"
+  }, {
+    "id" : "e676a678-aa28-adac-6d98-9cc2345244df",
+    "name" : "contact_description",
+    "label" : "Contact Description",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Visit our office or fill out the form. Our experts will get back to you within 24 hours."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "form_field" : {
+      "form_id" : "f9862398-b9d2-469f-ab1a-96cdf35e7caa",
+      "response_type" : "inline",
+      "message" : "Thanks for submitting the form.",
+      "form_type" : "HUBSPOT"
+    },
+    "contact_eyebrow" : "Get In Touch",
+    "contact_heading" : "Let's Grow Your Business",
+    "contact_description" : "Visit our office or fill out the form. Our experts will get back to you within 24 hours."
+  }
+}, {
+  "id" : "a5c0987b-63aa-bc74-1e18-b153f55e115f",
+  "name" : "audit_card_group",
+  "label" : "Audit Card Group",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "db955447-b002-61cb-8709-ec125b9d2175",
+    "name" : "audit_heading",
+    "label" : "Audit Heading",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Free Marketing Audit Worth ₹5,000"
+  }, {
+    "id" : "40a77e8d-8ea2-f766-4d02-e6186458d93b",
+    "name" : "audit_description",
+    "label" : "Audit Description",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Get a detailed audit report and growth roadmap for your business. Limited slots available for Siliguri brands this month."
+  }, {
+    "id" : "7f30c523-a87a-61d7-723f-3b94c37f23a0",
+    "name" : "audit_items",
+    "label" : "Audit Items",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 4
+    },
+    "children" : [ {
+      "id" : "aad0cdcc-f0e3-4d54-aca6-f40179d29c8b",
+      "name" : "text",
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "Competitor Analysis"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : [ {
+      "text" : "Competitor Analysis"
+    }, {
+      "text" : "Competitor Analysis"
+    }, {
+      "text" : "Competitor Analysis"
+    }, {
+      "text" : "Competitor Analysis"
+    } ]
+  }, {
+    "id" : "42ca5122-b045-41d3-d7b8-2ff26ba7637a",
+    "name" : "audit_cta",
+    "label" : "Audit CTA",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "e47d5800-e48e-d2b8-bf5d-dae376b20bec",
+    "name" : "audit_cta_text",
+    "label" : "Audit CTA Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Claim Free Audit Now"
+  }, {
+    "id" : "8c8e8a67-ed8a-3b1a-b228-e9f528953ec9",
+    "name" : "audit_card_title",
+    "label" : "Audit Card Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Local Market Growth Roadmap"
+  }, {
+    "id" : "7ba3ac58-da63-4464-b4c5-931d2609b812",
+    "name" : "audit_card_image",
+    "label" : "Audit Card Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/free%20marketing%20audit%20worth%20rupees%205000%20section.png",
+      "alt" : "free marketing audit worth rupees 5000 section",
+      "loading" : "lazy",
+      "width" : 1254,
+      "height" : 1254,
+      "max_width" : 1254,
+      "max_height" : 1254
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "audit_heading" : "Free Marketing Audit Worth ₹5,000",
+    "audit_description" : "Get a detailed audit report and growth roadmap for your business. Limited slots available for Siliguri brands this month.",
+    "audit_items" : [ {
+      "text" : "Competitor Analysis"
+    }, {
+      "text" : "Competitor Analysis"
+    }, {
+      "text" : "Competitor Analysis"
+    }, {
+      "text" : "Competitor Analysis"
+    } ],
+    "audit_cta" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "audit_cta_text" : "Claim Free Audit Now",
+    "audit_card_title" : "Local Market Growth Roadmap",
+    "audit_card_image" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/free%20marketing%20audit%20worth%20rupees%205000%20section.png",
+      "alt" : "free marketing audit worth rupees 5000 section",
+      "loading" : "lazy",
+      "width" : 1254,
+      "height" : 1254,
+      "max_width" : 1254,
+      "max_height" : 1254
+    }
+  }
+} ]

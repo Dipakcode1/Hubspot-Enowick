@@ -1,0 +1,180 @@
+<section id="{{ module.section_id|default('storytelling-section') }}" class="{{ name }}">
+  <div class="container">
+
+    <div class="storytelling-grid {{ module.style.layout }}">
+
+      <div class="img-container">
+        {% if module.image.src %}
+        <img
+          src="{{ module.image.src }}"
+          alt="{{ module.image.alt }}"
+          loading="lazy">
+        {% endif %}
+      </div>
+
+      <div class="text-content">
+        {% if module.eyebrow %}
+        <p class="eyebrow">
+          {{ module.eyebrow }}
+        </p>
+        {% endif %}
+        <h2>{{ module.title }}</h2>
+
+        <div class="description">
+          {{ module.description }}
+        </div>
+
+        <div class="check-list">
+          {% for item in module.check_items %}
+          <div class="check-item">
+            <span class="icon-container icon-color">
+              {% icon
+                name="{{ item.icon_field.name }}"
+                style="{{ item.icon_field.type }}"
+                unicode="{{ item.icon_field.unicode }}"
+                icon_set="{{ item.icon_field.icon_set }}"
+              %}
+            </span>
+<!--             <span class="material-symbols-outlined">check_circle</span> -->
+            
+            <span>{{ item.text }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+{% require_css %}
+<style>
+  .{{ name }} {
+    padding: 120px 0;
+    position: relative;
+  }
+
+  .{{ name }} .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .{{ name }} .storytelling-grid {
+    display: grid;
+    gap: 48px;
+    align-items: center;
+  }
+
+
+  @media (min-width: 1024px) {
+    .{{ name }} .storytelling-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .{{ name }} .storytelling-grid.image-right .img-container {
+      order: 2;
+    }
+
+    .{{ name }} .storytelling-grid.image-right .text-content {
+      order: 1;
+    }
+
+    .{{ name }} .storytelling-grid.image-left .img-container {
+      order: 1;
+    }
+
+    .{{ name }} .storytelling-grid.image-left .text-content {
+      order: 2;
+    }
+  }
+
+  .{{ name }} .img-container {
+    position: relative;
+  }
+
+  .{{ name }} .blur-bg {
+    position: absolute;
+    top: -48px;
+    left: -48px;
+    width: 192px;
+    height: 192px;
+    background-color: rgba(144, 14, 0, 0.1);
+    border-radius: 9999px;
+    filter: blur(60px);
+  }
+
+  .{{ name }} img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+/*     aspect-ratio: 4/3; */
+    object-fit: cover;
+  }
+
+  .{{ name }} h2 {
+/*     font-size: clamp(36px, 5vw, 48px); */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+
+  .{{ name }} .description {
+    font-size: 20px;
+    color: #5a413c;
+    margin-bottom: 32px;
+  }
+
+  .{{ name }} .check-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .{{ name }} .check-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+/*   .{{ name }} .check-item .material-symbols-outlined {
+    color: #900e00;
+  } */
+  
+    .{{ name }} .icon-container {
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .{{ name }} .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #b32915;
+    }
+
+  .{{ name }} .icon-container svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .{{ name }} .icon-color svg {
+    fill: {{ module.style.icon_color.color }};
+  }
+
+  .{{ name }} .icon-color svg path {
+    fill: {{ module.style.icon_color.color }};
+  }
+  
+</style>
+{% end_require_css %}

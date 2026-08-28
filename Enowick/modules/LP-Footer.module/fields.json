@@ -1,0 +1,460 @@
+[ {
+  "id" : "6a299980-babe-22bb-7f70-a4053c93a5fa",
+  "name" : "logo",
+  "label" : "Logo",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/logo_txt_1.png",
+    "alt" : "logo",
+    "loading" : "lazy",
+    "width" : 1440,
+    "height" : 720,
+    "max_width" : 1440,
+    "max_height" : 720
+  }
+}, {
+  "id" : "b92955a3-e1fd-f6e7-0015-0dd5dba00b08",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Empowering Siliguri founders with the digital growth engines they deserve. High-precision marketing for North Bengal's finest brands."
+}, {
+  "id" : "b49aa938-bf1d-b199-c649-3b2a0aad2676",
+  "name" : "social_links",
+  "label" : "Social Links",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "ad427144-8123-3fd6-dc96-9f2b74e28362",
+    "name" : "url_icon",
+    "label" : "url",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://www.facebook.com/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "098e792b-800b-54e7-655c-da06e397530c",
+    "name" : "icon_class",
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-6.4.2",
+    "type" : "icon",
+    "display_width" : null,
+    "default" : {
+      "name" : "Angles Left",
+      "unicode" : "f100",
+      "type" : "SOLID"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "url" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://www.facebook.com/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "icon_class" : {
+      "name" : "Angles Left",
+      "unicode" : "f100",
+      "type" : "SOLID"
+    }
+  }, {
+    "url" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://www.facebook.com/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "icon_class" : {
+      "name" : "Angles Left",
+      "unicode" : "f100",
+      "type" : "SOLID"
+    }
+  }, {
+    "url" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://www.facebook.com/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "icon_class" : {
+      "name" : "Angles Left",
+      "unicode" : "f100",
+      "type" : "SOLID"
+    }
+  }, {
+    "url" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://www.facebook.com/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "icon_class" : {
+      "name" : "Angles Left",
+      "unicode" : "f100",
+      "type" : "SOLID"
+    }
+  } ]
+}, {
+  "id" : "20c0d160-b9b6-0c9b-49a2-11aa412912d9",
+  "name" : "services",
+  "label" : "Services",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "dfd00176-e6d6-993b-739a-f896119b2bc9",
+    "name" : "url",
+    "label" : "URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "2ee312b0-1079-6e36-5431-0dbfa9627418",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Website Design"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "url" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "text" : "Website Design"
+  }, {
+    "url" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "text" : "Website Design"
+  }, {
+    "url" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "text" : "Website Design"
+  }, {
+    "url" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "text" : "Website Design"
+  } ]
+}, {
+  "id" : "5d10402b-6dca-0820-04a8-b7dcbc6d7092",
+  "name" : "locations",
+  "label" : "Locations",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "f4a5dd87-b3ac-c773-ee61-fe8aaadd544a",
+    "name" : "url",
+    "label" : "URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "62ea361c-e273-2d82-4fac-f30323e2f320",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Website Design"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "url" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "text" : "Website Design"
+  }, {
+    "url" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "text" : "Website Design"
+  }, {
+    "url" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "text" : "Website Design"
+  }, {
+    "url" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "text" : "Website Design"
+  } ]
+}, {
+  "id" : "a5cec82e-8941-0b89-4e94-dae2673ea6b9",
+  "name" : "footer_links",
+  "label" : "Footer Links",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "eb4f0cd8-6694-2276-de80-57456aa8c422",
+    "name" : "url",
+    "label" : "URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "67eaddbb-bdce-67d8-7031-95aa0f024046",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Website Design"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "url" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "text" : "Website Design"
+  }, {
+    "url" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "text" : "Website Design"
+  }, {
+    "url" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "text" : "Website Design"
+  }, {
+    "url" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "text" : "Website Design"
+  } ]
+}, {
+  "id" : "1e589cb0-3a0f-58d1-543a-3850664a6258",
+  "name" : "phone",
+  "label" : "Phone",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "+91 98320 98320"
+}, {
+  "id" : "54a1fb79-6838-c256-e156-076ba52b9fff",
+  "name" : "email",
+  "label" : "Email",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "codepoetryindia@gmail.com"
+}, {
+  "id" : "62424e38-c9e7-e30a-92e9-ccc89b0893ab",
+  "name" : "address",
+  "label" : "Address",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Chayan Para, East,Siliguri, West Bengal734006"
+}, {
+  "id" : "b92732a0-a807-0fad-e355-46596e9ee238",
+  "name" : "copyright_text",
+  "label" : "Copyright_text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "© 2026 CodePoetry. All Rights Reserved."
+} ]

@@ -1,0 +1,61 @@
+<section class="py-section-gap bg-white overflow-hidden {{name}}" id="process">
+
+  <div class="max-w-container-max mx-auto px-gutter">
+
+    <div class="text-center mb-20">
+      <p class="text-primary-container font-bold uppercase tracking-widest text-xs mb-4">
+        {{ module.eyebrow }}
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight section-heading">
+        {{ module.heading }}
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-12 relative grid-cols-2">
+
+      {% for item in module.steps %}
+
+      <div class="relative z-10 {% if not loop.last %}step-line{% endif %}">
+
+        <div class="w-12 h-12 bg-primary-container text-white rounded-full flex items-center justify-center font-bold text-xl mb-6 shadow-lg shadow-primary-container/20">
+          {{ "%02d"|format(loop.index) }}
+        </div>
+
+        <h4 class="text-xl font-bold mb-3">
+          {{ item.title }}
+        </h4>
+
+        <p class="text-on-surface-variant text-sm leading-relaxed">
+          {{ item.description }}
+        </p>
+
+      </div>
+
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+{% require_css %}
+<style>
+  .{{ name }} .section-heading {
+    max-width: 550px;
+    margin: 0 auto 40px;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+
+  @media (max-width: 767px) {
+    .{{ name }} .section-heading {
+      max-width: 100%;
+      font-size: 2rem;
+      margin-bottom: 32px;
+    }
+  }
+</style>
+{% end_require_css %}

@@ -1,0 +1,145 @@
+<section class="relative overflow-hidden py-20 md:py-32 bg-white {{name}}">
+
+  <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+    <div class="z-10">
+
+      <div class="inline-flex items-center gap-2 bg-primary-container/10 text-primary-container px-4 py-1.5 rounded-full text-xs font-bold mb-6">
+<!--         <span class="material-symbols-outlined text-sm"> -->
+        <span class="w-[12px] text-primary-container badge-icon">
+         {% icon
+            name="{{ module.badge_icon.name }}"
+            style="{{ module.badge_icon.type }}"
+            unicode="{{ module.badge_icon.unicode }}"
+            icon_set="{{ module.badge_icon.icon_set }}"
+          %}
+        </span>
+<!--         </span> -->
+        {{ module.badge_text }}
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-bold leading-[1.1] mb-6 tracking-tight">
+         {{ module.heading }}
+      </h1>
+
+      <p class="text-lg md:text-xl text-on-surface-variant mb-10 max-w-xl leading-relaxed">
+        {{ module.description }}
+      </p>
+
+      <div class="flex flex-wrap gap-4 mb-12">
+
+        {% for item in module.trust_items %}
+        <div class="flex items-center gap-2 text-sm font-semibold text-on-surface-variant">
+          <span class="material-symbols-outlined text-primary-container">
+            check_circle
+          </span>
+          {{ item.trust_option }}
+        </div>
+        {% endfor %}
+
+      </div>
+
+      <div class="flex flex-wrap gap-4">
+
+  {% if module.secondary_cta.url.href %}
+  <a
+    href="{{ module.secondary_cta.url.href }}"
+    {% if module.secondary_cta.open_in_new_tab %}target="_blank"{% endif %}
+    class="bg-primary-container text-white px-10 py-4 rounded-full font-bold text-lg flex items-center gap-2 hover:shadow-2xl hover:shadow-primary-container/30 transition-all">
+
+    <span class="material-symbols-outlined">
+      call
+    </span>
+
+    {{ module.secondary_cta_text }}
+  </a>
+  {% endif %}
+
+  {% if module.primary_cta.url.href %}
+    <a
+      href="{{ module.primary_cta.url.href }}"
+      {% if module.primary_cta.open_in_new_tab %}target="_blank"{% endif %}
+      class="secondary-cta border border-outline px-10 py-4 rounded-full font-bold text-lg hover:bg-white transition-all flex items-center gap-2">
+
+      {{ module.primary_cta_text }}
+
+      <span class="material-symbols-outlined cta-arrow">
+        arrow_right_alt
+      </span>
+    </a>
+  {% endif %}
+
+</div>
+
+    </div>
+
+    <div class="relative">
+      <div class="relative z-10 rounded-2xl overflow-hidden border border-white/20">
+        {% if module.hero_image.src %}
+        <img
+          src="{{ module.hero_image.src }}"
+          alt="{{ module.hero_image.alt|escape }}"
+          class="w-full h-auto"
+          loading="lazy">
+        {% endif %}
+      </div>
+
+<!--       <div class="absolute -top-6 -right-6 bg-white/90 backdrop-blur p-4 rounded-xl shadow-xl z-20 hidden md:block">
+
+        <div class="flex items-center gap-3">
+
+          <div class="w-10 h-10 bg-secondary/10 text-secondary rounded-lg flex items-center justify-center">
+            <span class="material-symbols-outlined">
+              {{ module.stat_icon }}
+            </span>
+          </div>
+
+          <div>
+            <p class="text-2xl font-bold">
+              {{ module.stat_value }}
+            </p>
+            <p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-wider">
+              {{ module.stat_label }}
+            </p>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+{% require_css %}
+<style>
+  .{{ name }} .badge-icon svg path {
+    fill: currentColor !important;
+  }
+    .{{ name }} .secondary-cta {
+    transition: all 0.3s ease;
+  }
+
+  .{{ name }} .secondary-cta:hover {
+    transform: translateY(-2px);
+  }
+
+  .{{ name }} .cta-arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .{{ name }} .secondary-cta:hover .cta-arrow {
+    transform: translateX(6px);
+  }
+
+  /* Attention animation */
+  .{{ name }} .secondary-cta .cta-arrow {
+    animation: arrow-nudge-{{ name }} 2s infinite;
+  }
+
+  @keyframes arrow-nudge-{{ name }} {
+    0%, 70%, 100% {
+      transform: translateX(0);
+    }
+    85% {
+      transform: translateX(5px);
+    }
+  }
+</style>
+{% end_require_css %}

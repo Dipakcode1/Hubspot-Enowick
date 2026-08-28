@@ -1,0 +1,213 @@
+[ {
+  "id" : "8e96d13c-5cf9-a8d0-2dda-2c60cefb4d0a",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "What We Do"
+}, {
+  "id" : "48b2564e-a94b-3d62-2caf-4fd180fa5fec",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Digital Marketing Services"
+}, {
+  "id" : "9f8b443c-1cd9-f8b1-ea38-a0982af5e500",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "End-to-end solutions designed to scale your North Bengal business from local leader to regional powerhouse."
+}, {
+  "id" : "1ba7dfa8-0906-cdca-a21e-82c8a790860f",
+  "name" : "services",
+  "label" : "Services",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "005ad11a-3c32-e72b-695c-196a496bc67b",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Google Ads Management"
+  }, {
+    "id" : "c7349397-2e60-6315-203a-49b36820acaa",
+    "name" : "icon_color",
+    "label" : "Icon Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FF0201",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "12be9a6d-4058-7d25-7503-faf7777f7ce5",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Drive targeted traffic and generate high-quality leads from Google search results."
+  }, {
+    "id" : "2284e4ca-1a5a-9239-4373-cacd584a70a2",
+    "name" : "link",
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "d2068775-2097-f7e6-ee76-051761aa1f3c",
+    "name" : "link_text",
+    "label" : "Link Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Learn More"
+  }, {
+    "id" : "ba9c963d-c3ec-c9db-87d8-7a86c0eee72a",
+    "name" : "image_field",
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Icon.png",
+      "alt" : "Icon",
+      "loading" : "lazy",
+      "width" : 31,
+      "height" : 31,
+      "max_width" : 31,
+      "max_height" : 31
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "Google Ads Management",
+    "icon_color" : {
+      "color" : "#FF0201",
+      "opacity" : 100
+    },
+    "description" : "Drive targeted traffic and generate high-quality leads from Google search results.",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "link_text" : "Learn More",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Icon.png",
+      "alt" : "Icon",
+      "loading" : "lazy",
+      "width" : 31,
+      "height" : 31,
+      "max_width" : 31,
+      "max_height" : 31
+    }
+  }, {
+    "title" : "Google Ads Management",
+    "icon_color" : {
+      "color" : "#FF0201",
+      "opacity" : 100
+    },
+    "description" : "Drive targeted traffic and generate high-quality leads from Google search results.",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "link_text" : "Learn More",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Icon.png",
+      "alt" : "Icon",
+      "loading" : "lazy",
+      "width" : 31,
+      "height" : 31,
+      "max_width" : 31,
+      "max_height" : 31
+    }
+  }, {
+    "title" : "Google Ads Management",
+    "icon_color" : {
+      "color" : "#FF0201",
+      "opacity" : 100
+    },
+    "description" : "Drive targeted traffic and generate high-quality leads from Google search results.",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://codepoetry.in/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "link_text" : "Learn More",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://47104785.fs1.hubspotusercontent-na1.net/hubfs/47104785/Icon.png",
+      "alt" : "Icon",
+      "loading" : "lazy",
+      "width" : 31,
+      "height" : 31,
+      "max_width" : 31,
+      "max_height" : 31
+    }
+  } ]
+} ]
