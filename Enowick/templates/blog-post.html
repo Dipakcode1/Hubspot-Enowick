@@ -25,16 +25,12 @@
                     {% endif %}
 
                     <div class="ew-blog-details-text">
-                        {% if content.topic_list %}
+                        {% if content.topic_list and content.topic_list|length > 0 %}
                             <span>{{ content.topic_list[0].name }}</span>
-                        {% else %}
-                            <span>Branding</span>
                         {% endif %}
                         <span>{{ content.publish_date|datetimeformat('%B %e, %Y') }}</span>
                         {% if content.blog_post_author %}
                             <span>by {{ content.blog_post_author.display_name }}</span>
-                        {% else %}
-                            <span>by Enowick</span>
                         {% endif %}
                         <h3>{{ content.name }}</h3>
                     </div>
@@ -46,18 +42,14 @@
                     <!-- Tags & Social Share Bar -->
                     <div class="ew-blog-details-list-main">
                         <div class="ew-blog-details-list">
-                            {% if content.tag_list %}
+                            {% if content.tag_list and content.tag_list|length > 0 %}
                                 {% for tag in content.tag_list %}
                                     <span>{{ tag.name }}</span>
                                 {% endfor %}
-                            {% elif content.topic_list %}
+                            {% elif content.topic_list and content.topic_list|length > 0 %}
                                 {% for topic in content.topic_list %}
                                     <span>{{ topic.name }}</span>
                                 {% endfor %}
-                            {% else %}
-                                <span>Design</span>
-                                <span>Development</span>
-                                <span>Marketing</span>
                             {% endif %}
                         </div>
                         <div class="ew-blog-details-list2">
@@ -72,8 +64,8 @@
 
                     <!-- Blog Comments Area -->
                     {% if group.allow_comments %}
-                        <div class="ew-blog-details-box mt-50">
-                            {% module "blog_comments" path="@hubspot/blog_comments", label="Blog comments" %}
+                        <div class="hs-blog-comment-wrapper">
+                            {% blog_comments "blog_comments" %}
                         </div>
                     {% endif %}
                 </div>
@@ -98,60 +90,20 @@
                             </div>
                         </div>
 
-                        <!-- Widget 2: Categories -->
+                        <!-- Widget 2: Recent Posts (1:1 Aspect Ratio Cover) -->
                         {% set blog_id = group.id if group.id else 'default' %}
-                        {% set blog_topic_list = blog_topics(blog_id, 8) %}
-                        {% if blog_topic_list and blog_topic_list|length > 0 %}
-                            <div class="ew-blog-sidebar-text">
-                                <h1>Categories</h1>
-                                {% for topic in blog_topic_list %}
-                                    <div class="ew-blog-sidebar-main">
-                                        <div class="ew-blog-sidebar-text2">
-                                            <span><a href="{{ blog_tag_url(blog_id, topic.slug) }}">{{ topic.name }}</a></span>
-                                        </div>
-                                        <div class="ew-blog-sidebar-number">
-                                            <ul>
-                                                <li>({{ topic.post_count }})</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            <div class="ew-blog-sidebar-text">
-                                <h1>Categories</h1>
-                                <div class="ew-blog-sidebar-main">
-                                    <div class="ew-blog-sidebar-text2"><span>Email Marketing</span></div>
-                                    <div class="ew-blog-sidebar-number"><ul><li>(6)</li></ul></div>
-                                </div>
-                                <div class="ew-blog-sidebar-main">
-                                    <div class="ew-blog-sidebar-text2"><span>Branding</span></div>
-                                    <div class="ew-blog-sidebar-number"><ul><li>(2)</li></ul></div>
-                                </div>
-                                <div class="ew-blog-sidebar-main">
-                                    <div class="ew-blog-sidebar-text2"><span>Design</span></div>
-                                    <div class="ew-blog-sidebar-number"><ul><li>(8)</li></ul></div>
-                                </div>
-                                <div class="ew-blog-sidebar-main">
-                                    <div class="ew-blog-sidebar-text2"><span>Business</span></div>
-                                    <div class="ew-blog-sidebar-number"><ul><li>(4)</li></ul></div>
-                                </div>
-                            </div>
-                        {% endif %}
-
-                        <!-- Widget 3: Recent Posts -->
                         {% set recent_sidebar_posts = blog_recent_posts(blog_id, 4) %}
-                        <div class="ew-blog-sidebar-post">
-                            <h2>Recent Posts</h2>
-                            {% if recent_sidebar_posts and recent_sidebar_posts|length > 0 %}
+                        {% if recent_sidebar_posts and recent_sidebar_posts|length > 0 %}
+                            <div class="ew-blog-sidebar-post">
+                                <h2>Recent Posts</h2>
                                 {% for post in recent_sidebar_posts %}
                                     <div class="ew-blog-sidebar-right">
                                         <div class="ew-blog-sidebar-imgtwo">
                                             <a href="{{ post.absolute_url }}">
                                                 {% if post.featured_image %}
-                                                    <img src="{{ post.featured_image }}" alt="{{ post.name|striptags|escape_attr }}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; display: block;">
+                                                    <img src="{{ post.featured_image }}" alt="{{ post.name|striptags|escape_attr }}">
                                                 {% else %}
-                                                    <img src="{{ get_asset_url('../images/sidebar/sidebar' ~ ((loop.index0 % 4) + 1) ~ '.jpg') }}" alt="{{ post.name|striptags|escape_attr }}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; display: block;">
+                                                    <img src="{{ get_asset_url('../images/blog/blog' ~ ((loop.index0 % 9) + 9) ~ '.jpg') }}" alt="{{ post.name|striptags|escape_attr }}">
                                                 {% endif %}
                                             </a>
                                         </div>
@@ -161,66 +113,17 @@
                                         </div>
                                     </div>
                                 {% endfor %}
-                            {% else %}
-                                <div class="ew-blog-sidebar-right">
-                                    <div class="ew-blog-sidebar-imgtwo">
-                                        <img src="{{ get_asset_url('../images/sidebar/sidebar1.jpg') }}" alt="sidebar post" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; display: block;">
-                                    </div>
-                                    <div class="ew-blog-sidebar-texttwo">
-                                        <h3><a href="#">The Importance of User Testing in UI/UX Design</a></h3>
-                                        <span>10 March 2026</span>
-                                    </div>
-                                </div>
-                                <div class="ew-blog-sidebar-right">
-                                    <div class="ew-blog-sidebar-imgtwo">
-                                        <img src="{{ get_asset_url('../images/sidebar/sidebar2.jpg') }}" alt="sidebar post" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; display: block;">
-                                    </div>
-                                    <div class="ew-blog-sidebar-texttwo">
-                                        <h3><a href="#">Future of Digital Marketing Trends Every Business Should..</a></h3>
-                                        <span>10 March 2026</span>
-                                    </div>
-                                </div>
-                                <div class="ew-blog-sidebar-right">
-                                    <div class="ew-blog-sidebar-imgtwo">
-                                        <img src="{{ get_asset_url('../images/sidebar/sidebar3.jpg') }}" alt="sidebar post" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; display: block;">
-                                    </div>
-                                    <div class="ew-blog-sidebar-texttwo">
-                                        <h3><a href="#">Ovanta agency revolutionizes work with the power of ai-driven</a></h3>
-                                        <span>10 March 2026</span>
-                                    </div>
-                                </div>
-                                <div class="ew-blog-sidebar-right">
-                                    <div class="ew-blog-sidebar-imgtwo">
-                                        <img src="{{ get_asset_url('../images/sidebar/sidebar4.jpg') }}" alt="sidebar post" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px; display: block;">
-                                    </div>
-                                    <div class="ew-blog-sidebar-texttwo">
-                                        <h3><a href="#">6 Big Commerce Design Tips For Big Results</a></h3>
-                                        <span>10 March 2026</span>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        </div>
+                            </div>
+                        {% endif %}
 
-                        <!-- Widget 4: Tags -->
+                        <!-- Widget 3: Tags -->
+                        {% set blog_topic_list = blog_topics(blog_id, 10) %}
                         {% if blog_topic_list and blog_topic_list|length > 0 %}
                             <div class="ew-blog-sidebar-tags">
                                 <h1>Tags</h1>
                                 {% for topic in blog_topic_list %}
                                     <span><a href="{{ blog_tag_url(blog_id, topic.slug) }}">{{ topic.name }}</a></span>
                                 {% endfor %}
-                            </div>
-                        {% else %}
-                            <div class="ew-blog-sidebar-tags">
-                                <h1>Tags</h1>
-                                <span><a href="#">Agency</a></span>
-                                <span><a href="#">Awards</a></span>
-                                <span><a href="#">Marketing</a></span>
-                                <span><a href="#">Brand</a></span>
-                                <span><a href="#">Contemporary</a></span>
-                                <span><a href="#">Education</a></span>
-                                <span><a href="#">Business</a></span>
-                                <span><a href="#">Modern</a></span>
-                                <span><a href="#">Ideas</a></span>
                             </div>
                         {% endif %}
                     </div>
